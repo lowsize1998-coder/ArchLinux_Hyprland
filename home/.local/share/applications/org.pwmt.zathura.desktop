@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Zathura · Symphony
+Comment=PDF, EPUB, DjVu и комиксы с оформлением Symphony
+Exec=/home/rozetta/.local/bin/zathura-rice launch %F
+TryExec=/usr/bin/zathura
+Icon=org.pwmt.zathura
+Terminal=false
+Categories=Office;Viewer;
+MimeType=application/pdf;application/epub+zip;application/oxps;application/vnd.ms-xpsdocument;image/vnd.djvu;image/vnd.djvu+multipage;application/vnd.comicbook+zip;application/vnd.comicbook-rar;application/x-cb7;application/x-cbt;application/postscript;
+StartupWMClass=org.pwmt.zathura

@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+if systemctl --user is-active --quiet symphony-idle.service; then
+    systemctl --user stop symphony-idle.service
+    notify-send "Screen Lock" "Off - Display will stay on"
+else
+    systemctl --user start symphony-idle.service
+    notify-send "Screen Lock" "On - Display will sleep when inactive"
+fi
+pkill -RTMIN+9 waybar || true

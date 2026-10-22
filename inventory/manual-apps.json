@@ -1,0 +1,19 @@
+{
+  "codex": "codex-cli 0.163.0",
+  "spicetify": "2.45.3",
+  "hyprland": "Hyprland 0.56.2 built from branch v0.56.2 at commit efb50993780079460b0cbed1363e2166a2de1d9f clean ([gha] Nix: update inputs).\nDate: Wed Aug 5 14:13:21 2026\nTag: v0.56.2, commits: 7661\n\nLibraries:\nHyprgraphics: built against 0.5.1, system has 0.5.1\nHyprutils: built against 0.14.2, system has 0.14.2\nHyprcursor: built against 0.1.13, system has 0.1.13\nHyprlang: built against 0.6.8, system has 0.6.8\nAquamarine: built against 0.15.1, system has 0.15.1\n\nVersion ABI string: efb50993780079460b0cbed1363e2166a2de1d9f_aq_0.15_hu_0.14_hg_0.5_hc_0.1_hlg_0.6\nno flags were set",
+  "zen": {
+    "Version": "1.23.4b",
+    "BuildID": "20261020090730",
+    "Name": "Zen"
+  },
+  "manual_applications": [
+    "Zen tarball: replaced by packaged zen-browser-bin plus compatible launcher on restore",
+    "AmneziaVPN installed under /opt: reinstall from official source; profiles excluded",
+    "Dota 2 Mod Manager AppImage: install separately; launcher and settings theme sources are saved",
+    "Koodo Reader: reinstall through saved koodo-rice-install launcher",
+    "Spicetify executable saved; Spotify installed by spotify-launcher",
+    "Waybar 0.15.0 custom binary and native PR patches saved",
+    "Spotify Qt AppImage and librespot saved as optional legacy client"
+  ]
+}

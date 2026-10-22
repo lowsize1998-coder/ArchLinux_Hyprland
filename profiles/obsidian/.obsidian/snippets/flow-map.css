@@ -1,0 +1,162 @@
+/* Flow Map 2026: стили ограничены заметками с cssclasses: flow-map. */
+.flow-map.markdown-preview-view .markdown-preview-sizer,
+.flow-map.markdown-source-view.mod-cm6 .cm-sizer,
+.flow-map .markdown-preview-sizer {
+  max-width: 1800px !important;
+  width: min(1800px, 100%) !important;
+}
+
+.flow-map h1 {
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.flow-map table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.flow-map th {
+  background: #111318;
+  color: #f7f7f7;
+  text-align: center;
+}
+
+.flow-map-year h2 {
+  margin-top: 2.4rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  background: #111318;
+  color: #f7f7f7;
+}
+
+.flow-map-year h2:nth-of-type(2) {
+  border-left: 8px solid #1e88e5;
+}
+
+.flow-map-year h2:nth-of-type(3) {
+  border-left: 8px solid #fb8c00;
+}
+
+.flow-map-year h2:nth-of-type(4) {
+  border-left: 8px solid #f4e409;
+}
+
+.flow-map-year h2:nth-of-type(5) {
+  border-left: 8px solid #43a047;
+}
+
+.flow-map .ofc-layout-horizontal {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.flow-map .ofc-layout-view-item {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+}
+
+.flow-map .fc-theme-standard td,
+.flow-map .fc-theme-standard th {
+  border-color: var(--background-modifier-border);
+}
+
+.flow-map .fc-col-header-cell {
+  background: #111318;
+}
+
+.flow-map .fc-col-header-cell-cushion {
+  color: #f7f7f7;
+  font-size: 0;
+}
+
+.flow-map .fc-col-header-cell-cushion::after {
+  font-size: 0.78rem;
+}
+
+.flow-map-year .fc-col-header-cell.fc-day-mon .fc-col-header-cell-cushion::after { content: "Пн"; }
+.flow-map-year .fc-col-header-cell.fc-day-tue .fc-col-header-cell-cushion::after { content: "Вт"; }
+.flow-map-year .fc-col-header-cell.fc-day-wed .fc-col-header-cell-cushion::after { content: "Ср"; }
+.flow-map-year .fc-col-header-cell.fc-day-thu .fc-col-header-cell-cushion::after { content: "Чт"; }
+.flow-map-year .fc-col-header-cell.fc-day-fri .fc-col-header-cell-cushion::after { content: "Пт"; }
+.flow-map-year .fc-col-header-cell.fc-day-sat .fc-col-header-cell-cushion::after { content: "Сб"; }
+.flow-map-year .fc-col-header-cell.fc-day-sun .fc-col-header-cell-cushion::after { content: "Вс"; }
+
+.flow-map-month .fc-col-header-cell.fc-day-mon .fc-col-header-cell-cushion::after { content: "Понедельник"; }
+.flow-map-month .fc-col-header-cell.fc-day-tue .fc-col-header-cell-cushion::after { content: "Вторник"; }
+.flow-map-month .fc-col-header-cell.fc-day-wed .fc-col-header-cell-cushion::after { content: "Среда"; }
+.flow-map-month .fc-col-header-cell.fc-day-thu .fc-col-header-cell-cushion::after { content: "Четверг"; }
+.flow-map-month .fc-col-header-cell.fc-day-fri .fc-col-header-cell-cushion::after { content: "Пятница"; }
+.flow-map-month .fc-col-header-cell.fc-day-sat .fc-col-header-cell-cushion::after { content: "Суббота"; }
+.flow-map-month .fc-col-header-cell.fc-day-sun .fc-col-header-cell-cushion::after { content: "Воскресенье"; }
+
+.flow-map .fc-daygrid-event {
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.flow-map-year .fc-daygrid-day-frame {
+  min-height: 44px;
+}
+
+.flow-map-year .fc-daygrid-day-number {
+  font-size: 0.72rem;
+  padding: 2px 4px;
+}
+
+.flow-map-year .fc-event-title {
+  font-size: 0.62rem;
+}
+
+.flow-map-month .fc-daygrid-day-frame {
+  min-height: 112px;
+}
+
+.flow-map-month .fc-daygrid-day-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 4px 7px;
+}
+
+.flow-map-month .fc-event-title {
+  font-size: 0.75rem;
+}
+
+/* Воскресенье видно, но оно полностью закрыто для создания и открытия задач. */
+.flow-map .fc-daygrid-day.fc-day-sun {
+  position: relative;
+  pointer-events: none;
+  cursor: not-allowed;
+  background: color-mix(in srgb, var(--background-secondary) 86%, #f4e409 14%);
+}
+
+.flow-map .fc-daygrid-day.fc-day-sun .fc-daygrid-day-frame::after {
+  content: "Выходной";
+  position: absolute;
+  inset: 42% 0 auto;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.flow-map .fc-daygrid-day.fc-day-other {
+  opacity: 0.42;
+}
+
+@media (max-width: 1100px) {
+  .flow-map .ofc-layout-horizontal {
+    overflow-x: auto;
+  }
+
+  .flow-map-year .ofc-layout-view-item {
+    min-width: 420px;
+  }
+}

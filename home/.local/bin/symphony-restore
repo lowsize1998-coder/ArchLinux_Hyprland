@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import shutil,subprocess
+home=Path.home()
+repo=home/'symphony'
+state=home/'.local/state/symphony-setup'
+backup=Path((state/'backup-path').read_text().strip())
+subprocess.run(['systemctl','--user','stop','symphony-desktop.target'])
+subprocess.run(['systemctl','--user','disable','--now','mpd.service','mpd-mpris.service'])
+for path in (home/'.config').iterdir():
+    if path.is_symlink():
+        target=path.resolve()
+        if target.is_relative_to(repo):path.unlink()
+for src in (backup/'.config').iterdir():
+    dst=home/'.config'/src.name
+    if dst.is_symlink():dst.unlink()
+    elif dst.exists():
+        # Preserve anything changed since setup before restoring the original.
+        moved=state/('before-restore-'+src.name)
+        if moved.exists():raise SystemExit('Existing restore backup: '+str(moved))
+        dst.rename(moved)
+    if src.is_symlink():dst.symlink_to(src.readlink())
+    elif src.is_dir():shutil.copytree(src,dst,symlinks=True)
+    else:shutil.copy2(src,dst)
+for name in ['.bashrc','.bash_profile']:shutil.copy2(backup/name,home/name)
+with (backup/'desktop-interface.dconf').open() as stream:
+    subprocess.run(['dconf','load','/org/gnome/desktop/interface/'],stdin=stream,check=True)
+subprocess.run(['systemctl','--user','daemon-reload'])
+subprocess.run(['hyprctl','reload'])
+print('Original configs restored from '+str(backup))
+print('Log out and back in. Installed packages are retained.')

@@ -1,0 +1,14 @@
+/* Geometry only: use the currently selected Symphony theme's background. */
+@import url("../colors.css");
+
+window#waybar {
+    background: @surface_container;
+    border: none;
+    border-radius: 0;
+}
+
+.modules-left, .modules-center, .modules-right {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}

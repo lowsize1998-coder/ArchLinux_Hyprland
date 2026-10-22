@@ -1,0 +1,12 @@
+{
+  "ink": "#1B272C",
+  "muted_on_light": "#2C4049",
+  "link_on_light": "#194B66",
+  "dim_text_on_blue": "#ADB5B8",
+  "accent_on_blue": "#BAAEDA",
+  "secondary_accent_on_blue": "#8BBEBB",
+  "info_on_blue": "#A4C9E5",
+  "success_on_blue": "#C7D6B3",
+  "warning_on_blue": "#CBB36B",
+  "error_on_blue": "#D4ABB0"
+}

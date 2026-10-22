@@ -1,0 +1,16 @@
+# Zathura · Symphony. Generated colors and preferences are kept separately.
+include preferences
+include appearance
+include profiles/default
+
+# Standard Vim navigation remains available.
+map <C-o> file_chooser
+map <F9> toggle_statusbar
+map <F6> exec "/home/rozetta/.local/bin/zathura-rice reload $DBUS"
+map <A-1> exec "/home/rozetta/.local/bin/zathura-rice profile rice $DBUS"
+map <A-2> exec "/home/rozetta/.local/bin/zathura-rice profile paper $DBUS"
+map <A-3> exec "/home/rozetta/.local/bin/zathura-rice profile warm $DBUS"
+map <A-0> exec "/home/rozetta/.local/bin/zathura-rice profile original $DBUS"
+
+# Personal overrides go last and are never generated.
+include custom

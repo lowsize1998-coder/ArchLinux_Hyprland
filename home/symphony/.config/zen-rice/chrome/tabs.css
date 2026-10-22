@@ -1,0 +1,27 @@
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  .tab-label {
+    font-family: var(--symphony-ui-font) !important;
+    font-size: var(--symphony-ui-size) !important;
+  }
+  .tab-background {
+    border-radius: var(--symphony-control-radius) !important;
+    box-shadow: none !important;
+  }
+  .tabbrowser-tab:not([selected]):hover .tab-background {
+    background: var(--symphony-hover) !important;
+  }
+  .tabbrowser-tab[selected] .tab-background {
+    background: var(--symphony-selected) !important;
+    border: 1px solid var(--symphony-border) !important;
+  }
+  .tabbrowser-tab[selected] .tab-label {
+    color: var(--symphony-fg) !important;
+    font-weight: 600 !important;
+  }
+  .tabbrowser-tab[zen-essential] .tab-background {
+    border-radius: var(--symphony-radius) !important;
+  }
+  .tabbrowser-tab[pinned] .tab-background {
+    background-color: var(--symphony-raised);
+  }
+}

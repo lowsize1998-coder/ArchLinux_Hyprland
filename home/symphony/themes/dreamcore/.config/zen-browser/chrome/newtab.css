@@ -1,0 +1,10 @@
+
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  /* Only the browser's empty tab, never a loaded website. */
+  :root[zen-has-empty-tab="true"] #tabbrowser-tabpanels,
+  :root[zen-has-empty-tab="true"] .browserSidebarContainer,
+  :root[zen-has-empty-tab="true"] .browserContainer,
+  :root[zen-has-empty-tab="true"] browser[type="content"] {
+    background: var(--dream-bg) !important;
+  }
+}

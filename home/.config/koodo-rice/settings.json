@@ -1,0 +1,14 @@
+{
+  "profile": "rice",
+  "fontFamily": "FreeSerif",
+  "fontSize": 24,
+  "lineHeight": 1.65,
+  "paragraphSpacing": 0.8,
+  "breakMinutes": 20,
+  "breakSeconds": 20,
+  "idleSeconds": 180,
+  "profiles": {
+    "paper": {"background": "#eee8dc", "foreground": "#292724"},
+    "warm": {"background": "#24211e", "foreground": "#e3d8c7"}
+  }
+}

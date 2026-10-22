@@ -1,0 +1,9 @@
+{
+  "source": "0.15.0",
+  "patches": [
+    "5013-native.patch",
+    "5043-native.patch"
+  ],
+  "apply": "passed",
+  "compiled_during_export": false
+}

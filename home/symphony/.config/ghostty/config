@@ -1,0 +1,31 @@
+# Colors from Symphony
+config-file = ?"~/.config/symphony/current/.config/ghostty/theme"
+
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-style = Regular
+font-size = 16
+
+# Window
+window-theme = ghostty
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface=false
+resize-overlay = never
+gtk-toolbar-style = flat
+
+# Opacity
+background-opacity = 0.95
+
+# Cursor styling
+cursor-style = "block"
+cursor-style-blink = true
+
+# Cursor styling + SSH session terminfo
+# (all shell integration options must be passed together)
+shell-integration-features = no-cursor,ssh-env
+
+# Mouse wheel scrolling; keep touchpad speed independent
+mouse-scroll-multiplier = discrete:3,precision:1
+
+command = /usr/bin/fish

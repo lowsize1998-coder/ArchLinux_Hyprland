@@ -1,0 +1,342 @@
+[
+  {
+    "desktop_file": "Alacritty.desktop",
+    "name": "Alacritty",
+    "exec": "alacritty"
+  },
+  {
+    "desktop_file": "AmneziaVPN.desktop",
+    "name": "AmneziaVPN",
+    "exec": "AmneziaVPN"
+  },
+  {
+    "desktop_file": "Happ.desktop",
+    "name": "Happ",
+    "exec": "/opt/happ/bin/Happ %f"
+  },
+  {
+    "desktop_file": "a2tools-dps-meter.desktop",
+    "name": "A2Tools DPS Meter",
+    "exec": "a2tools-dps-meter"
+  },
+  {
+    "desktop_file": "avahi-discover.desktop",
+    "name": "Avahi Zeroconf Browser",
+    "exec": "/usr/bin/avahi-discover"
+  },
+  {
+    "desktop_file": "bitwarden.desktop",
+    "name": "Bitwarden",
+    "exec": "bitwarden-desktop %u"
+  },
+  {
+    "desktop_file": "blueman-adapters.desktop",
+    "name": "Bluetooth Adapters",
+    "exec": "blueman-adapters"
+  },
+  {
+    "desktop_file": "blueman-manager.desktop",
+    "name": "Bluetooth Manager",
+    "exec": "blueman-manager"
+  },
+  {
+    "desktop_file": "bssh.desktop",
+    "name": "Avahi SSH Server Browser",
+    "exec": "/usr/bin/bssh"
+  },
+  {
+    "desktop_file": "btop.desktop",
+    "name": "btop++",
+    "exec": "btop"
+  },
+  {
+    "desktop_file": "bvnc.desktop",
+    "name": "Avahi VNC Server Browser",
+    "exec": "/usr/bin/bvnc"
+  },
+  {
+    "desktop_file": "chromium.desktop",
+    "name": "Chromium",
+    "exec": "/usr/bin/chromium %U"
+  },
+  {
+    "desktop_file": "com.mitchellh.ghostty.desktop",
+    "name": "Ghostty",
+    "exec": "/usr/bin/ghostty --gtk-single-instance=true"
+  },
+  {
+    "desktop_file": "dev.zed.Zed.desktop",
+    "name": "Zed",
+    "exec": "zeditor %U"
+  },
+  {
+    "desktop_file": "discord.desktop",
+    "name": "Discord",
+    "exec": "/usr/bin/discord --url -- %u"
+  },
+  {
+    "desktop_file": "htop.desktop",
+    "name": "Htop",
+    "exec": "htop"
+  },
+  {
+    "desktop_file": "input-remapper-gtk.desktop",
+    "name": "Input Remapper",
+    "exec": "input-remapper-gtk"
+  },
+  {
+    "desktop_file": "kitty.desktop",
+    "name": "kitty",
+    "exec": "kitty"
+  },
+  {
+    "desktop_file": "kvantummanager.desktop",
+    "name": "Kvantum Manager",
+    "exec": "kvantummanager"
+  },
+  {
+    "desktop_file": "libreoffice-base.desktop",
+    "name": "LibreOffice Base",
+    "exec": "libreoffice --base %U"
+  },
+  {
+    "desktop_file": "libreoffice-calc.desktop",
+    "name": "LibreOffice Calc",
+    "exec": "libreoffice --calc %U"
+  },
+  {
+    "desktop_file": "libreoffice-draw.desktop",
+    "name": "LibreOffice Draw",
+    "exec": "libreoffice --draw %U"
+  },
+  {
+    "desktop_file": "libreoffice-impress.desktop",
+    "name": "LibreOffice Impress",
+    "exec": "libreoffice --impress %U"
+  },
+  {
+    "desktop_file": "libreoffice-math.desktop",
+    "name": "LibreOffice Math",
+    "exec": "libreoffice --math %U"
+  },
+  {
+    "desktop_file": "libreoffice-startcenter.desktop",
+    "name": "LibreOffice",
+    "exec": "libreoffice %U"
+  },
+  {
+    "desktop_file": "libreoffice-writer.desktop",
+    "name": "LibreOffice Writer",
+    "exec": "libreoffice --writer %U"
+  },
+  {
+    "desktop_file": "localsend.desktop",
+    "name": "LocalSend",
+    "exec": "localsend %U"
+  },
+  {
+    "desktop_file": "lstopo.desktop",
+    "name": "Hardware Locality lstopo",
+    "exec": "lstopo"
+  },
+  {
+    "desktop_file": "mattermost-desktop.desktop",
+    "name": "Mattermost",
+    "exec": "mattermost-desktop %U"
+  },
+  {
+    "desktop_file": "mpv.desktop",
+    "name": "mpv Media Player",
+    "exec": "mpv --player-operation-mode=pseudo-gui -- %U"
+  },
+  {
+    "desktop_file": "nm-connection-editor.desktop",
+    "name": "Advanced Network Configuration",
+    "exec": "nm-connection-editor"
+  },
+  {
+    "desktop_file": "nvim.desktop",
+    "name": "Neovim",
+    "exec": "nvim %F"
+  },
+  {
+    "desktop_file": "nwg-look.desktop",
+    "name": "GTK Settings",
+    "exec": "nwg-look"
+  },
+  {
+    "desktop_file": "obsidian.desktop",
+    "name": "Obsidian",
+    "exec": "/usr/bin/obsidian %U"
+  },
+  {
+    "desktop_file": "org.gnome.Nautilus.desktop",
+    "name": "Files",
+    "exec": "nautilus --new-window %U"
+  },
+  {
+    "desktop_file": "org.kde.dolphin.desktop",
+    "name": "Dolphin",
+    "exec": "dolphin %u"
+  },
+  {
+    "desktop_file": "org.kde.kdeconnect.app.desktop",
+    "name": "KDE Connect",
+    "exec": "kdeconnect-app"
+  },
+  {
+    "desktop_file": "org.kde.kdeconnect.nonplasma.desktop",
+    "name": "KDE Connect Indicator",
+    "exec": "kdeconnect-indicator"
+  },
+  {
+    "desktop_file": "org.kde.kdeconnect.sms.desktop",
+    "name": "KDE Connect SMS",
+    "exec": "kdeconnect-sms"
+  },
+  {
+    "desktop_file": "org.pulseaudio.pavucontrol.desktop",
+    "name": "Volume Control",
+    "exec": "pavucontrol"
+  },
+  {
+    "desktop_file": "org.pwmt.zathura.desktop",
+    "name": "Zathura",
+    "exec": "zathura %U"
+  },
+  {
+    "desktop_file": "org.telegram.desktop.desktop",
+    "name": "Telegram",
+    "exec": "Telegram -- %U"
+  },
+  {
+    "desktop_file": "qt6ct.desktop",
+    "name": "Qt6 Settings",
+    "exec": "qt6ct"
+  },
+  {
+    "desktop_file": "qv4l2.desktop",
+    "name": "Qt V4L2 test Utility",
+    "exec": "qv4l2"
+  },
+  {
+    "desktop_file": "qvidcap.desktop",
+    "name": "Qt V4L2 video capture utility",
+    "exec": "qvidcap"
+  },
+  {
+    "desktop_file": "rmpc.desktop",
+    "name": "rmpc",
+    "exec": "rmpc"
+  },
+  {
+    "desktop_file": "rofi-theme-selector.desktop",
+    "name": "Rofi Theme Selector",
+    "exec": "rofi-theme-selector"
+  },
+  {
+    "desktop_file": "rofi.desktop",
+    "name": "Rofi",
+    "exec": "rofi -show"
+  },
+  {
+    "desktop_file": "spotify-launcher.desktop",
+    "name": "Spotify (Launcher)",
+    "exec": "spotify-launcher %U"
+  },
+  {
+    "desktop_file": "steam.desktop",
+    "name": "Steam",
+    "exec": "/usr/bin/steam %U"
+  },
+  {
+    "desktop_file": "uuctl.desktop",
+    "name": "uuctl",
+    "exec": "uuctl"
+  },
+  {
+    "desktop_file": "vim.desktop",
+    "name": "Vim",
+    "exec": "vim %F"
+  },
+  {
+    "desktop_file": "wiremix.desktop",
+    "name": "Wiremix",
+    "exec": "wiremix"
+  },
+  {
+    "desktop_file": "xgps.desktop",
+    "name": "xgps",
+    "exec": "xgps"
+  },
+  {
+    "desktop_file": "xgpsspeed.desktop",
+    "name": "xgpsspeed",
+    "exec": "xgpsspeed"
+  },
+  {
+    "desktop_file": "yazi.desktop",
+    "name": "Yazi File Manager",
+    "exec": "yazi %f"
+  },
+  {
+    "desktop_file": "AION 2.desktop",
+    "name": "AION 2",
+    "exec": "steam steam://rungameid/3393110"
+  },
+  {
+    "desktop_file": "Dota 2.desktop",
+    "name": "Dota 2",
+    "exec": "steam steam://rungameid/570"
+  },
+  {
+    "desktop_file": "Happ.desktop",
+    "name": "Happ",
+    "exec": "/home/rozetta/.local/bin/happ-dreamcore %f"
+  },
+  {
+    "desktop_file": "dota2-mod-manager.desktop",
+    "name": "Dota 2 Mod Manager",
+    "exec": "\"/home/rozetta/.local/opt/dota2-mod-manager/Dota-2-Mod-Manager.AppImage\" %u"
+  },
+  {
+    "desktop_file": "dreamcore-spotify-mini.desktop",
+    "name": "Spotify Mini",
+    "exec": "/home/rozetta/.local/bin/spotify-mini"
+  },
+  {
+    "desktop_file": "koodo-rice.desktop",
+    "name": "Koodo Reader · Symphony",
+    "exec": "/home/rozetta/.local/bin/koodo-rice %F"
+  },
+  {
+    "desktop_file": "org.pwmt.zathura.desktop",
+    "name": "Zathura · Symphony",
+    "exec": "/home/rozetta/.local/bin/zathura-rice launch %F"
+  },
+  {
+    "desktop_file": "spotify-qt.desktop",
+    "name": "Spotify Qt",
+    "exec": "/home/rozetta/.local/bin/spotify-qt"
+  },
+  {
+    "desktop_file": "waybar-display-mode.desktop",
+    "name": "Waybar Appearance",
+    "exec": "/home/rozetta/.local/bin/waybar-mode-menu"
+  },
+  {
+    "desktop_file": "yazi.desktop",
+    "name": "Yazi File Manager",
+    "exec": "/home/rozetta/.local/bin/yazi-open %f"
+  },
+  {
+    "desktop_file": "zaread.desktop",
+    "name": "Zaread · Dreamcore",
+    "exec": "/home/rozetta/.local/bin/zaread-open %f"
+  },
+  {
+    "desktop_file": "zen.desktop",
+    "name": "Zen Browser",
+    "exec": "/home/rozetta/.tarball-installations/zen/zen %u"
+  }
+]

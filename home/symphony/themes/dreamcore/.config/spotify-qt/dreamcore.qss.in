@@ -1,0 +1,95 @@
+/* Generated from Dreamcore palette.json and derived.json; edit this template. */
+
+/* Canvas and readable text. */
+QWidget {
+    color: ${text};
+    font-family: "Noto Sans";
+    font-size: 14px;
+    selection-background-color: ${selection};
+    selection-color: ${ink};
+}
+QMainWindow, MainWindow, QDialog, QTabWidget::pane {
+    background-color: ${background};
+}
+QLabel { background-color: transparent; }
+QWidget:disabled { color: ${dim_text_on_blue}; }
+
+/* Library and tracks: blue canvas, soft selection, no alternating stripes. */
+QAbstractItemView, QTextEdit, QTextBrowser {
+    background-color: ${background};
+    alternate-background-color: ${background};
+    border: none;
+    outline: none;
+}
+QAbstractItemView::item { min-height: 28px; padding: 3px 6px; }
+QAbstractItemView::item:hover { background-color: ${panel}; color: ${ink}; }
+QAbstractItemView::item:selected { background-color: ${selection}; color: ${ink}; }
+QAbstractItemView::item:disabled { color: ${dim_text_on_blue}; }
+QHeaderView::section {
+    background-color: ${panel}; color: ${ink};
+    border: none; padding: 7px 8px;
+}
+QTableCornerButton::section { background-color: ${panel}; border: none; }
+QGroupBox {
+    border: 1px solid ${secondary_accent}; border-radius: 8px;
+    margin-top: 12px; padding: 12px;
+}
+QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 5px; }
+
+/* Text inputs and buttons have a dark foreground on pastel surfaces. */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    background-color: ${panel}; color: ${ink};
+    selection-background-color: ${selection}; selection-color: ${ink};
+    border: 1px solid ${border}; border-radius: 7px;
+    padding: 6px 8px; min-height: 22px;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus { border-color: ${accent}; }
+QLineEdit:disabled, QComboBox:disabled { color: ${dim_text}; }
+QComboBox QAbstractItemView { background-color: ${popup}; color: ${ink}; }
+QPushButton {
+    background-color: ${panel}; color: ${ink};
+    border: 1px solid ${border}; border-radius: 7px;
+    padding: 7px 12px; min-height: 22px;
+}
+QPushButton:hover { background-color: ${selection}; }
+QPushButton:pressed, QPushButton:checked { background-color: ${secondary_accent}; }
+QPushButton:default { border: 2px solid ${accent}; }
+QPushButton:disabled { background-color: ${panel}; color: ${dim_text}; }
+
+/* Playback controls keep a blue surface for the bundled light icons. */
+QToolBar, MainToolBar { background-color: ${background}; border: none; padding: 6px; }
+QToolButton { background-color: transparent; border: none; border-radius: 6px; padding: 5px; }
+QToolButton:hover, QToolButton:checked { background-color: ${dim_text}; }
+QTabBar::tab {
+    background-color: ${background}; color: ${secondary_text};
+    border: none; padding: 8px 12px;
+}
+QTabBar::tab:selected { background-color: ${selection}; color: ${ink}; border-radius: 6px; }
+QTabBar::tab:hover:!selected { color: ${text}; }
+QStatusBar { background-color: ${background}; color: ${secondary_text}; }
+
+/* Green context menus, pastel selection, tooltips with enough contrast. */
+QMenu, QToolTip {
+    background-color: ${popup}; color: ${ink};
+    border: 1px solid ${border}; border-radius: 8px; padding: 6px;
+}
+QMenu::item { padding: 7px 22px; border-radius: 5px; }
+QMenu::item:selected { background-color: ${selection}; color: ${ink}; }
+QMenu::item:disabled { color: ${dim_text}; }
+QMenu::separator { height: 1px; background-color: ${dim_text}; margin: 5px 10px; }
+
+/* Sliders and scrollbars use static styling, with no background effects. */
+QSlider::groove:horizontal { height: 5px; background-color: ${dim_text}; border-radius: 2px; }
+QSlider::sub-page:horizontal { background-color: ${secondary_accent}; border-radius: 2px; }
+QSlider::handle:horizontal {
+    background-color: ${panel}; border: 1px solid ${border};
+    width: 12px; margin: -4px 0; border-radius: 6px;
+}
+QScrollBar:vertical { background: transparent; width: 10px; margin: 0; }
+QScrollBar:horizontal { background: transparent; height: 10px; margin: 0; }
+QScrollBar::handle { background-color: ${secondary_accent}; border-radius: 4px; min-height: 24px; min-width: 24px; }
+QScrollBar::add-line, QScrollBar::sub-line { height: 0; width: 0; }
+QScrollBar::add-page, QScrollBar::sub-page { background: transparent; }
+QSplitter::handle { background-color: ${background}; width: 5px; }
+QProgressBar { border: 1px solid ${secondary_accent}; border-radius: 5px; text-align: center; }
+QProgressBar::chunk { background-color: ${accent}; border-radius: 4px; }

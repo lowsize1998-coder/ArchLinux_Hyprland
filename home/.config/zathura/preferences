@@ -1,0 +1,17 @@
+# Generated from settings.json
+set font "Adwaita Sans 12"
+set guioptions "s"
+set adjust-open "width"
+set pages-per-row 1
+set page-v-padding 16
+set page-h-padding 16
+set scroll-step 55
+set scroll-full-overlap 0.15
+set zoom-step 10
+set selection-clipboard "clipboard"
+set window-title-basename true
+set window-title-page true
+set statusbar-basename true
+set incremental-search true
+set statusbar-h-padding 12
+set statusbar-v-padding 5

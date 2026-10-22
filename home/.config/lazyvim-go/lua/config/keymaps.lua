@@ -1,0 +1,1 @@
+-- Add personal mappings here after learning the default LazyVim keys.

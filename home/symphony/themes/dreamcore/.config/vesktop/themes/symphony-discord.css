@@ -1,0 +1,3 @@
+
+/* Native CSS tokens only; no remote theme framework. */
+.theme-dark { --background-primary: #194B66; --background-secondary: #194B66; --background-tertiary: #194B66; --background-floating: #86AD31; --text-normal: #FAEEBA; --text-muted: #C7D5EF; --header-primary: #FAEEBA; --interactive-normal: #FAEEBA; --brand-experiment: #9381C5; }

@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.lua text eol=lf
+*.css text eol=lf
+*.service text eol=lf
+*.target text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.odt binary
+*.so binary

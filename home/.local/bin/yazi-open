@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+folder="${1:-$HOME}"
+exec /usr/bin/ghostty --working-directory="$folder" -e /usr/bin/yazi "$folder"

@@ -1,0 +1,171 @@
+# Symphony by vyrx
+# Theme: Rose Pine
+# https://github.com/vyrx-dev
+
+# : Manager [[[
+
+[mgr]
+cwd = { fg = "#e0def4" }
+
+# Find
+find_keyword = { fg = "#ebbcba", bold = true, italic = true, underline = true }
+find_position = { fg = "#ebbcba", bold = true, italic = true }
+
+# Marker
+marker_copied = { fg = "#9ccfd8", bg = "#9ccfd8" }
+marker_cut = { fg = "#eb6f92", bg = "#eb6f92" }
+marker_marked = { fg = "#f6c177", bg = "#f6c177" }
+marker_selected = { fg = "#c4a7e7", bg = "#c4a7e7" }
+
+# Count
+count_copied = { fg = "#191724", bg = "#9ccfd8" }
+count_cut = { fg = "#191724", bg = "#eb6f92" }
+count_selected = { fg = "#191724", bg = "#c4a7e7" }
+
+# Border
+border_symbol = " "
+border_style  = { fg = "#c4a7e7" }
+
+# : ]]]
+
+
+# : Status [[[
+
+[status]
+sep_left = { open = "", close = "🭠" }
+sep_right = { open = "🭁", close = "" }
+
+# Permissions
+perm_type = { fg = "#9ccfd8" }
+perm_read = { fg = "#31748f" }
+perm_write = { fg = "#f6c177" }
+perm_exec = { fg = "#eb6f92" }
+perm_sep = { fg = "#c4a7e7" }
+
+# Progress
+progress_label = { bold = true }
+progress_normal = { fg = "#c4a7e7", bg = "#26233a" }
+progress_error = { fg = "#eb6f92", bg = "#26233a" }
+
+[mode]
+# Mode
+normal_main = { bg = "#c4a7e7", fg = "#191724", bold = true }
+normal_alt  = { bg = "#26233a", fg = "#e0def4" }
+
+# Select mode
+select_main = { bg = "#ebbcba", fg = "#191724", bold = true }
+select_alt  = { bg = "#26233a", fg = "#e0def4" }
+
+# Unset mode
+unset_main = { bg = "#9ccfd8", fg = "#191724", bold = true }
+unset_alt  = { bg = "#26233a", fg = "#e0def4" }
+
+# : ]]]
+
+
+# : Select [[[
+
+[select]
+border = { fg = "#c4a7e7" }
+active = { fg = "#9ccfd8", bold = true }
+
+# : ]]]
+
+
+# : Input [[[
+
+[input]
+border = { fg = "#c4a7e7" }
+value = { fg = "#e0def4" }
+
+# : ]]]
+
+# : Tabs [[[
+
+[tabs]
+active = { fg = "#c4a7e7", bold = true, bg = "#191724" }
+inactive = { fg = "#6e6a86", bg = "#191724" }
+sep_inner = { open = "[", close = "]" }
+
+# : ]]]
+
+
+# : Completion [[[
+
+[cmp]
+border = { fg = "#c4a7e7", bg = "#26233a" }
+
+# : ]]]
+
+
+# : Tasks [[[
+
+[tasks]
+border = { fg = "#c4a7e7" }
+title = {}
+hovered = { fg = "#ebbcba", underline = true }
+
+# : ]]]
+
+
+# : Which [[[
+
+[which]
+cols = 3
+mask = { bg = "#26233a" }
+cand = { fg = "#c4a7e7" }
+rest = { fg = "#6e6a86" }
+desc = { fg = "#e0def4" }
+separator = " ▶ "
+separator_style = { fg = "#e0def4" }
+
+# : ]]]
+
+
+# : Help [[[
+
+[help]
+on = { fg = "#e0def4" }
+run = { fg = "#e0def4" }
+footer = { fg = "#191724", bg = "#ebbcba" }
+
+# : ]]]
+
+
+# : Notify [[[
+
+[notify]
+title_info = { fg = "#9ccfd8" }
+title_warn = { fg = "#f6c177" }
+title_error = { fg = "#eb6f92" }
+
+# : ]]]
+
+
+# : File-specific styles [[[
+
+[filetype]
+
+rules = [
+    # Images
+    { mime = "image/*", fg = "#9ccfd8" },
+
+    # Media
+    { mime = "{audio,video}/*", fg = "#f6c177" },
+
+    # Archives
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#c4a7e7" },
+
+    # Documents
+    { mime = "application/{pdf,doc,rtf}", fg = "#31748f" },
+
+    # Special files
+    { url = "*", is = "orphan", bg = "#eb6f92" },
+    { url = "*", is = "exec", fg = "#e0def4" },
+
+    # Fallback
+    { url = "*", fg = "#e0def4" },
+    { url = "*/", fg = "#c4a7e7" },
+]
+
+# : ]]]

@@ -1,0 +1,134 @@
+/* Native Obsidian controls, with one quiet surface across the workspace. */
+body.theme-dark,
+body.theme-light {
+  color-scheme: dark;
+  --color-base-00: var(--dream-bg);
+  --color-base-05: var(--dream-bg);
+  --color-base-10: var(--dream-surface);
+  --color-base-20: var(--dream-surface);
+  --color-base-25: var(--dream-hover);
+  --color-base-30: var(--dream-border);
+  --color-base-35: var(--dream-border);
+  --color-base-40: var(--dream-muted);
+  --color-base-50: var(--dream-muted);
+  --color-base-60: var(--dream-secondary);
+  --color-base-70: var(--dream-secondary);
+  --color-base-100: var(--dream-text);
+  --background-primary: var(--dream-bg);
+  --background-primary-alt: var(--dream-bg);
+  --background-secondary: var(--dream-bg);
+  --background-secondary-alt: var(--dream-bg);
+  --background-modifier-hover: var(--dream-hover);
+  --background-modifier-active-hover: var(--dream-hover);
+  --background-modifier-border: var(--dream-border);
+  --background-modifier-border-hover: var(--dream-muted);
+  --background-modifier-border-focus: var(--dream-accent);
+  --background-modifier-form-field: var(--dream-surface);
+  --background-modifier-box-shadow: #00000024;
+  --background-modifier-cover: #07172299;
+  --background-modifier-error: color-mix(in srgb, var(--dream-error) 15%, var(--dream-bg));
+  --background-modifier-error-hover: color-mix(in srgb, var(--dream-error) 25%, var(--dream-bg));
+  --background-modifier-success: color-mix(in srgb, var(--dream-success) 15%, var(--dream-bg));
+  --text-normal: var(--dream-text);
+  --text-muted: var(--dream-secondary);
+  --text-faint: var(--dream-muted);
+  --text-on-accent: var(--dream-ink);
+  --text-on-accent-inverted: var(--dream-ink);
+  --text-accent: var(--dream-accent);
+  --text-accent-hover: var(--dream-pink);
+  --text-error: var(--dream-error);
+  --text-success: var(--dream-success);
+  --text-warning: var(--dream-warning);
+  --text-selection: color-mix(in srgb, var(--dream-selection) 24%, transparent);
+  --text-highlight-bg: var(--dream-selection);
+  --text-highlight-bg-active: var(--dream-warning);
+  --interactive-normal: var(--dream-surface);
+  --interactive-hover: var(--dream-hover);
+  --interactive-accent: var(--dream-accent);
+  --interactive-accent-hover: var(--dream-pink);
+  --interactive-success: var(--dream-success);
+  --color-accent: var(--dream-accent);
+  --color-accent-1: var(--dream-accent);
+  --color-accent-2: var(--dream-pink);
+  --color-red: var(--dream-error);
+  --color-orange: #F59127;
+  --color-yellow: var(--dream-warning);
+  --color-green: var(--dream-success);
+  --color-cyan: var(--dream-teal);
+  --color-blue: var(--dream-info);
+  --color-purple: var(--dream-accent);
+  --color-pink: var(--dream-pink);
+  --icon-color: var(--dream-secondary);
+  --icon-color-hover: var(--dream-text);
+  --icon-color-active: var(--dream-text);
+  --icon-color-focused: var(--dream-accent);
+  --nav-item-color: var(--dream-secondary);
+  --nav-item-color-hover: var(--dream-text);
+  --nav-item-color-active: var(--dream-text);
+  --nav-item-background-hover: var(--dream-hover);
+  --nav-item-background-active: var(--dream-hover);
+  --nav-item-padding: 5px 9px;
+  --nav-indentation-guide-color: var(--dream-border);
+  --tab-container-background: var(--dream-bg);
+  --tab-background-active: var(--dream-hover);
+  --tab-outline-width: 0px;
+  --tab-divider-color: transparent;
+  --tab-text-color: var(--dream-muted);
+  --tab-text-color-active: var(--dream-secondary);
+  --tab-text-color-focused: var(--dream-secondary);
+  --tab-text-color-focused-active: var(--dream-text);
+  --tab-text-color-focused-active-current: var(--dream-text);
+  --titlebar-background: var(--dream-bg);
+  --titlebar-background-focused: var(--dream-bg);
+  --titlebar-text-color: var(--dream-secondary);
+  --titlebar-text-color-focused: var(--dream-text);
+  --titlebar-border-width: 0px;
+  --header-height: 38px;
+  --status-bar-background: var(--dream-bg);
+  --status-bar-text-color: var(--dream-muted);
+  --status-bar-border-width: 0px;
+  --status-bar-font-size: 11px;
+  --divider-color: var(--dream-border);
+  --divider-width: 1px;
+  --divider-color-hover: var(--dream-accent);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--dream-teal) 32%, transparent);
+  --scrollbar-active-thumb-bg: var(--dream-teal);
+  --modal-background: var(--dream-surface);
+  --menu-background: var(--dream-surface);
+  --prompt-background: var(--dream-surface);
+  --search-result-background: var(--dream-bg);
+  --search-result-background-hover: var(--dream-hover);
+  --checkbox-color: var(--dream-teal);
+  --checkbox-color-hover: var(--dream-selection);
+  --checkbox-marker-color: var(--dream-ink);
+  --slider-thumb-color: var(--dream-selection);
+  --slider-track-background: var(--dream-hover);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+  --radius-s: 5px;
+  --radius-m: 8px;
+  --radius-l: 10px;
+}
+
+.workspace-tab-header-inner {
+  box-shadow: none;
+}
+
+.workspace-leaf-content[data-type="markdown"] .view-header {
+  background: var(--dream-bg);
+  border-bottom: 0;
+}
+
+.status-bar {
+  opacity: 0.8;
+}
+
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  color: var(--dream-ink);
+  background-color: var(--dream-selection);
+  box-shadow: none;
+  border-radius: 3px;
+  padding-inline: 0.12em;
+}

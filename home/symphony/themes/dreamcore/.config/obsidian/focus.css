@@ -1,0 +1,49 @@
+/* @settings
+name: Dreamcore
+id: dreamcore
+settings:
+  - id: dreamcore-focus
+    title: Dreamcore Focus
+    description: "Только активная заметка. Ctrl+Alt+F возвращает панели и вкладки."
+    type: class-toggle
+    default: false
+    addCommand: true
+*/
+
+/* Scope focus to a Markdown pane. Switching to a graph or canvas restores chrome. */
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  :is(.mod-sidedock, .workspace-ribbon, .titlebar, .status-bar,
+      .mod-root .workspace-tab-header-container, .mod-root .view-header,
+      .mod-root .sidebar-toggle-button) {
+  display: none !important;
+}
+
+/* Do not close other notes: hide only groups and leaves outside the active path. */
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root :is(.workspace-split, .workspace-tabs):not(:has(.workspace-leaf.mod-active)),
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root .workspace-leaf:not(.mod-active),
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .workspace-split.mod-root .workspace-leaf-resize-handle {
+  display: none !important;
+}
+
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root :is(.workspace-split, .workspace-tabs):has(.workspace-leaf.mod-active),
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root .workspace-leaf.mod-active {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform: none !important;
+}
+
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .workspace-leaf.mod-active :is(.metadata-container, .embedded-backlinks) {
+  display: none !important;
+}
+
+body.dreamcore-focus {
+  --file-margins: 48px;
+}

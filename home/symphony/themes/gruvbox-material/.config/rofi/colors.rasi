@@ -1,0 +1,46 @@
+/**
+ * ════════════════════════════════════════════════════════
+ *   Symphony by https://github.com/vyrx-dev
+ *   Theme: Gruvbox Material
+ * ════════════════════════════════════════════════════════
+ */
+
+* {
+    /* Primary accent color (using cyan/green as primary) */
+    primary: #89b482;
+    primary-container: #7daea3;
+    on-primary: #111313;
+    on-primary-container: #ddc7a1;
+    
+    /* Secondary accent */
+    secondary: #d3869b;
+    secondary-container: #32302f;
+    on-secondary: #111313;
+    on-secondary-container: #ddc7a1;
+    
+    /* Surface backgrounds (progressively lighter) */
+    surface: #111313;
+    surface-dim: #111313;
+    surface-bright: #32302f;
+    surface-container-lowest: #111313;
+    surface-container-low: #111313;
+    surface-container: #32302f;
+    surface-container-high: #32302f;
+    surface-container-highest: #32302f;
+    
+    /* Text colors */
+    on-surface: #ddc7a1;
+    on-surface-variant: #d4be98;
+    
+    /* Outline/border colors */
+    outline: #32302f;
+    outline-variant: #32302f;
+    
+    /* Error colors */
+    error: #ea6962;
+    on-error: #111313;
+    
+    /* Inverse colors */
+    inverse-surface: #ddc7a1;
+    inverse-on-surface: #111313;
+}

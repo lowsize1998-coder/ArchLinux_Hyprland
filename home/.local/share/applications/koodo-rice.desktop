@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Koodo Reader · Symphony
+Comment=Книги с оформлением Symphony и напоминаниями о перерывах
+Exec=/home/rozetta/.local/bin/koodo-rice %F
+TryExec=/home/rozetta/.local/share/koodo-rice/current/koodo-reader
+Icon=accessories-ebook-reader
+Terminal=false
+Categories=Office;Viewer;
+MimeType=application/pdf;application/epub+zip;application/x-fictionbook+xml;application/x-mobipocket-ebook;application/vnd.amazon.ebook;application/vnd.comicbook+zip;application/vnd.comicbook-rar;
+StartupWMClass=koodo-reader

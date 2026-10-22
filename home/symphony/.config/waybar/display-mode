@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+"""Switch Waybar geometry without changing theme files or module settings."""
+import argparse
+import fcntl
+import json
+import os
+from pathlib import Path
+import re
+import subprocess
+
+CONFIG = Path.home() / '.config/waybar'
+STATE = Path(os.environ.get('XDG_STATE_HOME', Path.home() / '.local/state')) / 'waybar-display'
+SERVICE = 'symphony-waybar.service'
+
+
+def current_mode():
+    return (STATE / 'mode').read_text().strip() if (STATE / 'mode').exists() else 'islands'
+
+
+def write_atomic(path, text):
+    temporary = path.with_suffix(path.suffix + '.tmp')
+    temporary.write_text(text)
+    temporary.replace(path)
+
+
+def load_config():
+    text = (CONFIG / 'config.jsonc').read_text()
+    # Preserve quoted strings (including URLs), remove JSONC comments and commas.
+    string = r'"(?:\\.|[^"\\])*"'
+    text = re.sub('(' + string + r')|//[^\n]*|/\*[\s\S]*?\*/',
+                  lambda match: match.group(1) or ' ', text)
+    text = re.sub('(' + string + r')|,(?=\s*[}\]])',
+                  lambda match: match.group(1) or '', text)
+    return json.loads(text)
+
+
+def generate(mode):
+    config = load_config()
+    bars = config if isinstance(config, list) else [config]
+    if mode == 'strip':
+        for bar in bars:
+            bar['margin-top'] = 0
+            bar['margin-bottom'] = 0
+            bar['margin-left'] = 0
+            bar['margin-right'] = 0
+    write_atomic(STATE / 'config.jsonc', json.dumps(config, ensure_ascii=False, indent=2) + '\n')
+    css = '@import url(' + json.dumps(str(CONFIG / 'style.css')) + ');\n'
+    if mode == 'strip':
+        css += '@import url(' + json.dumps(str(CONFIG / 'display-modes/strip.css')) + ');\n'
+    write_atomic(STATE / 'style.css', css)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('action', nargs='?', default='toggle',
+                        choices=('toggle', 'islands', 'strip', 'status', 'run'))
+    parser.add_argument('binary', nargs='?')
+    args = parser.parse_args()
+    STATE.mkdir(parents=True, exist_ok=True)
+    with (STATE / 'mode.lock').open('w') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        mode = current_mode()
+        if args.action == 'status':
+            print(mode)
+            return
+        if args.action == 'run':
+            if not args.binary:
+                parser.error('run requires the Waybar binary path')
+            generate(mode)
+        else:
+            mode = ('strip' if mode == 'islands' else 'islands') if args.action == 'toggle' else args.action
+            # Validate the source before saving the selection or restarting Waybar.
+            load_config()
+            write_atomic(STATE / 'mode', mode + '\n')
+    if args.action == 'run':
+        os.execv(args.binary, [args.binary, '-c', str(STATE / 'config.jsonc'), '-s', str(STATE / 'style.css')])
+    else:
+        if subprocess.run(['systemctl', '--user', 'is-active', '--quiet', SERVICE]).returncode == 0:
+            subprocess.run(['systemctl', '--user', 'restart', SERVICE], check=True)
+        print(mode)
+
+
+if __name__ == '__main__':
+    main()

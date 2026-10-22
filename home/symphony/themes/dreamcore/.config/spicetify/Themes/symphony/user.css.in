@@ -1,0 +1,231 @@
+/* Dreamcore for the official Spotify client.
+ * Generated from palette.json / derived.json. Static CSS; no remote assets.
+ */
+
+/* Shared theme colors and the default blue canvas. */
+:root {
+    --dream-blue: ${background};
+    --dream-pink: ${panel};
+    --dream-cream: ${text};
+    --dream-muted: ${secondary_text};
+    --dream-ink: ${ink};
+    --dream-menu: ${popup};
+    --dream-selection: ${selection};
+    --dream-lavender: ${accent};
+    --dream-teal: ${secondary_accent};
+    --dream-border: ${border};
+}
+body, input, button, [class*="encore-text"] {
+    font-family: "Noto Sans", sans-serif !important;
+}
+body, .Root__top-container, .Root__main-view, .main-view-container,
+.Root__right-sidebar, .main-nowPlayingView-container {
+    background-color: var(--dream-blue) !important;
+}
+.encore-dark-theme {
+    --background-base: var(--dream-blue);
+    --background-highlight: var(--dream-blue);
+    --background-press: var(--dream-blue);
+    --background-elevated-base: var(--dream-blue);
+    --background-elevated-highlight: var(--dream-blue);
+    --background-tinted-base: var(--dream-blue);
+    --background-tinted-highlight: var(--dream-blue);
+    --text-base: var(--dream-cream);
+    --text-subdued: var(--dream-muted);
+    --text-bright-accent: ${accent_on_blue};
+    --essential-base: var(--dream-cream);
+    --essential-subdued: var(--dream-muted);
+    --essential-bright-accent: var(--dream-teal);
+}
+.Root__main-view, .Root__nav-bar, .Root__right-sidebar {
+    border-radius: 12px !important;
+}
+
+/* Controls use the same blue canvas and readable cream foreground. */
+.encore-dark-theme :is(.encore-inverted-set, .encore-inverted-light-set,
+.encore-bright-accent-set) {
+    --background-base: var(--dream-blue);
+    --background-highlight: var(--dream-blue);
+    --background-press: var(--dream-blue);
+    --text-base: var(--dream-cream);
+    --text-subdued: var(--dream-muted);
+    --essential-base: var(--dream-cream);
+    --essential-subdued: var(--dream-muted);
+    --parents-essential-base: var(--dream-cream);
+    color: var(--dream-cream) !important;
+}
+.encore-dark-theme :is(.encore-inverted-set, .encore-inverted-light-set,
+.encore-bright-accent-set) > * {
+    --parents-essential-base: var(--dream-cream);
+    color: var(--dream-cream) !important;
+}
+
+/* Library, navigation and playback share the central blue shade. */
+.Root__nav-bar, .Root__globalNav, .Root__now-playing-bar,
+.main-yourLibraryX-library, .main-yourLibraryX-libraryContainer,
+.main-nowPlayingBar-container, .main-nowPlayingBar-nowPlayingBar {
+    background-color: var(--dream-blue) !important;
+    color: var(--dream-cream) !important;
+}
+:is(.Root__nav-bar, .Root__globalNav, .Root__now-playing-bar),
+:is(.Root__nav-bar, .Root__globalNav, .Root__now-playing-bar) .encore-dark-theme {
+    --background-base: var(--dream-blue);
+    --background-elevated-base: var(--dream-blue);
+    --background-highlight: var(--dream-blue);
+    --background-elevated-highlight: var(--dream-blue);
+    --background-press: var(--dream-blue);
+    --background-tinted-base: var(--dream-blue);
+    --background-tinted-highlight: var(--dream-blue);
+    --text-base: var(--dream-cream);
+    --text-subdued: var(--dream-muted);
+    --text-bright-accent: var(--dream-teal);
+    --essential-base: var(--dream-cream);
+    --essential-subdued: var(--dream-muted);
+    --essential-bright-accent: var(--dream-teal);
+}
+:is(.Root__nav-bar, .Root__globalNav, .Root__now-playing-bar)
+:is(a, button, p, span, svg) { color: var(--dream-cream) !important; }
+.Root__nav-bar [aria-selected="true"] {
+    background-color: var(--dream-blue) !important;
+    box-shadow: inset 0 0 0 1px var(--dream-teal);
+}
+.main-globalNav-searchInputContainer, .main-globalNav-searchInputContainer input {
+    background-color: var(--dream-blue) !important;
+    color: var(--dream-cream) !important;
+    border: 1px solid var(--dream-teal);
+    border-radius: 999px !important;
+}
+.main-globalNav-searchInputWrapper, .main-globalNav-searchInputText {
+    background-color: transparent !important;
+    color: var(--dream-cream) !important;
+}
+.main-globalNav-searchInputContainer input::placeholder { color: var(--dream-muted) !important; }
+.main-globalNav-searchInputContainer input { border: none !important; }
+.Root__now-playing-bar {
+    border-radius: 12px !important;
+    border-top: 1px solid var(--dream-border) !important;
+}
+.Root__now-playing-bar .progress-bar {
+    --bg-color: var(--dream-teal);
+    --fg-color: var(--dream-cream);
+    --is-active-fg-color: var(--dream-cream);
+}
+
+/* Selection keeps the blue background; a thin outline marks the current row. */
+.main-trackList-trackListRow:hover,
+.main-trackList-trackListRow[aria-selected="true"] {
+    background-color: var(--dream-blue) !important;
+    --text-base: var(--dream-cream);
+    --text-subdued: var(--dream-muted);
+    --text-bright-accent: var(--dream-teal);
+    --essential-base: var(--dream-cream);
+    box-shadow: inset 0 0 0 1px var(--dream-teal);
+}
+:is(.main-trackList-trackListRow:hover,
+.main-trackList-trackListRow[aria-selected="true"])
+:is(a, button, p, span, svg, .main-trackList-rowTitle) {
+    color: var(--dream-cream) !important;
+}
+.main-trackList-trackListHeader { border-bottom-color: var(--dream-border) !important; }
+
+/* Menus and tooltips have their own readable foreground. */
+[role="menu"], .main-contextMenu-menu, .main-contextMenu-tippy,
+[data-tippy-root] .tippy-box {
+    background-color: var(--dream-blue) !important;
+    color: var(--dream-cream) !important;
+    --background-base: var(--dream-blue);
+    --background-elevated-base: var(--dream-blue);
+    --background-highlight: var(--dream-blue);
+    --text-base: var(--dream-cream);
+    --text-subdued: var(--dream-muted);
+    --essential-base: var(--dream-cream);
+    border: 1px solid var(--dream-teal);
+    border-radius: 10px !important;
+}
+:is([role="menu"], .main-contextMenu-menu, [data-tippy-root] .tippy-box)
+:is(button, a, span, p, svg) { color: var(--dream-cream) !important; }
+[role="menuitem"]:hover, .main-contextMenu-menu button:hover {
+    background-color: var(--dream-blue) !important;
+    box-shadow: inset 0 0 0 1px var(--dream-teal);
+}
+
+/* Sticky headers and artwork-derived background layers use the same solid blue. */
+.main-topBar-background, .main-topBar-overlay, .main-topBar-container,
+.main-actionBarBackground-background, .main-entityHeader-backgroundColor,
+.main-entityHeader-overlay, .main-trackList-trackListHeader,
+.main-nowPlayingView-mainWrapper, .main-nowPlayingView-section,
+.Root__main-view main {
+    background: var(--dream-blue) !important;
+}
+
+/* Keyboard focus stays visible on both blue and pink surfaces. */
+button:focus-visible, a:focus-visible, input:focus-visible {
+    outline: 2px solid var(--dream-lavender) !important;
+    outline-offset: 2px;
+}
+::selection { background-color: var(--dream-selection); color: var(--dream-ink); }
+
+/* Roomier 16 px interface, retaining the original heading hierarchy. */
+:is(.encore-text-body-small, .encore-text-body-small-bold,
+.encore-text-body-medium, .encore-text-body-medium-bold,
+.main-trackList-rowTitle, .main-trackList-rowDuration) { font-size: 16px !important; }
+.main-trackList-trackListRow { --row-height: 64px; min-height: 64px !important; }
+.main-yourLibraryX-libraryItemContainer { min-height: 76px; }
+.Root__top-container { --panel-gap: 10px; }
+.main-contextMenu-menuItemButton, [role="menuitem"] { padding-block: 10px; }
+
+/* Music-only navigation; native lyrics, queue and mini-player remain available. */
+.Root__globalNav button[aria-label="What's New"],
+.Root__globalNav button[aria-label="Friend Activity"],
+.Root__globalNav button[aria-label="Friends"],
+.Root__globalNav button[aria-label="Listening activity"],
+.Root__nav-bar button[aria-label="Podcasts"],
+.Root__nav-bar button[aria-label="Audiobooks"],
+.Root__main-view button[aria-label="Podcasts"],
+.Root__main-view button[aria-label="Audiobooks"],
+.Root__globalNav a[href*="/genre/audiobooks"],
+.Root__globalNav a[href*="/genre/podcasts"] { display: none !important; }
+/* This Linux build's native PiP button does not open a window; use Spotify Mini. */
+.Root__now-playing-bar [data-testid="pip-toggle-button"] { display: none !important; }
+
+/* Hide Spotify's homepage promotional banner, using its semantic markers. */
+.Root__main-view [data-testid="home-ads-container"],
+.Root__main-view [data-testid="home-ad-card"] { display: none !important; }
+
+/* Short color transitions; progress follows playback, direct dragging stays exact. */
+button, a, .main-trackList-trackListRow {
+    transition: background-color 140ms ease, color 140ms ease !important;
+}
+@property --progress-bar-transform {
+    inherits: true;
+    initial-value: 0%;
+    syntax: '<percentage>';
+}
+.playback-bar .progress-bar { transition: --progress-bar-transform 1s linear !important; }
+.main-nowPlayingBar-volumeBar .progress-bar { transition: --progress-bar-transform 120ms ease-out !important; }
+.progress-bar--isDragging { transition: none !important; }
+
+/* Static large player: retain album art, skip blurred canvas and animated backgrounds. */
+#full-app-display { background: var(--dream-blue) !important; color: var(--dream-cream) !important; }
+#fad-background { display: none !important; }
+#fad-art-inner, #fad-art-overlay { filter: none !important; backdrop-filter: none !important; }
+#fad-title, #fad-artist, #fad-album, #fad-elapsed, #fad-duration, #fad-next {
+    color: var(--dream-cream) !important;
+}
+#fad-next { margin-top: 24px; font-size: 16px; opacity: .85; }
+#fad-art {
+    width: clamp(200px, 30vw, 560px) !important;
+    max-width: min(560px, 52vh) !important;
+    min-width: min(200px, 35vw) !important;
+    flex-shrink: 0;
+}
+#fad-art-image { border-radius: 16px !important; }
+#fad-title { font-size: clamp(32px, 5vw, 72px) !important; line-height: 1.15 !important; }
+#fad-artist { font-size: clamp(20px, 2.5vw, 34px) !important; }
+#fad-album { font-size: 22px !important; }
+#fad-status { flex-wrap: wrap; gap: 12px; align-items: center; }
+#fad-next { flex-basis: 100%; }
+#fad-progress-inner { background-color: var(--dream-cream) !important; }
+#fad-thumb { background-color: var(--dream-pink) !important; }
+#fad-controls button { color: var(--dream-cream) !important; }
+#full-app-display svg { fill: currentColor !important; }

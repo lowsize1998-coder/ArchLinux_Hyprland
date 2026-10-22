@@ -1,0 +1,14 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 272
+            }
+        ],
+        "target_uinput": "keyboard + mouse",
+        "output_symbol": "parallel(hold(BTN_LEFT),wait(1).event(EV_KEY,KEY_R,1).wait(1).event(EV_KEY,KEY_R,0).wait(1).wait(1).event(EV_KEY,KEY_7,1).wait(1).event(EV_KEY,KEY_7,0).wait(1))",
+        "name": "R -> 7 (6 ms)",
+        "mapping_type": "key_macro"
+    }
+]

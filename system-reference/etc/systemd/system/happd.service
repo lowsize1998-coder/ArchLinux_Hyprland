@@ -1,0 +1,33 @@
+[Unit]
+Description=Happ Process Control Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/opt/happ/bin/happd
+# `always`, not `on-failure`: when a newer client connects, the daemon exits
+# cleanly on purpose so systemd re-execs the upgraded binary (see the
+# client-hello handler in HappDaemon.cpp). That is a zero exit status, which
+# `on-failure` would not restart. An explicit `systemctl stop` still stops the
+# unit for good -- systemd does not re-trigger Restart= on a requested stop.
+Restart=always
+RestartSec=5s
+
+# Security settings
+NoNewPrivileges=false
+# Daemon needs to run privileged processes (sing-box with TUN)
+# So we cannot use strict sandboxing
+
+# Logging is handled by the daemon's custom message handler
+# which writes to /var/log/happd.log directly
+# StandardOutput and StandardError left to journal for systemctl status
+
+# Process settings
+TimeoutStopSec=10s
+KillMode=mixed
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

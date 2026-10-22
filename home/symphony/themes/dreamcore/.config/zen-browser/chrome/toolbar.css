@@ -1,0 +1,52 @@
+
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  #nav-bar, #PersonalToolbar, #zen-appcontent-navbar-container { background: var(--dream-panel) !important; color: var(--dream-ink) !important; }
+  #urlbar-background, #searchbar { background: var(--dream-panel) !important; border: 1px solid var(--dream-border) !important; border-radius: 8px !important; }
+  #urlbar-input, #searchbar input, #urlbar .urlbar-input { color: var(--dream-ink) !important; }
+  #urlbar[breakout-extend] #urlbar-background { background: var(--dream-popup) !important; }
+  .urlbarView { background: var(--dream-popup) !important; color: var(--dream-ink) !important; }
+  .urlbarView-row[selected], .urlbarView-row:hover { background: var(--dream-selection) !important; color: var(--dream-ink) !important; }
+  .urlbarView-url, .urlbarView-action { color: var(--dream-bg) !important; }
+  /* Gecko 157 / Zen 1.23 uses classes for all omnibox instances. */
+  .urlbar {
+    --input-color: var(--dream-ink) !important;
+    --toolbar-field-color: var(--dream-ink) !important;
+    --zen-urlbar-background-base: var(--dream-popup) !important;
+    --zen-urlbar-background-transparent: var(--dream-popup) !important;
+    color: var(--dream-ink) !important;
+    color-scheme: light !important;
+  }
+  .urlbar .urlbar-background {
+    background: var(--dream-panel) !important;
+    border: 1px solid var(--dream-border) !important;
+    border-radius: 8px !important;
+    backdrop-filter: none !important;
+  }
+  .urlbar[breakout-extend] .urlbar-background {
+    background: var(--dream-popup) !important;
+    border-radius: 10px !important;
+  }
+  .urlbar .urlbar-input, .urlbar .urlbar-input::placeholder {
+    color: var(--dream-ink) !important;
+    -webkit-text-fill-color: var(--dream-ink) !important;
+    opacity: 1 !important;
+  }
+  .urlbar .urlbar-input-container { color: var(--dream-ink) !important; }
+  .urlbar .urlbarView { background: var(--dream-popup) !important; color: var(--dream-ink) !important; }
+  .urlbar .urlbarView-row[selected], .urlbar .urlbarView-row:hover {
+    background: var(--dream-selection) !important; color: var(--dream-ink) !important;
+  }
+  /* Native Zen gives every descendant of a selected result a white color. */
+  .urlbar .urlbarView-title, .urlbar .urlbarView-title *,
+  .urlbar .urlbarView-action, .urlbar .urlbarView-title-separator,
+  .urlbar .urlbarView-title-separator::before {
+    color: var(--dream-ink) !important;
+    -webkit-text-fill-color: var(--dream-ink) !important;
+  }
+  .urlbar .urlbarView-row .urlbarView-favicon {
+    color: var(--dream-ink) !important;
+    fill: var(--dream-ink) !important;
+    stroke: var(--dream-ink) !important;
+  }
+  findbar { background: var(--dream-panel) !important; color: var(--dream-ink) !important; }
+}

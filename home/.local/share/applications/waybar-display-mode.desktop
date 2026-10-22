@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Waybar Appearance
+Comment=Show islands, show a full-width bar, or hide Waybar
+Exec=/home/rozetta/.local/bin/waybar-mode-menu
+Icon=preferences-desktop-display
+Terminal=false
+Categories=Settings;DesktopSettings;
+Keywords=Waybar;panel;islands;bar;hide;панель;островки;полоса;

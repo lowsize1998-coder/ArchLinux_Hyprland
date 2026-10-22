@@ -1,0 +1,93 @@
+[
+  {
+    "id": "uBlock0@raymondhill.net",
+    "version": "1.75.0",
+    "active": true,
+    "type": "extension",
+    "name": "uBlock Origin"
+  },
+  {
+    "id": "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}",
+    "version": "10.2.1.0",
+    "active": true,
+    "type": "extension",
+    "name": "TWP - Translate Web Pages"
+  },
+  {
+    "id": "addon@darkreader.org",
+    "version": "4.9.133",
+    "active": true,
+    "type": "extension",
+    "name": "Dark Reader"
+  },
+  {
+    "id": "formautofill@mozilla.org",
+    "version": "1.0.1",
+    "active": true,
+    "type": "extension",
+    "name": "Form Autofill"
+  },
+  {
+    "id": "ipp-activator@mozilla.com",
+    "version": "0.3",
+    "active": true,
+    "type": "extension",
+    "name": "IPP Activator"
+  },
+  {
+    "id": "newtab@mozilla.org",
+    "version": "158.2.0",
+    "active": true,
+    "type": "extension",
+    "name": "New Tab"
+  },
+  {
+    "id": "pictureinpicture@mozilla.org",
+    "version": "1.0.0",
+    "active": true,
+    "type": "extension",
+    "name": "Picture-In-Picture"
+  },
+  {
+    "id": "addons-search-detection@mozilla.com",
+    "version": "3.0.0",
+    "active": true,
+    "type": "extension",
+    "name": "Add-ons Search Detection"
+  },
+  {
+    "id": "webcompat@mozilla.org",
+    "version": "158.0.0",
+    "active": true,
+    "type": "extension",
+    "name": "Web Compatibility Interventions"
+  },
+  {
+    "id": "default-theme@mozilla.org",
+    "version": "1.4.2",
+    "active": true,
+    "type": "theme",
+    "name": "System theme — auto"
+  },
+  {
+    "id": "firefox-compact-light@mozilla.org",
+    "version": "1.3.4",
+    "active": false,
+    "type": "theme",
+    "name": "Light"
+  },
+  {
+    "id": "firefox-compact-dark@mozilla.org",
+    "version": "1.3.4",
+    "active": false,
+    "type": "theme",
+    "name": "Dark"
+  },
+  {
+    "id": "firefox-alpenglow@mozilla.org",
+    "version": "1.5.3",
+    "active": false,
+    "type": "theme",
+    "name": "Firefox Alpenglow"
+  }
+]

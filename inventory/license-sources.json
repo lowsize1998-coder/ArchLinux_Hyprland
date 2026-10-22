@@ -1,0 +1,34 @@
+[
+  {
+    "file": "home/.local/share/spicetify/LICENSE",
+    "url": "https://raw.githubusercontent.com/spicetify/cli/master/LICENSE",
+    "saved": true
+  },
+  {
+    "file": "profiles/obsidian/.obsidian/plugins/obsidian-style-settings/LICENSE",
+    "url": "https://raw.githubusercontent.com/community-archive/obsidian-style-settings/main/LICENSE",
+    "saved": false,
+    "reason": "HTTPError"
+  },
+  {
+    "file": "profiles/obsidian/.obsidian/plugins/obsidian-excalidraw-plugin/LICENSE",
+    "url": "https://raw.githubusercontent.com/zsviczian/obsidian-excalidraw-plugin/master/LICENSE",
+    "saved": true
+  },
+  {
+    "file": "profiles/obsidian/.obsidian/plugins/full-calendar-remastered/LICENSE",
+    "url": "https://raw.githubusercontent.com/Raleigneur/obsidian-full-calendar-remastered/main/LICENSE",
+    "saved": false,
+    "reason": "HTTPError"
+  },
+  {
+    "file": "profiles/obsidian/.obsidian/plugins/obsidian-style-settings/LICENSE",
+    "url": "https://raw.githubusercontent.com/obsidian-community/obsidian-style-settings/HEAD/LICENSE.md",
+    "saved": true
+  },
+  {
+    "file": "profiles/obsidian/.obsidian/plugins/full-calendar-remastered/LICENSE",
+    "url": "https://raw.githubusercontent.com/obsidian-full-calendar-remastered/plugin-full-calendar/HEAD/LICENSE.md",
+    "saved": true
+  }
+]

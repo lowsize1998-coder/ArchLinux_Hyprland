@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=AION 2
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/3393110
+Icon=steam_icon_3393110
+Terminal=false
+Type=Application
+Categories=Game;

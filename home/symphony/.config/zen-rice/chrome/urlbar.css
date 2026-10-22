@@ -1,0 +1,28 @@
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  #urlbar {
+    font-family: var(--symphony-ui-font) !important;
+    font-size: var(--symphony-ui-size) !important;
+    border-radius: var(--symphony-radius) !important;
+  }
+  #urlbar .urlbar-background, #urlbar-background, #searchbar {
+    background: var(--symphony-bg) !important;
+    border: 1px solid var(--symphony-border) !important;
+    border-radius: var(--symphony-radius) !important;
+    backdrop-filter: none !important;
+  }
+  #urlbar[focused] .urlbar-background, #urlbar[focused] #urlbar-background {
+    border-color: var(--symphony-accent) !important;
+  }
+  #urlbar-input, #urlbar-scheme {
+    font-family: var(--symphony-ui-font) !important;
+    font-size: var(--symphony-ui-size) !important;
+  }
+  .urlbarView {
+    background: var(--symphony-panel) !important;
+    color: var(--symphony-fg) !important;
+    border-radius: var(--symphony-radius) !important;
+  }
+  .urlbarView-row-inner {
+    border-radius: var(--symphony-control-radius) !important;
+  }
+}

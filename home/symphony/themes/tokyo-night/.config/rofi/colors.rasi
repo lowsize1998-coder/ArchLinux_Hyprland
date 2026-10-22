@@ -1,0 +1,46 @@
+/**
+ * ════════════════════════════════════════════════════════
+ *   Symphony by https://github.com/vyrx-dev
+ *   Theme: Tokyo Night
+ * ════════════════════════════════════════════════════════
+ */
+
+* {
+    /* Primary accent color (using cyan/green as primary) */
+    primary: #7dcfff;
+    primary-container: #7aa2f7;
+    on-primary: #15161e;
+    on-primary-container: #c0caf5;
+    
+    /* Secondary accent */
+    secondary: #bb9af7;
+    secondary-container: #414868;
+    on-secondary: #15161e;
+    on-secondary-container: #c0caf5;
+    
+    /* Surface backgrounds (progressively lighter) */
+    surface: #1a1b26;
+    surface-dim: #1a1b26;
+    surface-bright: #414868;
+    surface-container-lowest: #1a1b26;
+    surface-container-low: #1a1b26;
+    surface-container: #414868;
+    surface-container-high: #414868;
+    surface-container-highest: #414868;
+    
+    /* Text colors */
+    on-surface: #1a1b26;
+    on-surface-variant: #a9b1d6;
+    
+    /* Outline/border colors */
+    outline: #414868;
+    outline-variant: #414868;
+    
+    /* Error colors */
+    error: #f7768e;
+    on-error: #15161e;
+    
+    /* Inverse colors */
+    inverse-surface: #1a1b26;
+    inverse-on-surface: #1a1b26;
+}

@@ -1,0 +1,18 @@
+{
+  "background": "window_background screen_background setting_screen_background nav_button_default input_background_light input_background scrollbar_back textarea_background add_conf_window_background tab_background_default active_tab_background speed_card_color server_screen_background server_item_background server_item_active connection_background server_section_background server_section_info connect_center_default update_background info_even_background iconbutton_default menu_background menu_background_disabled tooltip_background toogle_card message_background",
+  "hover": "nav_button_hover switch_background_disabled switch_background_off switch_background_hover switch_indicator_disabled comboBox_item_hovered_background tab_background_hovered server_item_selected connect_middle_default connect_middle_hovered connect_middle_pressed connect_center_pressed info_odd_background iconbutton_hover iconbutton_pressed menu_background_hover menu_background_pressed",
+  "text": "text_color text_hover text_pressed switch_indicator_off radiobutton_default textfield_text_focus textfield_text_enabled chevron_hovered server_section_text tooltip_text toogle_text_checked toogle_text_default",
+  "secondary_text": "secondary_text_color label_text_color textfield_text_disabled chevron_default scrollbar_default server_section_subtext toogle_text_hovered",
+  "muted": "text_disabled_color chevron_disabled",
+  "border": "screen_border_color separator_color switch_border_off textfield_border_default textfield_border_disabled popup_border comboBox_separator_color comboBox_border comboBox_border_disabled textarea_border textarea_border_disabled tab_border_color active_tab_border speed_card_border server_separator server_section_info_separator update_border menu_separator tooltip_border tooltip_indicator toogle_stroke",
+  "accent": "last_setting_text_color nav_rect_selected switch_background_on switch_border_on radiobutton_checked textfield_border_hover_focus textfield_selection_color comboBox_border_hover comboBox_rect_selected scrollbar_pressed button_background_default button_border_color textarea_border_active refresh_spinner connect_outside toogle_border_checked toogle_background_checked",
+  "secondary_accent": "radiobutton_hovered scrollbar_hovered button_background_hovered cancel_button_border_color connect_gradient_start connect_gradient_stop progressbar_background",
+  "panel": "cancel_button_background_default cancel_button_background_pressed",
+  "selection": "cancel_button_background_hovered",
+  "ink": "button_text_color cancel_button_text_color switch_indicator_on",
+  "accent_pressed": "button_background_pressed",
+  "selected": "nav_button_selected item_background",
+  "popup": "popup_background",
+  "success": "success_check",
+  "error": "highlight_text_color error_cross"
+}

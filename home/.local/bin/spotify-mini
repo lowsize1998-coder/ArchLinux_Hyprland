@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+"""Open/focus the Spotify MPRIS mini-player on the monitor of invocation."""
+import json
+import os
+import subprocess
+from pathlib import Path
+
+monitors = json.loads(subprocess.check_output(['hyprctl', 'monitors', '-j']))
+monitor = next(m['name'] for m in monitors if m.get('focused'))
+windows = json.loads(subprocess.check_output(['hyprctl', 'clients', '-j']))
+existing = next((w for w in windows if w.get('class') == 'dreamcore-spotify-mini'), None)
+if existing:
+    selector = 'address:' + existing['address']
+    subprocess.run(['hyprctl', 'dispatch', f'hl.dsp.window.move({{window={json.dumps(selector)},monitor={json.dumps(monitor)},follow=false}})'], check=True)
+    subprocess.run(['hyprctl', 'dispatch', 'hl.dsp.focus({window=' + json.dumps(selector) + '})'], check=True)
+else:
+    binary = Path.home() / '.local/lib/spotify-dreamcore/spotify-mini'
+    os.environ['QT_QPA_PLATFORM'] = 'wayland'
+    os.execv(str(binary), [str(binary)])

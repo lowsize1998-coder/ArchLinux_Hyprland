@@ -1,0 +1,46 @@
+/**
+ * ════════════════════════════════════════════════════════
+ *   Symphony by https://github.com/vyrx-dev
+ *   Theme: Rose Pine
+ * ════════════════════════════════════════════════════════
+ */
+
+* {
+    /* Primary accent color (using cyan/green as primary) */
+    primary: #ebbcba;
+    primary-container: #9ccfd8;
+    on-primary: #26233a;
+    on-primary-container: #e0def4;
+    
+    /* Secondary accent */
+    secondary: #c4a7e7;
+    secondary-container: #6e6a86;
+    on-secondary: #26233a;
+    on-secondary-container: #e0def4;
+    
+    /* Surface backgrounds (progressively lighter) */
+    surface: #191724;
+    surface-dim: #191724;
+    surface-bright: #6e6a86;
+    surface-container-lowest: #191724;
+    surface-container-low: #191724;
+    surface-container: #6e6a86;
+    surface-container-high: #6e6a86;
+    surface-container-highest: #6e6a86;
+    
+    /* Text colors */
+    on-surface: #191724;
+    on-surface-variant: #e0def4;
+    
+    /* Outline/border colors */
+    outline: #6e6a86;
+    outline-variant: #6e6a86;
+    
+    /* Error colors */
+    error: #eb6f92;
+    on-error: #26233a;
+    
+    /* Inverse colors */
+    inverse-surface: #191724;
+    inverse-on-surface: #191724;
+}

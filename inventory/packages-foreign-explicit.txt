@@ -1,0 +1,7 @@
+a2tools-dps-meter
+happ
+input-remapper-git
+localsend-bin
+nvibrant-bin
+nvibrant-bin-debug
+uair

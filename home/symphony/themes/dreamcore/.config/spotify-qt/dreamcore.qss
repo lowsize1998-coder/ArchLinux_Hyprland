@@ -1,0 +1,95 @@
+/* Generated from Dreamcore palette.json and derived.json; edit this template. */
+
+/* Canvas and readable text. */
+QWidget {
+    color: #FAEEBA;
+    font-family: "Noto Sans";
+    font-size: 14px;
+    selection-background-color: #DFEDC9;
+    selection-color: #1B272C;
+}
+QMainWindow, MainWindow, QDialog, QTabWidget::pane {
+    background-color: #194B66;
+}
+QLabel { background-color: transparent; }
+QWidget:disabled { color: #ADB5B8; }
+
+/* Library and tracks: blue canvas, soft selection, no alternating stripes. */
+QAbstractItemView, QTextEdit, QTextBrowser {
+    background-color: #194B66;
+    alternate-background-color: #194B66;
+    border: none;
+    outline: none;
+}
+QAbstractItemView::item { min-height: 28px; padding: 3px 6px; }
+QAbstractItemView::item:hover { background-color: #FFE2E6; color: #1B272C; }
+QAbstractItemView::item:selected { background-color: #DFEDC9; color: #1B272C; }
+QAbstractItemView::item:disabled { color: #ADB5B8; }
+QHeaderView::section {
+    background-color: #FFE2E6; color: #1B272C;
+    border: none; padding: 7px 8px;
+}
+QTableCornerButton::section { background-color: #FFE2E6; border: none; }
+QGroupBox {
+    border: 1px solid #81B8B5; border-radius: 8px;
+    margin-top: 12px; padding: 12px;
+}
+QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 5px; }
+
+/* Text inputs and buttons have a dark foreground on pastel surfaces. */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    background-color: #FFE2E6; color: #1B272C;
+    selection-background-color: #DFEDC9; selection-color: #1B272C;
+    border: 1px solid #FDE1BA; border-radius: 7px;
+    padding: 6px 8px; min-height: 22px;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus { border-color: #9381C5; }
+QLineEdit:disabled, QComboBox:disabled { color: #2C4049; }
+QComboBox QAbstractItemView { background-color: #86AD31; color: #1B272C; }
+QPushButton {
+    background-color: #FFE2E6; color: #1B272C;
+    border: 1px solid #FDE1BA; border-radius: 7px;
+    padding: 7px 12px; min-height: 22px;
+}
+QPushButton:hover { background-color: #DFEDC9; }
+QPushButton:pressed, QPushButton:checked { background-color: #81B8B5; }
+QPushButton:default { border: 2px solid #9381C5; }
+QPushButton:disabled { background-color: #FFE2E6; color: #2C4049; }
+
+/* Playback controls keep a blue surface for the bundled light icons. */
+QToolBar, MainToolBar { background-color: #194B66; border: none; padding: 6px; }
+QToolButton { background-color: transparent; border: none; border-radius: 6px; padding: 5px; }
+QToolButton:hover, QToolButton:checked { background-color: #2C4049; }
+QTabBar::tab {
+    background-color: #194B66; color: #C7D5EF;
+    border: none; padding: 8px 12px;
+}
+QTabBar::tab:selected { background-color: #DFEDC9; color: #1B272C; border-radius: 6px; }
+QTabBar::tab:hover:!selected { color: #FAEEBA; }
+QStatusBar { background-color: #194B66; color: #C7D5EF; }
+
+/* Green context menus, pastel selection, tooltips with enough contrast. */
+QMenu, QToolTip {
+    background-color: #86AD31; color: #1B272C;
+    border: 1px solid #FDE1BA; border-radius: 8px; padding: 6px;
+}
+QMenu::item { padding: 7px 22px; border-radius: 5px; }
+QMenu::item:selected { background-color: #DFEDC9; color: #1B272C; }
+QMenu::item:disabled { color: #2C4049; }
+QMenu::separator { height: 1px; background-color: #2C4049; margin: 5px 10px; }
+
+/* Sliders and scrollbars use static styling, with no background effects. */
+QSlider::groove:horizontal { height: 5px; background-color: #2C4049; border-radius: 2px; }
+QSlider::sub-page:horizontal { background-color: #81B8B5; border-radius: 2px; }
+QSlider::handle:horizontal {
+    background-color: #FFE2E6; border: 1px solid #FDE1BA;
+    width: 12px; margin: -4px 0; border-radius: 6px;
+}
+QScrollBar:vertical { background: transparent; width: 10px; margin: 0; }
+QScrollBar:horizontal { background: transparent; height: 10px; margin: 0; }
+QScrollBar::handle { background-color: #81B8B5; border-radius: 4px; min-height: 24px; min-width: 24px; }
+QScrollBar::add-line, QScrollBar::sub-line { height: 0; width: 0; }
+QScrollBar::add-page, QScrollBar::sub-page { background: transparent; }
+QSplitter::handle { background-color: #194B66; width: 5px; }
+QProgressBar { border: 1px solid #81B8B5; border-radius: 5px; text-align: center; }
+QProgressBar::chunk { background-color: #9381C5; border-radius: 4px; }

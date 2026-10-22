@@ -1,0 +1,61 @@
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  :root {
+    --symphony-ui-font: "JetBrainsMono Nerd Font", "Noto Sans", "Noto Color Emoji", sans-serif;
+    --symphony-ui-size: 14px;
+    --symphony-radius: 10px;
+    --symphony-control-radius: 7px;
+    --symphony-sidebar-width: 240px;
+    --zen-primary-color: var(--symphony-accent) !important;
+    --zen-colors-primary: var(--symphony-bg) !important;
+    --zen-colors-secondary: var(--symphony-panel) !important;
+    --zen-colors-tertiary: var(--symphony-hover) !important;
+    --zen-colors-border: var(--symphony-border) !important;
+    --zen-main-browser-background: var(--symphony-bg) !important;
+    --zen-main-browser-background-toolbar: var(--symphony-panel) !important;
+    --zen-themed-toolbar-bg-transparent: var(--symphony-panel) !important;
+    --zen-border-radius: var(--symphony-radius) !important;
+    --zen-element-separation: 6px !important;
+    --zen-active-tab-scale: 1 !important;
+    --zen-sidebar-themed-icon-fill: var(--symphony-muted) !important;
+    --zen-accent-button-background: var(--symphony-selected) !important;
+    --zen-accent-button-color: var(--symphony-fg) !important;
+    --zen-input-border-color: var(--symphony-border) !important;
+    --zen-appcontent-border: 1px solid var(--symphony-border) !important;
+    --toolbar-color: var(--symphony-fg) !important;
+    --toolbar-color-scheme: var(--symphony-color-scheme) !important;
+    --toolbar-bgcolor: var(--symphony-panel) !important;
+    --toolbar-background-color: var(--symphony-panel) !important;
+    --toolbar-field-background-color: var(--symphony-bg) !important;
+    --toolbar-field-color: var(--symphony-fg) !important;
+    --toolbar-field-focus-background-color: var(--symphony-panel) !important;
+    --toolbar-field-focus-color: var(--symphony-fg) !important;
+    --toolbar-field-border-color: var(--symphony-border) !important;
+    --toolbarbutton-hover-background: var(--symphony-hover) !important;
+    --toolbarbutton-active-background: var(--symphony-selected) !important;
+    --toolbarbutton-icon-fill: var(--symphony-fg) !important;
+    --urlbarView-result-hover-background: var(--symphony-hover) !important;
+    --urlbarView-highlight-background: var(--symphony-selected) !important;
+    --urlbarView-highlight-color: var(--symphony-fg) !important;
+    --arrowpanel-background: var(--symphony-panel) !important;
+    --arrowpanel-color: var(--symphony-fg) !important;
+    --arrowpanel-border-color: var(--symphony-border) !important;
+    --arrowpanel-dimmed: var(--symphony-hover) !important;
+    --arrowpanel-dimmed-further: var(--symphony-selected) !important;
+    --lwt-accent-color: var(--symphony-bg) !important;
+    --lwt-text-color: var(--symphony-fg) !important;
+  }
+  #main-window {
+    font-family: var(--symphony-ui-font) !important;
+    font-size: var(--symphony-ui-size) !important;
+    color: var(--symphony-fg) !important;
+    color-scheme: var(--symphony-color-scheme);
+  }
+  #zen-main-app-wrapper, #zen-browser-background {
+    background: var(--symphony-bg) !important;
+    color: var(--symphony-fg) !important;
+  }
+  toolbarbutton:focus-visible, .tabbrowser-tab:focus-visible {
+    outline: 2px solid var(--symphony-accent) !important;
+    outline-offset: -2px;
+  }
+}

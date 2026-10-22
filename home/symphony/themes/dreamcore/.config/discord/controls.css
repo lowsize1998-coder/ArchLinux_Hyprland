@@ -1,0 +1,22 @@
+/* Small color transitions; no blur, animated backgrounds or remote assets. */
+[class*="button_"], [class*="item_"][role="menuitem"] {
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+[class*="lookFilled_"][class*="colorBrand_"] {
+  background-color: var(--dc-accent) !important;
+  color: var(--dc-ink) !important;
+}
+
+[class*="lookFilled_"][class*="colorBrand_"]:hover {
+  background-color: var(--dc-teal) !important;
+}
+
+[class*="mentioned_"]::before {
+  background-color: var(--dc-accent) !important;
+}
+
+::selection {
+  background-color: var(--dc-selection);
+  color: var(--dc-ink);
+}

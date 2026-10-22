@@ -1,0 +1,17 @@
+{
+  "name": "Dreamcore",
+  "background": "#194B66",
+  "panel": "#FFE2E6",
+  "popup": "#86AD31",
+  "text": "#FAEEBA",
+  "secondary_text": "#C7D5EF",
+  "dim_text": "#2C4049",
+  "border": "#FDE1BA",
+  "selection": "#DFEDC9",
+  "accent": "#9381C5",
+  "secondary_accent": "#81B8B5",
+  "info": "#A4C9E5",
+  "success": "#C7D6B3",
+  "warning": "#CBB36B",
+  "error": "#840E1C"
+}

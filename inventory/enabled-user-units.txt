@@ -1,0 +1,13 @@
+UNIT FILE                   STATE   PRESET
+mpd-mpris.service           enabled enabled
+mpd.service                 enabled enabled
+uair.service                enabled enabled
+wireplumber.service         enabled enabled
+xdg-user-dirs.service       enabled enabled
+zathura-breaks.service      enabled enabled
+gnome-keyring-daemon.socket enabled enabled
+p11-kit-server.socket       enabled enabled
+pipewire-pulse.socket       enabled enabled
+pipewire.socket             enabled enabled
+
+10 unit files listed.

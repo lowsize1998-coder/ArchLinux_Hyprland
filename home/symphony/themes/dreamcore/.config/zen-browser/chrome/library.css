@@ -1,0 +1,35 @@
+
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  /* The Library overlays a dark surface and needs the terminal foreground. */
+  zen-library {
+    --toolbar-color: var(--dream-fg) !important;
+    --toolbox-textcolor: var(--dream-fg) !important;
+    --toolbox-textcolor-inactive: var(--dream-fg) !important;
+    --toolbarbutton-icon-fill: var(--dream-fg) !important;
+    --zen-sidebar-themed-icon-fill: var(--dream-fg) !important;
+    --zen-accent-button-color: var(--dream-fg) !important;
+    --toolbar-color-scheme: dark !important;
+    color: var(--dream-fg) !important;
+    color-scheme: dark !important;
+  }
+  zen-library .zen-library-tab,
+  zen-library .zen-library-tab label,
+  zen-library .zen-library-row-title,
+  zen-library .zen-library-row-subtitle,
+  zen-library .zen-library-search-header input,
+  zen-library .zen-library-search-header input::placeholder,
+  zen-library .zen-library-filter-header,
+  zen-library .zen-library-group-label,
+  zen-library .zen-library-section-empty {
+    color: var(--dream-fg) !important;
+  }
+  zen-library .zen-library-tab-icon-image {
+    --stroke: var(--dream-fg) !important;
+    --fill: var(--dream-fg) !important;
+    stroke: var(--dream-fg) !important;
+  }
+  zen-library .zen-library-row-icon {
+    color: var(--dream-fg) !important;
+    fill: var(--dream-fg) !important;
+  }
+}

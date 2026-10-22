@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Dreamcore",
+  "showRibbon": false,
+  "enabledCssSnippets": [
+    "flow-map"
+  ],
+  "theme": "obsidian",
+  "baseFontSize": 18,
+  "interfaceFontFamily": "Noto Sans",
+  "textFontFamily": "Noto Sans",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font"
+}

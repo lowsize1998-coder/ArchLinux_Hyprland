@@ -1,0 +1,7 @@
+
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  menupopup, panel, .panel-subview-body { --arrowpanel-background: var(--dream-popup) !important; --arrowpanel-color: var(--dream-ink) !important; }
+  menupopup::part(content), panel::part(content) { background: var(--dream-popup) !important; color: var(--dream-ink) !important; border: 1px solid var(--dream-border) !important; border-radius: 10px !important; }
+  menu, menuitem, .subviewbutton { color: var(--dream-ink) !important; }
+  menuitem[_moz-menuactive], menu[_moz-menuactive], .subviewbutton:hover { background: var(--dream-selection) !important; }
+}

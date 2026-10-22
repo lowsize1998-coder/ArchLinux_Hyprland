@@ -1,0 +1,67 @@
+[
+  {
+    "source": "/home/rozetta/Wallpapers/Dreamcore/wallhaven-d8vy3m.png",
+    "enhanced": "/home/rozetta/Wallpapers/Dreamcore/enhanced-4k/pink-door-4k.png",
+    "file": "backgrounds/1-pink-door-4k.png",
+    "size": [
+      3840,
+      2160
+    ],
+    "source_sha256": "a0498047dc11381249dd271543384b2e58d35dfd85925fdeb66e85cd9d19aa6a",
+    "output_sha256": "bb0fa6072ebb412bf749f4cced5383ee9423bf688ad93671058781759c1de2e0",
+    "method": "Real-ESRGAN x4plus, TTA, Lanczos 4K; centered 16:9 framing",
+    "neural_blend": 1
+  },
+  {
+    "source": "/home/rozetta/Wallpapers/Dreamcore/cce9997ecaa149e638dc482472d8383d.jpg",
+    "enhanced": "/home/rozetta/Wallpapers/Dreamcore/enhanced-4k/field-clouds-4k.png",
+    "file": "backgrounds/2-field-clouds-4k.png",
+    "size": [
+      3840,
+      2160
+    ],
+    "source_sha256": "b2a6276bf0b38177b7028ee9e5c9e19599829e7c8c6464777c57da54eefcc8d3",
+    "output_sha256": "9789a23ff3c09644f359bd11254f1a171937de078778b18ca718a3fc773bd48e",
+    "method": "Real-ESRGAN x4plus, TTA, Lanczos 4K; centered 16:9 framing",
+    "neural_blend": 1
+  },
+  {
+    "source": "/home/rozetta/Wallpapers/Dreamcore/9ae6c9a81183bbc4d684afbfa4ae8e3a.jpg",
+    "enhanced": "/home/rozetta/Wallpapers/Dreamcore/enhanced-4k/tree-clouds-4k.png",
+    "file": "backgrounds/3-tree-clouds-4k.png",
+    "size": [
+      3840,
+      2160
+    ],
+    "source_sha256": "0ab66a79c9b2e988ddec07139d48987ca6c242444b7a485b2be8ca03b94e0741",
+    "output_sha256": "1505005d2260598a06c8d6a60a3355b3a365ffb36281e8a7278cb403a4d516a6",
+    "method": "Real-ESRGAN x4plus, TTA, Lanczos 4K; centered 16:9 framing",
+    "neural_blend": 1
+  },
+  {
+    "source": "/home/rozetta/Wallpapers/Dreamcore/thumb-1920-1360895.jpeg",
+    "enhanced": "/home/rozetta/Wallpapers/Dreamcore/enhanced-4k/poolrooms-4k.png",
+    "file": "backgrounds/4-poolrooms-4k.png",
+    "size": [
+      3840,
+      2160
+    ],
+    "source_sha256": "62226346312aa05e6a76368c7ce5d1b0743a24a4daf4437ef27b5a521a02d610",
+    "output_sha256": "44d8a21e4b4aeea8fff051f5f5a5b307102987914c114028bdacafbbc00b1f09",
+    "method": "Real-ESRGAN x4plus, TTA, Lanczos 4K; centered 16:9 framing",
+    "neural_blend": 1
+  },
+  {
+    "source": "/home/rozetta/Wallpapers/Dreamcore/wp13652320.jpg",
+    "enhanced": "/home/rozetta/Wallpapers/Dreamcore/enhanced-4k/cloud-room-4k.png",
+    "file": "backgrounds/5-cloud-room-4k.png",
+    "size": [
+      3840,
+      2160
+    ],
+    "source_sha256": "34d8ea90f8b7926b919e14a9f6b5a240709bc4e6caaa148164e665f886650312",
+    "output_sha256": "dd0c9d7290a1642ee64392a39a6d33b22776df7b28ff1321972ab19caa91ea2a",
+    "method": "Real-ESRGAN x4plus, TTA, Lanczos 4K; centered 16:9 framing",
+    "neural_blend": 0.35
+  }
+]

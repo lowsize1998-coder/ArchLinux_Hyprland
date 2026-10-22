@@ -1,0 +1,8 @@
+/* Generated from settings.json; add your own styles in epub-custom.css. */
+body { font-family: serif; font-size: 16pt !important; line-height: 1.6 !important; }
+p, li, blockquote { line-height: 1.6 !important; }
+p { margin-bottom: 0.8em !important; }
+pre, code { font-family: monospace; }
+/* Дополнительные стили EPUB. Они добавляются после настроек из settings.json.
+   MuPDF поддерживает ограниченный набор CSS, поэтому сложные стили могут
+   отображаться иначе, чем в браузере. */

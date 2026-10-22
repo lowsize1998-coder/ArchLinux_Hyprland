@@ -1,0 +1,20 @@
+@import url("colors.css");
+/* Only built-in pages. Website colors, fonts, controls and content stay native. */
+@-moz-document url("about:home"), url("about:newtab"), url("about:preferences"), url("about:downloads") {
+  :root {
+    --in-content-page-background: var(--symphony-bg) !important;
+    --in-content-page-color: var(--symphony-fg) !important;
+    --in-content-box-background: var(--symphony-panel) !important;
+    --in-content-box-border-color: var(--symphony-border) !important;
+    --in-content-button-background: var(--symphony-hover) !important;
+    --in-content-button-background-hover: var(--symphony-selected) !important;
+    --in-content-accent-color: var(--symphony-accent) !important;
+    --in-content-accent-color-active: var(--symphony-muted) !important;
+    color-scheme: var(--symphony-color-scheme);
+  }
+  body {
+    background-color: var(--symphony-bg) !important;
+    color: var(--symphony-fg) !important;
+    font-family: "Noto Sans", "Noto Color Emoji", sans-serif !important;
+  }
+}

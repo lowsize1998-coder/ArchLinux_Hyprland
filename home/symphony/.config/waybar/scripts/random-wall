@@ -1,0 +1,48 @@
+#!/bin/bash
+
+if command -v swww >/dev/null 2>&1; then
+    wallbin=swww
+elif command -v awww >/dev/null 2>&1; then
+    wallbin=awww
+else
+    noitfy-send "No wallpaper daemon found" "Please install awww or swww and try again"
+    exit 1 
+fi
+
+# Random wallpaper selector with smooth animations
+WALLPAPER_DIR="$HOME/Wallpapers/"
+
+# Get wallpaper files
+mapfile -t wallpapers < <(
+  find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | sort
+)
+
+# Validate wallpapers exist
+if [[ ${#wallpapers[@]} -eq 0 ]]; then
+  (action=$(notify-send -A "open=Get Wallpapers" --wait "No Wallpapers Found" "Add images to ~/Wallpapers to use dynamic theming") && [[ "$action" == "open" ]] && xdg-open "https://github.com/vyrx-dev/Wallpapers") &
+  exit 1
+fi
+
+# Start wallpaper daemon if not running
+"$wallbin" query &>/dev/null || "$wallbin"-daemon --format argb &
+
+# Wait for daemon to initialize
+sleep 0.5
+
+# Select random wallpaper
+random_index=$((RANDOM % ${#wallpapers[@]}))
+selected_wallpaper="${wallpapers[$random_index]}"
+
+# Apply wallpaper with top-right corner grow animation
+"$wallbin" img "$selected_wallpaper" \
+  --transition-type grow \
+  --transition-pos top-right \
+  --transition-fps 120 \
+  --transition-duration 1 \
+  --transition-bezier 0.25,0.1,0.25,1.0
+
+# Send notification with wallpaper preview
+notify-send -i "$selected_wallpaper" "Random Wallpaper" "$(basename "$selected_wallpaper")"
+
+# Fixed typo: illall -> killall
+killall -SIGUSR1 kitty

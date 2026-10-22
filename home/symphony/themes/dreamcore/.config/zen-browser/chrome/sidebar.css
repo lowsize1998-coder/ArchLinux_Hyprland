@@ -1,0 +1,25 @@
+
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  #navigator-toolbox, #titlebar, #TabsToolbar, #zen-sidebar-top-buttons, #zen-sidebar-bottom-buttons, #zen-sidebar-icons-wrapper {
+    background: var(--dream-panel) !important; color: var(--dream-ink) !important;
+  }
+  .tabbrowser-tab { color: var(--dream-ink) !important; }
+  .tab-background { background: transparent !important; border-radius: 8px !important; }
+  .tabbrowser-tab:hover .tab-background { background: var(--dream-selection) !important; }
+  .tabbrowser-tab[selected] .tab-background { background: var(--dream-selection) !important; border: 1px solid var(--dream-accent) !important; }
+  #zen-sidebar-icons-wrapper toolbarbutton { fill: var(--dream-ink) !important; color: var(--dream-ink) !important; }
+  #navigator-toolbox, zen-workspace {
+    --toolbox-textcolor: var(--dream-ink) !important;
+    --toolbar-color: var(--dream-ink) !important;
+    color: var(--dream-ink) !important;
+    color-scheme: light !important;
+  }
+  #navigator-toolbox toolbarbutton, .zen-current-workspace-indicator-name,
+  .zen-current-workspace-indicator-icon, .zen-workspace-sidebar-name,
+  .zen-workspace-sidebar-icon, #zen-workspaces-button {
+    color: var(--dream-ink) !important;
+    fill: var(--dream-ink) !important;
+  }
+  .zen-current-workspace-indicator-name { opacity: 1 !important; }
+  #zen-workspaces-button toolbarbutton { --zen-sidebar-themed-icon-fill: var(--dream-ink) !important; }
+}

@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+if [[ $(hyprctl activewindow -j | jq -r '.pinned // false') == true ]]; then
+    hyprctl eval 'hl.dispatch(hl.dsp.window.pin({action = "disable"})); hl.dispatch(hl.dsp.window.float({action = "disable"}))'
+else
+    hyprctl eval 'hl.dispatch(hl.dsp.window.float({action = "enable"})); hl.dispatch(hl.dsp.window.center()); hl.dispatch(hl.dsp.window.pin({action = "enable"})); hl.dispatch(hl.dsp.window.alter_zorder({mode = "top"}))'
+fi

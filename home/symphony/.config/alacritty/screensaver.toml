@@ -1,0 +1,12 @@
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.cursor]
+cursor = "#ffffff"
+
+[font]
+size = 18.0
+
+[window]
+opacity = 1.0

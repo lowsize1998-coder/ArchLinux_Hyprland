@@ -1,0 +1,12 @@
+{
+  "base": "Alexays/Waybar 0.15.0",
+  "upstream_fixes": [
+    5013,
+    5043
+  ],
+  "build_tools": "user-local only",
+  "binary_sha256": "56b1c646e109ac75e13647cbff09ca91d533be30b2786ca5b4702eaaaf431bbc",
+  "build_directory": "/home/rozetta/.local/state/hypr-monitors/waybar-lua-build",
+  "original_binary": "/usr/bin/waybar",
+  "backup": "/home/rozetta/.local/state/hypr-monitors/backups/20261013-184609-dual-monitor-workflow"
+}

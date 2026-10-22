@@ -1,0 +1,4 @@
+@-moz-document url("about:newtab"), url("about:home"), url("about:preferences"), url("about:downloads"), url("about:blank"), url("chrome://browser/content/blanktab.html") {
+  :root { --in-content-page-background: #194B66 !important; --in-content-page-color: #FAEEBA !important; --in-content-box-background: #194B66 !important; --in-content-primary-button-background: #DFEDC9 !important; --in-content-primary-button-text-color: #1B272C !important; --in-content-link-color: #A4C9E5 !important; color-scheme: dark; }
+  html, body { background: #194B66 !important; color: #FAEEBA !important; }
+}

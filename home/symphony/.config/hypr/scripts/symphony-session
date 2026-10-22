@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+export PATH="$HOME/.local/bin:$HOME/dotfiles/scripts:$HOME/dotfiles/install/themes:$HOME/.config/hypr/scripts:$PATH"
+export MPD_HOST="$XDG_RUNTIME_DIR/mpd/socket"
+export XCURSOR_THEME=Bibata-Modern-Ice
+export XCURSOR_SIZE=24
+export QT_QPA_PLATFORMTHEME=qt6ct
+systemctl --user import-environment PATH MPD_HOST XCURSOR_THEME XCURSOR_SIZE QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP
+hyprctl setcursor Bibata-Modern-Ice 24
+systemctl --user start symphony-desktop.target

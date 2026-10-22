@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+umask 077
+app="$HOME/.local/lib/spotify-qt/squashfs-root/AppRun"
+theme="${XDG_CONFIG_HOME:-$HOME/.config}/symphony/current/.config/spotify-qt/dreamcore.qss"
+
+# The portable release bundles its own Qt; avoid loading system Qt plugins.
+unset QT_PLUGIN_PATH QT_QPA_PLATFORM_PLUGIN_PATH LD_LIBRARY_PATH
+export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=xdgdesktopportal
+export QT_STYLE_OVERRIDE=Fusion
+if [[ -f "$theme" ]]; then
+    exec "$app" -style Fusion -stylesheet "$theme" "$@"
+fi
+exec "$app" -style Fusion "$@"

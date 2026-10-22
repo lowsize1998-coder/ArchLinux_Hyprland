@@ -1,0 +1,9 @@
+# Keep the existing Dreamcore appearance and Zathura shortcuts.
+READER="/home/rozetta/.local/bin/zathura-rice"
+READER_ARG="launch"
+
+# LibreOffice is only a local converter; no editor window or background service.
+OFFICE_CMD="/usr/bin/soffice"
+OFFICE_ARG="--headless --nologo --nodefault --norestore"
+
+VERBOSE=0

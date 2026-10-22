@@ -1,0 +1,10 @@
+# Changes require a restart to take effect.
+
+# Cursor size specifically for Hyprland's internal rendering
+export HYPRCURSOR_SIZE=24
+
+# Path
+export PATH="$HOME/.local/bin:$PATH"
+
+# Default terminal for Hyprland applications.
+export TERMINAL=ghostty

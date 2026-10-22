@@ -1,0 +1,31 @@
+#!/bin/bash
+set -euo pipefail
+
+switcher="$HOME/.config/waybar/display-mode"
+service="symphony-waybar.service"
+selected_row=2
+if systemctl --user is-active --quiet "$service"; then
+    case $("$switcher" status) in
+        strip) selected_row=1 ;;
+        *) selected_row=0 ;;
+    esac
+fi
+
+choice=$(printf 'Islands\nFull-width bar\nHide Waybar\n' | rofi -dmenu \
+    -no-custom -no-show-icons -format i -selected-row "$selected_row" \
+    -theme-str 'mainbox { children: [ "listview" ]; } listview { lines: 3; columns: 1; fixed-height: true; border: 0px; } element { children: [ "element-text" ]; }') || exit 0
+
+case "$choice" in
+    0) mode=islands ;;
+    1) mode=strip ;;
+    2) exec systemctl --user stop "$service" ;;
+    *) exit 0 ;;
+esac
+
+if systemctl --user is-failed --quiet "$service"; then
+    systemctl --user reset-failed "$service"
+fi
+if [[ $("$switcher" status) != "$mode" ]]; then
+    "$switcher" "$mode"
+fi
+exec systemctl --user start "$service"

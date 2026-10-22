@@ -1,0 +1,15 @@
+[Unit]
+Description=Pomodoro timer for Waybar
+PartOf=graphical-session.target symphony-desktop.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecCondition=/usr/bin/python3 /home/rozetta/.config/uair/socket-check.py
+ExecStart=/usr/bin/uair --quiet
+ExecStopPost=/usr/bin/python3 /home/rozetta/.config/uair/socket-check.py --cleanup
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=symphony-desktop.target

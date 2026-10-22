@@ -1,0 +1,24 @@
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  findbar {
+    background: var(--symphony-panel) !important;
+    color: var(--symphony-fg) !important;
+    border: 1px solid var(--symphony-border) !important;
+    border-radius: var(--symphony-control-radius) !important;
+    padding: 6px 8px !important;
+    font-family: var(--symphony-ui-font) !important;
+    backdrop-filter: none !important;
+  }
+  findbar .findbar-textbox {
+    border-radius: 5px !important;
+    font-family: var(--symphony-ui-font) !important;
+  }
+  #downloadsPanel, #zen-library-button-panel, #appMenu-popup,
+  #unified-extensions-panel, #identity-popup {
+    --arrowpanel-background: var(--symphony-panel) !important;
+    --arrowpanel-color: var(--symphony-fg) !important;
+  }
+  #zen-toast-container {
+    font-family: var(--symphony-ui-font) !important;
+    color: var(--symphony-fg) !important;
+  }
+}

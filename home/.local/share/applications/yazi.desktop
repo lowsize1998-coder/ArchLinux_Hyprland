@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Yazi File Manager
+Comment=Open folders in Yazi using Ghostty
+Icon=yazi
+Exec=/home/rozetta/.local/bin/yazi-open %f
+TryExec=/usr/bin/yazi
+Terminal=false
+MimeType=inode/directory;
+Categories=System;FileManager;
+Keywords=File;Manager;Explorer;Browser;

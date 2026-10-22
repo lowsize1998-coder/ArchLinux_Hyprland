@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+go_nvim_data="${XDG_DATA_HOME:-$HOME/.local/share}/lazyvim-go"
+
+export NVIM_APPNAME=lazyvim-go
+export PATH="$go_nvim_data/mason/bin:$PATH"
+
+exec nvim "$@"

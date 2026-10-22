@@ -1,0 +1,80 @@
+/* Comfortable study text; ordinary prose uses Noto Sans, code uses JetBrains Mono. */
+body {
+  --font-interface-theme: "Noto Sans", sans-serif;
+  --font-text-theme: "Noto Sans", sans-serif;
+  --font-monospace-theme: "JetBrainsMono Nerd Font", monospace;
+  --font-ui-small: 13px;
+  --font-ui-medium: 14px;
+  --file-line-width: 780px;
+  --file-margins: 32px;
+  --line-height-normal: 1.7;
+  --line-height-tight: 1.35;
+  --h1-size: 1.75em;
+  --h2-size: 1.4em;
+  --h3-size: 1.18em;
+  --h4-size: 1.08em;
+  --h1-color: var(--dream-text);
+  --h2-color: var(--dream-text);
+  --h3-color: var(--dream-text);
+  --h4-color: var(--dream-text);
+  --h5-color: var(--dream-text);
+  --h6-color: var(--dream-secondary);
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --inline-title-color: var(--dream-text);
+  --inline-title-size: 1.85em;
+  --inline-title-weight: 600;
+  --bold-color: var(--dream-text);
+  --italic-color: var(--dream-secondary);
+  --link-color: var(--dream-info);
+  --link-color-hover: var(--dream-pink);
+  --link-external-color: var(--dream-info);
+  --link-external-color-hover: var(--dream-pink);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+  --list-marker-color: var(--dream-teal);
+  --list-marker-color-hover: var(--dream-selection);
+  --blockquote-border-color: var(--dream-teal);
+  --blockquote-border-thickness: 2px;
+  --blockquote-color: var(--dream-secondary);
+  --code-background: var(--dream-surface);
+  --code-normal: var(--dream-text);
+  --code-comment: var(--dream-muted);
+  --code-function: #F59127;
+  --code-keyword: #F59127;
+  --code-important: #F59127;
+  --code-property: var(--dream-info);
+  --code-operator: var(--dream-secondary);
+  --code-punctuation: var(--dream-secondary);
+  --code-string: var(--dream-selection);
+  --code-tag: #F59127;
+  --code-value: #F59127;
+  --tag-color: var(--dream-accent);
+  --tag-color-hover: var(--dream-pink);
+  --tag-background: color-mix(in srgb, var(--dream-accent) 12%, transparent);
+  --tag-background-hover: var(--dream-hover);
+  --tag-radius: 5px;
+  --table-border-color: var(--dream-border);
+  --table-header-background: var(--dream-surface);
+  --table-header-color: var(--dream-text);
+  --table-row-alt-background: color-mix(in srgb, var(--dream-text) 3%, transparent);
+  --metadata-label-text-color: var(--dream-muted);
+  --metadata-input-text-color: var(--dream-secondary);
+  --metadata-border-color: var(--dream-border);
+}
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-content {
+  caret-color: var(--dream-text);
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--dream-border);
+  border-radius: var(--radius-m);
+}
+
+.markdown-rendered img {
+  border-radius: var(--radius-s);
+}

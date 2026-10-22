@@ -1,0 +1,17 @@
+{
+  "profile": "rice",
+  "font": "Adwaita Sans 12",
+  "epubFont": "serif",
+  "epubFontSize": 16,
+  "epubLineHeight": 1.6,
+  "epubParagraphSpacing": 0.8,
+  "pagePadding": 16,
+  "scrollStep": 55,
+  "zoomStep": 10,
+  "breakMinutes": 20,
+  "breakSeconds": 20,
+  "profiles": {
+    "paper": {"background": "#eee8dc", "foreground": "#292724"},
+    "warm": {"background": "#24211e", "foreground": "#e3d8c7"}
+  }
+}

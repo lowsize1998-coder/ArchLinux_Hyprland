@@ -1,0 +1,60 @@
+/* Match Zen Library's charcoal surfaces and the Dreamcore cream foreground.
+ * Browser-only overrides: the shared system palette and website CSS stay separate.
+ */
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  :root {
+    --dream-bg: #131313;
+    --dream-panel: #131313;
+    --dream-popup: #191919;
+    --dream-ink: var(--dream-fg);
+    --dream-muted: color-mix(in srgb, var(--dream-fg) 65%, #131313);
+    --dream-light-muted: var(--dream-muted);
+    --dream-selection: color-mix(in srgb, var(--dream-fg) 12%, #131313);
+    --dream-accent: var(--dream-fg);
+    --dream-border: color-mix(in srgb, var(--dream-fg) 18%, #131313);
+    --dream-info: var(--dream-fg);
+    --toolbar-color-scheme: dark !important;
+    --lwt-accent-color: var(--dream-bg) !important;
+    --lwt-accent-color-inactive: var(--dream-bg) !important;
+    --lwt-sidebar-background-color: var(--dream-bg) !important;
+    --lwt-sidebar-text-color: var(--dream-fg) !important;
+    background-color: var(--dream-bg) !important;
+    fill: var(--dream-fg) !important;
+    color-scheme: dark !important;
+  }
+
+  #navigator-toolbox, zen-workspace, .urlbar {
+    color-scheme: dark !important;
+  }
+
+  .tabbrowser-tab:hover .tab-background {
+    background: color-mix(in srgb, var(--dream-fg) 7%, var(--dream-bg)) !important;
+  }
+
+  .tabbrowser-tab[selected] .tab-background {
+    border-color: var(--dream-border) !important;
+  }
+
+  .urlbarView-url, .urlbarView-action {
+    color: var(--dream-muted) !important;
+  }
+
+  #urlbar .urlbar-input::placeholder, #searchbar input::placeholder,
+  .urlbar .urlbar-input::placeholder {
+    color: var(--dream-muted) !important;
+    -webkit-text-fill-color: var(--dream-muted) !important;
+  }
+
+  .urlbar .urlbarView-row .urlbarView-url,
+  .urlbar .urlbarView-action,
+  .urlbar .urlbarView-title-separator,
+  .urlbar .urlbarView-title-separator::before {
+    color: var(--dream-muted) !important;
+    -webkit-text-fill-color: var(--dream-muted) !important;
+  }
+
+  #zen-media-controls-toolbar {
+    background: var(--dream-panel) !important;
+    color: var(--dream-fg) !important;
+  }
+}

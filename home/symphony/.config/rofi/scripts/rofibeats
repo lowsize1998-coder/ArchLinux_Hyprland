@@ -1,0 +1,88 @@
+#!/bin/bash
+# rofi music player - plays online streams or local files
+
+music_dir="$HOME/Music"
+icon="$HOME/.config/rofi/music.png"
+rofi_dir="$HOME/.config/rofi/custom-rofi"
+
+declare -A stations=(
+  ["Radio - Lofi Girl"]="https://play.streamafrica.net/lofiradio"
+  ["Radio - Chillhop"]="http://stream.zeno.fm/fyn8eh3h5f8uv"
+  ["FM - Love Radio 90.7"]="https://radio-stations-philippines.com/love"
+  ["YT - Relaxing Music"]="https://youtube.com/playlist?list=PLMIbmfP_9vb8BCxRoraJpoo4q1yMFg4CE"
+  ["YT - Youtube Remix"]="https://youtube.com/playlist?list=PLeqTkIUlrZXlSNn3tcXAa-zbo95j0iN-0"
+  ["YT - Korean Drama OST"]="https://youtube.com/playlist?list=PLUge_o9AIFp4HuA-A3e3ZqENh63LuRRlQ"
+  ["YT - Relaxing Piano Jazz"]="https://youtu.be/85UEqRat6E4?si=jXQL1Yp2VP_G6NSn"
+  ["YT - John Snow reveal"]="https://youtu.be/dNOZ7MuET2E?si=MDfxr_LrpEEcYslC"
+  ["YT - Moody Classic"]="https://youtube.com/playlist?list=PLgIxeDoNjzdD0EpiuE6KaBWiIrgGI2QvE&si=Z6C-Vm8u9cNZ8tny"
+  ["YT - Japanese City Pop"]="https://youtu.be/Rh7u_cbAiZc?si=gRa6zNjYQZweSm8u"
+  ["YT - Starboy Vibes"]="https://youtu.be/fykM0vDDUnU?si=bnfSyV-LTxVfSyhU"
+  ["YT - Jazz Lounge"]="https://youtu.be/kJl319t76z8?si=ny03bA2GHDRwXW5-"
+  ["YT - Friends S1"]="https://youtube.com/playlist?list=PLnS-KSZtIXlH8YNow_rTIflrX6ZEF1uNd&si=Y-0aWZSaBJ4peNfu"
+  ["YT - Hindi Cover Songs"]="https://youtube.com/playlist?list=PLjqy7NBQvw8wnorOYEom-tBnd1wtiveQZ&si=hVjVxPXF5Bl8zH8l"
+)
+
+notify() {
+  notify-send -u normal -i "$icon" "Now Playing" "$1"
+}
+
+play_local() {
+  if [[ ! -d "$music_dir" ]]; then
+    notify-send -u critical "Error" "Music directory not found"
+    exit 1
+  fi
+
+  # get all music files
+  mapfile -t files < <(find "$music_dir" -type f \( -iname "*.mp3" -o -iname "*.flac" -o -iname "*.wav" -o -iname "*.ogg" -o -iname "*.mp4" \))
+
+  if [[ ${#files[@]} -eq 0 ]]; then
+    notify-send -u critical "Error" "No music files found"
+    exit 1
+  fi
+
+  # show only filenames in rofi
+  choice=$(printf "%s\n" "${files[@]}" | xargs -d '\n' -n1 basename | rofi -i -dmenu -config "$rofi_dir/config-rofi-Beats.rasi" -p "Local Music")
+  [[ -z "$choice" ]] && exit 0
+
+  # find which file was selected and its index
+  for i in "${!files[@]}"; do
+    if [[ "$(basename "${files[$i]}")" == "$choice" ]]; then
+      notify "$choice"
+      mpv --playlist-start="$i" --loop-playlist --vid=no "${files[@]}"
+      exit 0
+    fi
+  done
+}
+
+play_shuffle() {
+  if [[ ! -d "$music_dir" ]]; then
+    notify-send -u critical "Error" "Music directory not found"
+    exit 1
+  fi
+  notify "Shuffle Play"
+  mpv --shuffle --loop-playlist --vid=no "$music_dir"
+}
+
+play_online() {
+  choice=$(printf "%s\n" "${!stations[@]}" | sort | rofi -i -dmenu -config "$rofi_dir/config-rofi-Beats.rasi" -p "Online Music")
+  [[ -z "$choice" ]] && exit 0
+
+  notify "$choice"
+  mpv --vid=no "${stations[$choice]}"
+}
+
+# if mpv is running, stop it. otherwise show menu
+if pkill mpv; then
+  notify-send -u low -i "$icon" "Music stopped"
+  exit 0
+fi
+
+pkill -x rofi 2>/dev/null
+
+choice=$(printf "Play from Online Stations\nPlay from Music Folder\nShuffle Music Folder" | rofi -dmenu -config "$rofi_dir/config-rofi-Beats-menu.rasi" -p "")
+
+case "$choice" in
+  "Play from Music Folder") play_local ;;
+  "Play from Online Stations") play_online ;;
+  "Shuffle Music Folder") play_shuffle ;;
+esac

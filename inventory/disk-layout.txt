@@ -1,0 +1,8 @@
+NAME          SIZE TYPE FSTYPE MOUNTPOINTS
+sda         111.8G disk        
+└─sda1      111.8G part ntfs   
+zram0           4G disk swap   [SWAP]
+nvme0n1     465.8G disk        
+├─nvme0n1p1     1G part vfat   /boot
+├─nvme0n1p2    46G part ext4   /
+└─nvme0n1p3 418.8G part ext4   /home

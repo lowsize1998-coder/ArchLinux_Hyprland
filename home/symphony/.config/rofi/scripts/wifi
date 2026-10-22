@@ -1,0 +1,40 @@
+#!/bin/bash
+# wifi network selector using rofi and nmcli
+
+notify-send "Wi-Fi Scanning..."
+
+wifi_list=$(nmcli --fields "SECURITY,SSID" device wifi list | sed 1d | sed 's/  */ /g' | sed -E "s/WPA*.?\S/ /g" | sed "s/^--/ /g" | sed "s/  //g" | sed "/--/d")
+
+if nmcli -fields WIFI g | grep -q "enabled"; then
+	toggle="󰖪  Disable Wi-Fi"
+else
+	toggle="󰖩  Enable Wi-Fi"
+fi
+
+chosen=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID:")
+[[ -z "$chosen" ]] && exit 0
+
+case "$chosen" in
+"󰖩  Enable Wi-Fi")
+	nmcli radio wifi on
+	;;
+"󰖪  Disable Wi-Fi")
+	nmcli radio wifi off
+	;;
+*)
+	# extract ssid (skip icon)
+	ssid="${chosen:3}"
+
+	# check if already saved
+	if nmcli -g NAME connection | grep -qw "$ssid"; then
+		nmcli connection up id "$ssid" && notify-send "Wi-Fi" "Connected to $ssid"
+	else
+		# secured network needs password
+		if [[ "$chosen" =~ "" ]]; then
+			pass=$(rofi -dmenu -p "Password:")
+			[[ -z "$pass" ]] && exit 0
+		fi
+		nmcli device wifi connect "$ssid" password "$pass" && notify-send "Wi-Fi" "Connected to $ssid"
+	fi
+	;;
+esac

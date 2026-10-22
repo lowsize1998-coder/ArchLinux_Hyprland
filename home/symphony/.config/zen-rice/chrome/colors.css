@@ -1,0 +1,18 @@
+/* Generated from the active Symphony GTK palette; run build-colors.py. */
+@-moz-document url("chrome://browser/content/browser.xhtml"),
+  url("about:newtab"), url("about:home"), url("about:preferences"), url("about:downloads") {
+  :root {
+    --symphony-bg: #0f0f0f;
+    --symphony-fg: #e8e8ed;
+    --symphony-panel: #1c1c1e;
+    --symphony-raised: #1c1c1e;
+    --symphony-muted: #d1d1d6;
+    --symphony-border: #48484a;
+    --symphony-accent: #a8a8ac;
+    --symphony-accent-ink: #0f0f0f;
+    --symphony-hover: #343437;
+    --symphony-selected: #49494c;
+    --symphony-color-scheme: dark;
+    --symphony-theme-name: "zen";
+  }
+}

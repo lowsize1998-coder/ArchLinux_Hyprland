@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+marker="$XDG_RUNTIME_DIR/symphony-focus-mode"
+if [[ -f "$marker" ]]; then
+    rm "$marker"
+    hyprctl reload
+    notify-send "Symphony" "Vibe mode"
+else
+    hyprctl eval 'hl.config({general = {gaps_in = 0, gaps_out = 0, border_size = 1}, decoration = {rounding = 0, active_opacity = 1, inactive_opacity = 1, blur = {enabled = false}}, animations = {enabled = false}})'
+    touch "$marker"
+    notify-send "Symphony" "Focus mode"
+fi

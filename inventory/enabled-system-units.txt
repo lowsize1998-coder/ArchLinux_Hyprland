@@ -1,0 +1,22 @@
+UNIT FILE                          STATE   PRESET
+AmneziaVPN.service                 enabled disabled
+bluetooth.service                  enabled disabled
+docker.service                     enabled disabled
+getty@.service                     enabled enabled
+happd.service                      enabled disabled
+input-remapper.service             enabled disabled
+NetworkManager-dispatcher.service  enabled disabled
+NetworkManager-wait-online.service enabled disabled
+NetworkManager.service             enabled disabled
+power-profiles-daemon.service      enabled disabled
+sddm.service                       enabled disabled
+seatd.service                      enabled disabled
+systemd-resolved.service           enabled enabled
+systemd-timesyncd.service          enabled enabled
+systemd-resolved-monitor.socket    enabled disabled
+systemd-resolved-varlink.socket    enabled disabled
+systemd-userdbd.socket             enabled enabled
+remote-fs.target                   enabled enabled
+fstrim.timer                       enabled disabled
+
+19 unit files listed.

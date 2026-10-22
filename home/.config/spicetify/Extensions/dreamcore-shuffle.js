@@ -1,0 +1,1 @@
+../../../symphony/themes/dreamcore/.config/spicetify/Extensions/dreamcore-shuffle.js

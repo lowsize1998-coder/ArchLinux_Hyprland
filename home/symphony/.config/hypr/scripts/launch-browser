@@ -1,0 +1,2 @@
+#!/bin/bash
+exec uwsm-app -- "$HOME/.local/bin/zen" "$@"

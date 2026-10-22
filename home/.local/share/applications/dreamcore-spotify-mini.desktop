@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify Mini
+Comment=Compact controller for official Spotify
+Exec=/home/rozetta/.local/bin/spotify-mini
+Icon=spotify-launcher
+Terminal=false
+Categories=AudioVideo;Audio;Music;Player;
+StartupWMClass=dreamcore-spotify-mini

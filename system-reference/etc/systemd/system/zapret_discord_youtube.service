@@ -1,0 +1,16 @@
+[Unit]
+Description=Custom Script Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/zapret-discord-youtube-linux
+User=root
+ExecStart=/usr/bin/env bash /opt/zapret-discord-youtube-linux/service.sh daemon
+ExecStop=/usr/bin/env bash /opt/zapret-discord-youtube-linux/service.sh kill
+ExecStopPost=/usr/bin/env echo "Сервис завершён"
+PIDFile=/run/zapret_discord_youtube.pid
+
+[Install]
+WantedBy=multi-user.target

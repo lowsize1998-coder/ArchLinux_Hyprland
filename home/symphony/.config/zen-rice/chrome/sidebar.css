@@ -1,0 +1,21 @@
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  #navigator-toolbox {
+    background: var(--symphony-panel) !important;
+    color: var(--symphony-fg) !important;
+    border-radius: var(--symphony-radius) !important;
+  }
+  :root[zen-sidebar-expanded="true"]:not([zen-compact-mode]) #navigator-toolbox {
+    min-width: var(--symphony-sidebar-width) !important;
+  }
+  #zen-sidebar-top-buttons, #zen-sidebar-foot-buttons {
+    padding: 4px 6px !important;
+  }
+  #zen-sidebar-top-buttons toolbarbutton, #zen-sidebar-foot-buttons toolbarbutton {
+    border-radius: var(--symphony-control-radius) !important;
+  }
+  #zen-media-controls-toolbar {
+    background: var(--symphony-raised) !important;
+    border: 1px solid var(--symphony-border) !important;
+    border-radius: var(--symphony-radius) !important;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "V1-Willemstad-Colours@@color-accent-d-ch-presets": "ssopt-col-accent-d-azul",
+  "V1-Willemstad-Colours@@col-selection-d-presets": "ssopt-sel-d-met-cross-deep-blue",
+  "V1-Willemstad-Colours@@color-base-d-l-presets": "ssopt-col-base-lightness-d-cinematic",
+  "V1-Willemstad-Colours@@color-rainbow-d-presets": "ssopt-col-rainbow-d-dracula",
+  "V1-Willemstad-Colours@@ssopt-theme-contrast-dark": false,
+  "V1-Willemstad-Colours@@ssopt-custom-colour-template-dark": false,
+  "pluglets-iem-settings@@ssopt-super-focused-mode": false,
+  "pluglets-iem-settings@@ssopt-focused-mode": false,
+  "pluglets-iem-settings@@distant-opacity": 1,
+  "pluglets-iem-settings@@near-fade-factor": 0.5,
+  "cssc-latex-settings@@cssc-latex-font-size": 14,
+  "V1-Willemstad-Root@@no-animations": false,
+  "V1-Willemstad-Editor@@ssopt-highlight-no-box-shadow": false,
+  "V1-Willemstad-Editor@@col-highlight-0@@dark": "#85743D",
+  "V1-Willemstad-Editor@@col-highlight-text@@dark": "#000000",
+  "dreamcore@@dreamcore-focus": false
+}

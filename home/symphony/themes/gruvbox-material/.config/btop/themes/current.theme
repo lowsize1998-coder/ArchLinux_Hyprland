@@ -1,0 +1,75 @@
+## Symphony
+## Author: vyrx
+## Theme: Gruvbox Material
+
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#111313"
+
+# Main text color
+theme[main_fg]="#ddc7a1"
+
+# Title color for boxes
+theme[title]="#a9b665"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#7daea3"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#32302f"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#ddc7a1"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#32302f"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#a9b665"
+
+# Box outline and divider line color
+theme[cpu_box]="#7daea3"
+theme[mem_box]="#7daea3"
+theme[net_box]="#7daea3"
+theme[proc_box]="#7daea3"
+theme[div_line]="#32302f"
+
+# Gradient for all meters and graphs
+theme[temp_start]="#7daea3"
+theme[temp_mid]="#89b482"
+theme[temp_end]="#a9b665"
+
+
+theme[cpu_start]="#7daea3"
+theme[cpu_mid]="#89b482"
+theme[cpu_end]="#a9b665"
+
+
+theme[free_start]="#89b482"
+theme[free_mid]="#a9b665"
+theme[free_end]="#d8a657"
+
+
+theme[cached_start]="#d8a657"
+theme[cached_mid]="#d8a657"
+theme[cached_end]="#d8a657"
+
+
+theme[available_start]="#a9b665"
+theme[available_mid]="#a9b665"
+theme[available_end]="#a9b665"
+
+
+theme[used_start]="#7daea3"
+theme[used_mid]="#7daea3"
+theme[used_end]="#7daea3"
+
+
+theme[download_start]="#d8a657"
+theme[download_mid]="#a9b665"
+theme[download_end]="#7daea3"
+
+
+theme[upload_start]="#d8a657"
+theme[upload_mid]="#a9b665"
+theme[upload_end]="#7daea3"

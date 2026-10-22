@@ -1,0 +1,49 @@
+#!/bin/bash
+# Wallpaper picker - swww only (no theme changes)
+
+if command -v swww >/dev/null 2>&1; then
+    wallbin=swww
+elif command -v awww >/dev/null 2>&1; then
+    wallbin=awww
+else
+    noitfy-send "No wallpaper daemon found" "Please install awww or swww and try again"
+    exit 1 
+fi
+
+WALLPAPER_DIR="$HOME/Wallpapers/"
+ WALLPAPER_PARAMS="--transition-fps 60 --transition-type=any --transition-duration=1"
+
+# Get focused monitor
+focused_monitor=$(hyprctl -j monitors | jq -r '.[] | select(.focused==true).name')
+: "${focused_monitor:=HDMI-A-1}"
+
+# Get wallpapers
+mapfile -d '' wallpapers < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) -print0)
+
+if [[ ${#wallpapers[@]} -eq 0 ]]; then
+  (action=$(notify-send -A "open=Get Wallpapers" --wait "No Wallpapers Found" "Add images to ~/Wallpapers to use dynamic theming") && [[ "$action" == "open" ]] && xdg-open "https://github.com/vyrx-dev/Wallpapers") &
+  exit 1
+fi
+
+# Build menu with thumbnails
+menu() {
+  for wallpaper in "${wallpapers[@]}"; do
+    printf "%s\x00icon\x1f%s\n" "$(basename "$wallpaper")" "$wallpaper"
+  done | sort
+}
+
+# Start wallpaper daemon if needed
+"$wallbin" query &>/dev/null || "$wallbin"-daemon --format argb
+
+# Show menu
+choice=$(menu | rofi -i -dmenu -config ~/.config/rofi/custom-rofi/config-wallpaper.rasi)
+[[ -z "$choice" ]] && exit 0
+
+# Apply wallpaper
+for wallpaper in "${wallpapers[@]}"; do
+  [[ "$(basename "$wallpaper")" == "$choice" ]] || continue
+  
+  "$wallbin" img -o "$focused_monitor" "$wallpaper" $WALLPAPER_PARAMS
+  notify-send -i "$wallpaper" "Wallpaper Changed" "$(basename "$wallpaper")"
+  break
+done

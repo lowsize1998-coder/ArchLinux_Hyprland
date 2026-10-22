@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+for attempt in {1..30}; do
+    if awww query >/dev/null 2>&1; then
+        wallpaper="$HOME/.config/symphony/current/wallpaper"
+        if [[ -f "$wallpaper" ]]; then
+            exec awww img "$wallpaper" --transition-type none
+        fi
+        exit 0
+    fi
+    sleep 0.1
+done
+exit 1

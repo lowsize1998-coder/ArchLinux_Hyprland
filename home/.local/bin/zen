@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+for candidate in "$HOME/.tarball-installations/zen/zen" /usr/bin/zen-browser /usr/bin/zen; do
+    if [[ -x "$candidate" ]]; then exec "$candidate" "$@"; fi
+done
+printf 'Install Zen Browser first (for example zen-browser-bin), then launch again.\n' >&2
+exit 127

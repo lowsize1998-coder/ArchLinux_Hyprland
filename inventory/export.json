@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-22",
+  "source_home": "/home/rozetta",
+  "copied_regular_files": 1292,
+  "excluded": [
+    {
+      "path": "/home/rozetta/symphony/.config/fish/fish_variables",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/symphony/.config/hypr/local.lua.before-mouse-flat-20261006",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/symphony/.config/hypr/local.lua.before-zathura-alt-fix-20261006",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/symphony/.config/hypr/local.lua.before-zathura-rice-20261006",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/symphony/.config/hypr/scripts/nightlight.before-gamma-fix-20261006",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/symphony/.config/waybar/config.jsonc.before-uair-waybar-20261007-120559",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/symphony/.config/waybar/style.css.before-uair-waybar-20261007-120559",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/symphony/.config/zen-rice/network-fix",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/.github",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/assets",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/install/themes/__pycache__",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/anonymous (omarchy)/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/dreamcore/__pycache__",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/dynamic/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/espresso/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/forest/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/gruvbox-material/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/kanagawa/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/nordic/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/rose-pine/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/sakura/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/tokyo-night/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/void/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/symphony/themes/zen/.cache",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/.config/nvim-lazyvim/.git",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/.config/zathura/__pycache__",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/.config/uair/__pycache__",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/.config/uair/uair.toml.before-uair-waybar-20261007-120559",
+      "reason": "history, backup, runtime or credential filename"
+    },
+    {
+      "path": "/home/rozetta/.local/bin/__pycache__",
+      "reason": "dependency, runtime, backup or showcase directory"
+    },
+    {
+      "path": "/home/rozetta/.local/lib/spotify-qt/squashfs-root/usr/lib/libQt6Network.so.6",
+      "reason": "Redundant extracted AppImage omitted; Qt library contains a PEM format marker, not a user key"
+    },
+    {
+      "path": "/home/rozetta/.local/lib/spotify-qt/squashfs-root/usr/plugins/tls/libqopensslbackend.so",
+      "reason": "Redundant extracted AppImage omitted; Qt library contains a PEM format marker, not a user key"
+    },
+    {
+      "path": "/home/rozetta/Инструкции/.sources/__pycache__",
+      "reason": "dependency, runtime, backup or showcase directory"
+    }
+  ],
+  "manual_symlinks": [],
+  "zen_safe_preferences": 18,
+  "supplemental_resources": [
+    "home/symphony/themes/dreamcore/assets/solid-blue.png",
+    "home/.config/dlv/config.yml",
+    "home/.local/share/happ-dreamcore/DarkTheme.qml",
+    "home/.local/share/happ-dreamcore/compatibility.json",
+    "home/.local/share/happ-dreamcore/theme.qrc",
+    "home/.local/share/happ-dreamcore/theme.rcc",
+    "home/.local/share/happ-dreamcore/colors.json",
+    "home/.local/share/happ-dreamcore/palette-fingerprint",
+    "home/.local/share/happ-dreamcore/LightTheme.qml",
+    "home/.local/share/dreamcore-upscale/realesrgan-ncnn-vulkan",
+    "home/.local/share/dreamcore-upscale/README.md",
+    "home/.local/share/dreamcore-upscale/LICENSE",
+    "home/.local/share/dreamcore-upscale/models/realesr-animevideov3-x4.bin",
+    "home/.local/share/dreamcore-upscale/models/realesr-animevideov3-x2.bin",
+    "home/.local/share/dreamcore-upscale/models/realesr-animevideov3-x3.bin",
+    "home/.local/share/dreamcore-upscale/models/realesrgan-x4plus-anime.param",
+    "home/.local/share/dreamcore-upscale/models/realesrgan-x4plus.param",
+    "home/.local/share/dreamcore-upscale/models/realesrgan-x4plus-anime.bin",
+    "home/.local/share/dreamcore-upscale/models/realesr-animevideov3-x2.param",
+    "home/.local/share/dreamcore-upscale/models/realesr-animevideov3-x3.param",
+    "home/.local/share/dreamcore-upscale/models/realesr-animevideov3-x4.param",
+    "home/.local/share/dreamcore-upscale/models/realesrgan-x4plus.bin"
+  ]
+}

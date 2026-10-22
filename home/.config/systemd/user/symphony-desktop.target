@@ -1,0 +1,5 @@
+[Unit]
+Description=Symphony desktop
+PartOf=graphical-session.target
+After=graphical-session.target
+Wants=symphony-waybar.service symphony-notifications.service symphony-wallpaper.service symphony-idle.service symphony-osd.service symphony-clipboard-text.service symphony-clipboard-image.service symphony-clipboard-persist.service symphony-polkit.service

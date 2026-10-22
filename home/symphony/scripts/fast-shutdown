@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Configure systemd for faster shutdown (5s instead of default 90s)
+# This prevents hanging services from delaying shutdown
+
+sudo mkdir -p /etc/systemd/system.conf.d
+
+cat <<EOF | sudo tee /etc/systemd/system.conf.d/10-faster-shutdown.conf
+[Manager]
+DefaultTimeoutStopSec=5s
+EOF
+
+echo "Fast shutdown configured. Changes take effect after reboot."
+echo "Services will now be killed after 5 seconds instead of 90 seconds."

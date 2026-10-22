@@ -1,0 +1,98 @@
+[
+  {
+    "pair": "Blue / cream",
+    "foreground": "#FAEEBA",
+    "background": "#194B66",
+    "ratio": 8.04
+  },
+  {
+    "pair": "Blue / secondary",
+    "foreground": "#C7D5EF",
+    "background": "#194B66",
+    "ratio": 6.34
+  },
+  {
+    "pair": "Pink / ink",
+    "foreground": "#1B272C",
+    "background": "#FFE2E6",
+    "ratio": 12.58
+  },
+  {
+    "pair": "Green menu / ink",
+    "foreground": "#1B272C",
+    "background": "#86AD31",
+    "ratio": 5.85
+  },
+  {
+    "pair": "Selection / ink",
+    "foreground": "#1B272C",
+    "background": "#DFEDC9",
+    "ratio": 12.45
+  },
+  {
+    "pair": "dim_text on blue",
+    "foreground": "#ADB5B8",
+    "background": "#194B66",
+    "ratio": 4.5
+  },
+  {
+    "pair": "accent on blue",
+    "foreground": "#BAAEDA",
+    "background": "#194B66",
+    "ratio": 4.53
+  },
+  {
+    "pair": "secondary_accent on blue",
+    "foreground": "#8BBEBB",
+    "background": "#194B66",
+    "ratio": 4.55
+  },
+  {
+    "pair": "info on blue",
+    "foreground": "#A4C9E5",
+    "background": "#194B66",
+    "ratio": 5.39
+  },
+  {
+    "pair": "success on blue",
+    "foreground": "#C7D6B3",
+    "background": "#194B66",
+    "ratio": 6.12
+  },
+  {
+    "pair": "warning on blue",
+    "foreground": "#CBB36B",
+    "background": "#194B66",
+    "ratio": 4.55
+  },
+  {
+    "pair": "error on blue",
+    "foreground": "#D4ABB0",
+    "background": "#194B66",
+    "ratio": 4.58
+  },
+  {
+    "pair": "accent / ink",
+    "foreground": "#1B272C",
+    "background": "#9381C5",
+    "ratio": 4.51
+  },
+  {
+    "pair": "secondary_accent / ink",
+    "foreground": "#1B272C",
+    "background": "#81B8B5",
+    "ratio": 6.89
+  },
+  {
+    "pair": "warning / ink",
+    "foreground": "#1B272C",
+    "background": "#CBB36B",
+    "ratio": 7.43
+  },
+  {
+    "pair": "success / ink",
+    "foreground": "#1B272C",
+    "background": "#C7D6B3",
+    "ratio": 9.98
+  }
+]

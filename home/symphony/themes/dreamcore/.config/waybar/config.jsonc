@@ -1,0 +1,222 @@
+[
+  {
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "fixed-center": true,
+    "height": 34,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
+    "spacing": 0,
+    "modules-left": [
+      "custom/music-icon",
+      "mpris"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "group/tray-drawer",
+      "pulseaudio",
+      "custom/keyboard-layout",
+      "memory",
+      "clock"
+    ],
+    "custom/music-icon": {
+      "format": "♪",
+      "tooltip": false,
+      "on-click": "playerctl play-pause 2>/dev/null",
+      "on-click-right": "playerctl next 2>/dev/null",
+      "on-click-middle": "playerctl previous 2>/dev/null"
+    },
+    "mpris": {
+      "format": "{artist} · {title}",
+      "format-paused": "{artist} · {title}",
+      "format-stopped": "",
+      "max-length": 55,
+      "tooltip": true,
+      "tooltip-format": "{artist}\n{title}"
+    },
+    "hyprland/workspaces": {
+      "on-click": "activate",
+      "format": "{id}",
+      "all-outputs": false,
+      "persistent-workspaces": {
+        "DP-2": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "move-to-monitor": false
+    },
+    "pulseaudio": {
+      "format": "{icon}",
+      "on-click": "ghostty --class=com.symphony.Wiremix -e wiremix",
+      "on-click-right": "pamixer -t",
+      "tooltip-format": "{volume}% · {desc}",
+      "scroll-step": 5,
+      "format-muted": "",
+      "format-icons": {
+        "default": [
+          "",
+          "",
+          ""
+        ]
+      }
+    },
+    "custom/keyboard-layout": {
+      "exec": "/home/rozetta/.config/waybar/scripts/keyboard-layout",
+      "return-type": "json",
+      "interval": 1
+    },
+    "group/tray-drawer": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 200,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "custom/expand",
+        "tray"
+      ]
+    },
+    "custom/expand": {
+      "format": "✧",
+      "tooltip": false
+    },
+    "tray": {
+      "icon-size": 12,
+      "spacing": 4,
+      "show-passive-items": true
+    },
+    "memory": {
+      "format": "{used:0.1f} GB",
+      "interval": 2,
+      "on-click": "ghostty -e btop",
+      "tooltip": true,
+      "tooltip-format": "Занято: {used:0.1f} GB ({percentage}%)\nДоступно: {avail:0.1f} GB\nВсего: {total:0.1f} GB"
+    },
+    "clock": {
+      "format": "{:%H:%M}",
+      "format-alt": "{:L%A %d %B}",
+      "tooltip": true,
+      "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+    },
+    "output": "DP-2"
+  },
+  {
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "fixed-center": true,
+    "height": 34,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
+    "spacing": 0,
+    "modules-left": [
+      "custom/music-icon",
+      "mpris"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "group/tray-drawer",
+      "pulseaudio",
+      "custom/keyboard-layout",
+      "memory",
+      "clock"
+    ],
+    "custom/music-icon": {
+      "format": "♪",
+      "tooltip": false,
+      "on-click": "playerctl play-pause 2>/dev/null",
+      "on-click-right": "playerctl next 2>/dev/null",
+      "on-click-middle": "playerctl previous 2>/dev/null"
+    },
+    "mpris": {
+      "format": "{artist} · {title}",
+      "format-paused": "{artist} · {title}",
+      "format-stopped": "",
+      "max-length": 35,
+      "tooltip": true,
+      "tooltip-format": "{artist}\n{title}"
+    },
+    "hyprland/workspaces": {
+      "on-click": "activate",
+      "format": "{id}",
+      "all-outputs": false,
+      "persistent-workspaces": {
+        "DP-1": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "move-to-monitor": false
+    },
+    "pulseaudio": {
+      "format": "{icon}",
+      "on-click": "ghostty --class=com.symphony.Wiremix -e wiremix",
+      "on-click-right": "pamixer -t",
+      "tooltip-format": "{volume}% · {desc}",
+      "scroll-step": 5,
+      "format-muted": "",
+      "format-icons": {
+        "default": [
+          "",
+          "",
+          ""
+        ]
+      }
+    },
+    "custom/keyboard-layout": {
+      "exec": "/home/rozetta/.config/waybar/scripts/keyboard-layout",
+      "return-type": "json",
+      "interval": 1
+    },
+    "group/tray-drawer": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 200,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "custom/expand",
+        "tray"
+      ]
+    },
+    "custom/expand": {
+      "format": "✧",
+      "tooltip": false
+    },
+    "tray": {
+      "icon-size": 12,
+      "spacing": 4,
+      "show-passive-items": true
+    },
+    "memory": {
+      "format": "{used:0.1f} GB",
+      "interval": 2,
+      "on-click": "ghostty -e btop",
+      "tooltip": true,
+      "tooltip-format": "Занято: {used:0.1f} GB ({percentage}%)\nДоступно: {avail:0.1f} GB\nВсего: {total:0.1f} GB"
+    },
+    "clock": {
+      "format": "{:%H:%M}",
+      "format-alt": "{:L%A %d %B}",
+      "tooltip": true,
+      "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>"
+    },
+    "output": "DP-1"
+  }
+]

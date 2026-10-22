@@ -1,0 +1,2 @@
+#!/bin/sh
+exec "/home/rozetta/.local/opt/dota2-mod-manager/Dota-2-Mod-Manager.AppImage" "$@"

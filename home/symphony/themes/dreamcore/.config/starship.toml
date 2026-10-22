@@ -1,0 +1,11 @@
+format = "$directory$git_branch$git_status$character"
+[directory]
+style = "#A4C9E5"
+truncation_length = 3
+[git_branch]
+style = "#BAAEDA"
+[git_status]
+style = "#CBB36B"
+[character]
+success_symbol = "[❯](#C7D6B3)"
+error_symbol = "[❯](#D4ABB0)"

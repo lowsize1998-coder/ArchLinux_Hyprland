@@ -1,0 +1,239 @@
+/**
+ * @name Dreamcore
+ * @author rozetta
+ * @version 1.0.0
+ * @description Shared Dreamcore palette, blue surfaces and pastel accents.
+ */
+/* Dreamcore color tokens; generated from the shared palette. */
+:root, .theme-dark, .theme-light, .theme-darker, .theme-midnight {
+  --dc-background: #194B66;
+  --dc-text: #FAEEBA;
+  --dc-secondary: #C7D5EF;
+  --dc-muted: #ADB5B8;
+  --dc-border: #698083;
+  --dc-hover: #25586F;
+  --dc-selected: #2F5577;
+  --dc-accent: #9381C5;
+  --dc-teal: #81B8B5;
+  --dc-ink: #1B272C;
+  --dc-selection: #DFEDC9;
+
+  --background-primary: var(--dc-background) !important;
+  --background-secondary: var(--dc-background) !important;
+  --background-secondary-alt: var(--dc-background) !important;
+  --background-tertiary: var(--dc-background) !important;
+  --background-floating: var(--dc-background) !important;
+  --background-accent: var(--dc-selected) !important;
+  --background-base-lowest: var(--dc-background) !important;
+  --background-base-lower: var(--dc-background) !important;
+  --background-base-low: var(--dc-background) !important;
+  --background-surface-high: var(--dc-background) !important;
+  --background-surface-higher: var(--dc-background) !important;
+  --background-surface-highest: var(--dc-background) !important;
+  --background-modifier-hover: var(--dc-hover) !important;
+  --background-modifier-active: var(--dc-selected) !important;
+  --background-modifier-selected: var(--dc-selected) !important;
+  --background-modifier-accent: var(--dc-border) !important;
+  --background-mod-subtle: var(--dc-hover) !important;
+  --background-mod-normal: var(--dc-selected) !important;
+  --background-mod-strong: var(--dc-selected) !important;
+  --background-mentioned: color-mix(in srgb, #9381C5 14%, transparent) !important;
+  --background-mentioned-hover: color-mix(in srgb, #9381C5 22%, transparent) !important;
+  --background-message-hover: var(--dc-hover) !important;
+  --channeltextarea-background: var(--dc-hover) !important;
+  --chat-background: var(--dc-background) !important;
+  --chat-background-default: var(--dc-background) !important;
+  --chat-border: var(--dc-border) !important;
+  --modal-background: var(--dc-background) !important;
+  --modal-footer-background: var(--dc-background) !important;
+  --input-background: var(--dc-hover) !important;
+  --input-border: var(--dc-border) !important;
+  --autocomplete-bg: var(--dc-background) !important;
+  --app-frame-background: var(--dc-background) !important;
+  --app-frame-border: var(--dc-border) !important;
+  --home-background: var(--dc-background) !important;
+  --card-background-default: var(--dc-background) !important;
+  --card-border-default: var(--dc-border) !important;
+  --card-primary-pressed-bg: var(--dc-selected) !important;
+  --card-secondary-bg: var(--dc-hover) !important;
+  --card-secondary-pressed-bg: var(--dc-selected) !important;
+  --embed-background-alternate: var(--dc-hover) !important;
+
+  --text-normal: var(--dc-text) !important;
+  --text-primary: var(--dc-text) !important;
+  --text-default: var(--dc-text) !important;
+  --text-secondary: var(--dc-secondary) !important;
+  --text-muted: var(--dc-secondary) !important;
+  --text-tertiary: var(--dc-muted) !important;
+  --text-strong: var(--dc-text) !important;
+  --text-subtle: var(--dc-secondary) !important;
+  --text-invert: var(--dc-ink) !important;
+  --chat-text-muted: var(--dc-secondary) !important;
+  --input-text-default: var(--dc-text) !important;
+  --input-text-error-default: var(--dc-text) !important;
+  --input-placeholder-text-default: var(--dc-secondary) !important;
+  --channel-text-area-placeholder: var(--dc-secondary) !important;
+  --input-icon-default: var(--dc-secondary) !important;
+  --input-background-default: var(--dc-hover) !important;
+  --input-background-error-default: var(--dc-hover) !important;
+  --input-border-default: var(--dc-border) !important;
+  --input-border-readonly: var(--dc-border) !important;
+  --input-border-hover: var(--dc-teal) !important;
+  --input-border-active: var(--dc-accent) !important;
+  --input-border-error-default: #D4ABB0 !important;
+  --text-link: #A4C9E5 !important;
+  --text-brand: #BAAEDA !important;
+  --text-positive: #C7D6B3 !important;
+  --text-warning: #CBB36B !important;
+  --text-danger: #D4ABB0 !important;
+  --header-primary: var(--dc-text) !important;
+  --header-secondary: var(--dc-secondary) !important;
+  --channels-default: var(--dc-secondary) !important;
+  --channel-icon: var(--dc-secondary) !important;
+  --interactive-normal: var(--dc-secondary) !important;
+  --interactive-hover: var(--dc-text) !important;
+  --interactive-active: var(--dc-text) !important;
+  --interactive-muted: var(--dc-muted) !important;
+  --interactive-text-default: var(--dc-secondary) !important;
+  --interactive-text-hover: var(--dc-text) !important;
+  --interactive-text-active: var(--dc-text) !important;
+  --icon-primary: var(--dc-text) !important;
+  --icon-secondary: var(--dc-secondary) !important;
+  --icon-tertiary: var(--dc-muted) !important;
+
+  --brand-experiment: var(--dc-accent) !important;
+  --brand-500: var(--dc-accent) !important;
+  --brand-560: var(--dc-accent) !important;
+  --brand-600: var(--dc-teal) !important;
+  --brand-700: var(--dc-teal) !important;
+  --control-brand-foreground: #BAAEDA !important;
+  --control-brand-foreground-new: #BAAEDA !important;
+  --button-filled-brand-background: var(--dc-accent) !important;
+  --button-filled-brand-background-hover: var(--dc-teal) !important;
+  --button-filled-brand-background-active: var(--dc-teal) !important;
+  --button-filled-brand-text: var(--dc-ink) !important;
+  --button-secondary-background: var(--dc-hover) !important;
+  --button-secondary-background-hover: var(--dc-selected) !important;
+  --button-secondary-text: var(--dc-text) !important;
+  --button-positive-background: #C7D6B3 !important;
+  --button-positive-text: var(--dc-ink) !important;
+  --button-danger-background: #840E1C !important;
+  --button-danger-text: var(--dc-text) !important;
+  --status-positive: #C7D6B3 !important;
+  --status-warning: #CBB36B !important;
+  --status-danger: #D4ABB0 !important;
+  --text-feedback-positive: #C7D6B3 !important;
+  --text-feedback-info: #A4C9E5 !important;
+  --text-feedback-warning: #CBB36B !important;
+  --text-feedback-critical: #D4ABB0 !important;
+  --text-status-online: #C7D6B3 !important;
+  --text-status-idle: #CBB36B !important;
+  --text-status-dnd: #D4ABB0 !important;
+  --text-status-offline: var(--dc-muted) !important;
+  --text-voice-connected: #C7D6B3 !important;
+  --text-voice-speaking: #C7D6B3 !important;
+  --text-voice-disconnected: #D4ABB0 !important;
+
+  --checkbox-background-default: var(--dc-hover) !important;
+  --checkbox-background-hover: var(--dc-selected) !important;
+  --checkbox-background-active: var(--dc-accent) !important;
+  --checkbox-background-selected-default: var(--dc-accent) !important;
+  --checkbox-background-selected-hover: var(--dc-teal) !important;
+  --checkbox-border-default: var(--dc-border) !important;
+  --checkbox-border-hover: var(--dc-teal) !important;
+  --checkbox-border-active: var(--dc-accent) !important;
+  --checkbox-border-selected-default: var(--dc-accent) !important;
+  --checkbox-border-selected-hover: var(--dc-teal) !important;
+  --checkbox-icon-active: var(--dc-ink) !important;
+  --radio-background-default: var(--dc-hover) !important;
+  --radio-background-hover: var(--dc-selected) !important;
+  --radio-background-active: var(--dc-accent) !important;
+  --radio-background-selected-default: var(--dc-accent) !important;
+  --radio-background-selected-hover: var(--dc-teal) !important;
+  --radio-border-default: var(--dc-border) !important;
+  --radio-border-hover: var(--dc-teal) !important;
+  --radio-border-active: var(--dc-accent) !important;
+  --radio-border-selected-default: var(--dc-accent) !important;
+  --radio-border-selected-hover: var(--dc-teal) !important;
+  --radio-foreground-default: var(--dc-text) !important;
+  --radio-foreground-hover: var(--dc-text) !important;
+  --radio-foreground-active: var(--dc-ink) !important;
+  --radio-thumb-background-active: var(--dc-ink) !important;
+
+  --reaction-text-default: var(--dc-secondary) !important;
+  --reaction-text-reacted-default: var(--dc-text) !important;
+  --reaction-text-active: var(--dc-text) !important;
+  --reaction-background: var(--dc-hover) !important;
+  --reaction-background-selected: var(--dc-selected) !important;
+  --slider-track-background: var(--dc-hover) !important;
+  --progressbar-indicator-background: var(--dc-accent) !important;
+
+  --border-subtle: var(--dc-border) !important;
+  --border-normal: var(--dc-border) !important;
+  --border-strong: var(--dc-teal) !important;
+  --border-faint: var(--dc-border) !important;
+  --divider-subtle: var(--dc-border) !important;
+  --scrollbar-thin-thumb: var(--dc-teal) !important;
+  --scrollbar-thin-track: transparent !important;
+  --scrollbar-auto-thumb: var(--dc-teal) !important;
+  --scrollbar-auto-track: var(--dc-background) !important;
+  --scrollbar-auto-scrollbar-color-thumb: var(--dc-teal) !important;
+  --scrollbar-auto-scrollbar-color-track: var(--dc-background) !important;
+  --font-primary: "Noto Sans", sans-serif;
+  --font-display: "Noto Sans", sans-serif;
+  --font-code: "JetBrainsMono Nerd Font", monospace;
+}
+
+/* Structural surfaces only; keep Discord's layout and content intact. */
+html, body, #app-mount {
+  background-color: var(--dc-background) !important;
+  color: var(--dc-text) !important;
+}
+
+[class*="sidebar_"]:not([class*="sidebarList_"]),
+[class*="sidebarList_"], [class*="guilds_"],
+[class*="chat_"]:not([class*="chatContent_"]),
+[class*="chatContent_"], [class*="membersWrap_"], [class*="members_"],
+[class*="privateChannels_"], [class*="panels_"],
+[class*="standardSidebarView_"], [class*="sidebarRegionScroller_"],
+[class*="contentRegion_"], [class*="contentRegionScroller_"],
+[class*="peopleColumn_"], [class*="nowPlayingColumn_"] {
+  background-color: var(--dc-background) !important;
+}
+
+[class*="menu_"][role="menu"], [class*="tooltip_"] {
+  border: 1px solid var(--dc-border);
+  border-radius: 10px;
+}
+
+[class*="channelTextArea_"] {
+  background-color: var(--dc-hover) !important;
+  border: 1px solid var(--dc-border);
+}
+
+[class*="markup_"] pre, [class*="markup_"] code {
+  background-color: var(--dc-hover) !important;
+}
+
+/* Small color transitions; no blur, animated backgrounds or remote assets. */
+[class*="button_"], [class*="item_"][role="menuitem"] {
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+[class*="lookFilled_"][class*="colorBrand_"] {
+  background-color: var(--dc-accent) !important;
+  color: var(--dc-ink) !important;
+}
+
+[class*="lookFilled_"][class*="colorBrand_"]:hover {
+  background-color: var(--dc-teal) !important;
+}
+
+[class*="mentioned_"]::before {
+  background-color: var(--dc-accent) !important;
+}
+
+::selection {
+  background-color: var(--dc-selection);
+  color: var(--dc-ink);
+}

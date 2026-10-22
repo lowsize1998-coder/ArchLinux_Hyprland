@@ -1,0 +1,40 @@
+# Account data and generated/runtime files do not belong in this repository.
+.git/
+__pycache__/
+*.pyc
+*.log
+*.lock
+*.sqlite*
+*.db
+*.db-wal
+*.db-shm
+auth.json
+auth.json.*
+.env
+.env.*
+Cookies*
+cookies.*
+logins*
+key4.db
+cert9.db
+sessionstore*
+zen-sessions*
+tdata/
+.ssh/
+.gnupg/
+.aws/
+.kube/
+.docker/
+node_modules/
+.cache/
+Cache/
+Code Cache/
+GPUCache/
+IndexedDB/
+Local Storage/
+Session Storage/
+private-backup/
+*.tar.gz
+*.tar.zst
+*.zip
+!build/waybar/waybar-0.15.0.zip

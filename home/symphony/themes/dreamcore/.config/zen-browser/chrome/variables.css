@@ -1,0 +1,44 @@
+
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  :root {
+    --zen-primary-color: var(--dream-accent) !important;
+    --zen-colors-primary: var(--dream-bg) !important;
+    --zen-colors-secondary: var(--dream-panel) !important;
+    --zen-colors-tertiary: var(--dream-selection) !important;
+    --zen-colors-border: var(--dream-border) !important;
+    --zen-main-browser-background: var(--dream-bg) !important;
+    --zen-main-browser-background-toolbar: var(--dream-panel) !important;
+    --zen-themed-toolbar-bg-transparent: var(--dream-panel) !important;
+    --zen-border-radius: 10px !important;
+    --zen-element-separation: 6px !important;
+    --zen-active-tab-scale: 1 !important;
+    --toolbar-bgcolor: var(--dream-panel) !important;
+    --toolbar-color: var(--dream-ink) !important;
+    --toolbox-textcolor: var(--dream-ink) !important;
+    --toolbox-textcolor-inactive: var(--dream-ink) !important;
+    --zen-sidebar-themed-icon-fill: var(--dream-ink) !important;
+    --zen-colors-primary-foreground: var(--dream-ink) !important;
+    --zen-colors-input-bg: var(--dream-panel) !important;
+    --zen-toolbar-element-bg: var(--dream-panel) !important;
+    --zen-toolbar-element-bg-hover: var(--dream-selection) !important;
+    --zen-accent-button-background: var(--dream-selection) !important;
+    --zen-accent-button-color: var(--dream-ink) !important;
+    --toolbarbutton-background-color-hover: var(--dream-selection) !important;
+    --toolbarbutton-background-color-active: var(--dream-selection) !important;
+    --toolbarbutton-icon-fill: var(--dream-ink) !important;
+    --toolbarbutton-hover-background: var(--dream-selection) !important;
+    --toolbarbutton-active-background: var(--dream-selection) !important;
+    --toolbar-field-background-color: var(--dream-panel) !important;
+    --toolbar-field-color: var(--dream-ink) !important;
+    --toolbar-field-focus-background-color: var(--dream-panel) !important;
+    --toolbar-field-focus-color: var(--dream-ink) !important;
+    --arrowpanel-background: var(--dream-popup) !important;
+    --arrowpanel-color: var(--dream-ink) !important;
+    --arrowpanel-border-color: var(--dream-border) !important;
+    --lwt-text-color: var(--dream-ink) !important;
+    --tab-selected-bgcolor: var(--dream-selection) !important;
+    --tab-selected-textcolor: var(--dream-ink) !important;
+  }
+  #main-window { font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif !important; font-size: 14px !important; color: var(--dream-ink) !important; }
+  #zen-main-app-wrapper, #zen-browser-background { background: var(--dream-bg) !important; }
+}

@@ -1,0 +1,9 @@
+{
+  "showTrayIcon": true,
+  "trayIconTheme": "use_system",
+  "minimizeToTray": false,
+  "spellCheckerLocales": [],
+  "darkMode": false,
+  "startInFullscreen": false,
+  "enableHardwareAcceleration": true
+}

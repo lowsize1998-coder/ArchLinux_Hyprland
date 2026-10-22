@@ -1,0 +1,90 @@
+#!/bin/bash
+# keyhints - show hyprland keybindings
+
+# Kill existing rofi
+if pidof rofi >/dev/null; then
+  pkill rofi
+  exit
+fi
+
+# Get bindings from hyprland and format for display
+hyprctl -j binds | jq -r '.[] | "\(.modmask),\(.key),\(.keycode),\(.description),\(.dispatcher),\(.arg)"' | \
+    sed -E \
+        -e 's/^0,/,/' \
+        -e 's/^1,/SHIFT,/' \
+        -e 's/^4,/CTRL,/' \
+        -e 's/^5,/SHIFT CTRL,/' \
+        -e 's/^8,/ALT,/' \
+        -e 's/^9,/SHIFT ALT,/' \
+        -e 's/^12,/CTRL ALT,/' \
+        -e 's/^13,/SHIFT CTRL ALT,/' \
+        -e 's/^64,/SUPER,/' \
+        -e 's/^65,/SUPER SHIFT,/' \
+        -e 's/^68,/SUPER CTRL,/' \
+        -e 's/^69,/SUPER SHIFT CTRL,/' \
+        -e 's/^72,/SUPER ALT,/' \
+        -e 's/^73,/SUPER SHIFT ALT,/' \
+        -e 's/^76,/SUPER CTRL ALT,/' \
+        -e 's/^77,/SUPER SHIFT CTRL ALT,/' | \
+    awk -F',' '
+    BEGIN {
+        # Keycode mappings
+        keymap[10] = "1"; keymap[11] = "2"; keymap[12] = "3"; keymap[13] = "4";
+        keymap[14] = "5"; keymap[15] = "6"; keymap[16] = "7"; keymap[17] = "8";
+        keymap[18] = "9"; keymap[19] = "0"; keymap[20] = "-"; keymap[21] = "=";
+        
+        # Mouse mappings
+        mousemap[272] = "LEFT CLICK"; mousemap[273] = "RIGHT CLICK"; 
+        mousemap[274] = "MIDDLE CLICK";
+    }
+    {
+        mod = $1; key = $2; keycode = $3; desc = $4; dispatcher = $5; arg = $6;
+        
+        # Resolve keycode if key is empty
+        if (key == "" && keycode != "0" && keycode != "") {
+            if (keycode in keymap) {
+                key = keymap[keycode];
+            } else {
+                key = "code:" keycode;
+            }
+        }
+        
+        # Resolve mouse buttons
+        if (key ~ /^mouse:/) {
+            mousecode = substr(key, 7);
+            if (mousecode in mousemap) {
+                key = mousemap[mousecode];
+            }
+        }
+        
+        # Generate description if empty
+        if (desc == "") {
+            desc = dispatcher;
+            if (arg != "") {
+                # Clean up common prefixes
+                gsub(/^exec, /, "", arg);
+                gsub(/uwsm app -- /, "", arg);
+                gsub(/uwsm-app -- /, "", arg);
+                
+                # Shorten long commands
+                if (length(arg) > 40) {
+                    desc = dispatcher;
+                } else {
+                    desc = dispatcher " " arg;
+                }
+            }
+        }
+        
+        # Clean up modifier display
+        gsub(/^[ \t]+/, "", mod);
+        gsub(/[ \t]+$/, "", mod);
+        
+        # Format output - handle empty modifier
+        if (mod != "") {
+            printf "%-35s → %s\n", mod " + " key, desc;
+        } else {
+            printf "%-35s → %s\n", key, desc;
+        }
+    }' | \
+    sort -u | \
+    rofi -dmenu -i -p "" -config ~/.config/rofi/custom-rofi/config-keybinds.rasi

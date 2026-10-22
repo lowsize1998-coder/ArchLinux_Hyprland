@@ -1,0 +1,15 @@
+
+* { font-family: "Noto Sans"; font-size: 14px; }
+.control-center { background: #86AD31; color: #1B272C; border: 1px solid #FDE1BA; border-radius: 14px; padding: 12px; }
+.notification-row { outline: none; }
+.notification { background: #FFE2E6; color: #1B272C; border: 1px solid #FDE1BA; border-radius: 10px; padding: 10px; margin: 5px; box-shadow: none; }
+.notification-content, .summary, .body, .time, .notification-default-action { background: transparent; color: #1B272C; }
+.notification-action, .close-button, .widget-title button, .widget-dnd { background: #DFEDC9; color: #1B272C; border: none; border-radius: 7px; padding: 6px; }
+.notification-action:hover, .close-button:hover, .widget-title button:hover { background: #9381C5; color: #1B272C; }
+.widget-mpris { background: #FFE2E6; color: #1B272C; border-radius: 10px; padding: 10px; margin: 8px 0; }
+.widget-mpris-player { background: #FFE2E6; color: #1B272C; border-radius: 8px; }
+.widget-title, .widget-title label, .widget-dnd label, .widget-mpris-title, .widget-mpris-subtitle, .notification-group-headers { color: #1B272C; }
+.widget-dnd switch { background: #FFE2E6; border: none; }
+.widget-dnd switch:checked { background: #9381C5; }
+.widget-dnd switch slider { background: #DFEDC9; }
+.notification.critical { border: 2px solid #840E1C; }

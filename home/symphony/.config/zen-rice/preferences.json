@@ -1,0 +1,17 @@
+{
+  "toolkit.legacyUserProfileCustomizations.stylesheets": true,
+  "zen.view.use-single-toolbar": false,
+  "zen.view.sidebar-expanded": true,
+  "zen.view.sidebar-expanded.max-width": 280,
+  "zen.theme.border-radius": 10,
+  "zen.theme.content-element-separation": 6,
+  "zen.view.compact.animate-sidebar": false,
+  "zen.workspaces.switch-animation-duration": 120,
+  "widget.use-xdg-desktop-portal.file-picker": 1,
+  "font.name.sans-serif.x-western": "Noto Sans",
+  "font.name.serif.x-western": "Noto Serif",
+  "font.name.monospace.x-western": "JetBrainsMono Nerd Font",
+  "font.name.sans-serif.x-cyrillic": "Noto Sans",
+  "font.name.serif.x-cyrillic": "Noto Serif",
+  "font.name.monospace.x-cyrillic": "JetBrainsMono Nerd Font"
+}

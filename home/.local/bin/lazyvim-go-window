@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+lazyvim_go_dir="$HOME"
+lazyvim_go_args=()
+case "${1:-}" in
+  --lab)
+    lazyvim_go_dir="$HOME/nvim-go-lab"
+    lazyvim_go_args=("$lazyvim_go_dir/greeting.go")
+    ;;
+  "")
+    lazyvim_go_dir=$("$HOME/.config/hypr/scripts/cwd-terminal")
+    [[ -d "$lazyvim_go_dir" ]] || lazyvim_go_dir="$HOME"
+    ;;
+  *)
+    printf 'Usage: lazyvim-go-window [--lab]\n' >&2
+    exit 2
+    ;;
+esac
+
+exec /usr/bin/ghostty \
+  --working-directory="$lazyvim_go_dir" \
+  --window-inherit-working-directory=false \
+  --title="LazyVim Go" \
+  -e "$HOME/.local/bin/nvim-go" "${lazyvim_go_args[@]}"

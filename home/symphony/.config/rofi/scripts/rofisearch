@@ -1,0 +1,9 @@
+#!/bin/bash
+# quick google search from rofi
+
+rofi_config="$HOME/.config/rofi/custom-rofi/config-search.rasi"
+
+pkill -x rofi 2>/dev/null
+
+query=$(rofi -dmenu -config "$rofi_config" -p "")
+[[ -n "$query" ]] && xdg-open "https://www.google.com/search?q=$query"

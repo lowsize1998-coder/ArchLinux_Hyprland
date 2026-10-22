@@ -1,0 +1,55 @@
+From cdb792af41e78d01263c2152d8b5050c40705ea9 Mon Sep 17 00:00:00 2001
+From: Tom Benham <tom.benham13@gmail.com>
+Date: Sat, 16 May 2026 18:03:09 +0200
+Subject: [PATCH 1/2] fix(hyprland/workspaces): fix IPC call when using
+ `"move-to-monitor": true`
+
+---
+ src/modules/hyprland/backend.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/modules/hyprland/backend.cpp b/src/modules/hyprland/backend.cpp
+index 08cf97c118..f38f8216b4 100644
+--- a/src/modules/hyprland/backend.cpp
++++ b/src/modules/hyprland/backend.cpp
+@@ -320,7 +320,7 @@ std::string IPC::buildLuaDispatch(const std::string& dispatcher, const std::stri
+   // New format:  /dispatch hl.dsp.focus({ workspace = "1" })
+   //
+   // Old format:  dispatch focusworkspaceoncurrentmonitor 2
+-  // New format:  /dispatch hl.dsp.focus({ workspace = "2", monitor = "current" })
++  // New format:  /dispatch hl.dsp.focus({ workspace = "2", on_current_monitor = true })
+   //
+   // Old format:  dispatch togglespecialworkspace name
+   // New format:  /dispatch hl.dsp.workspace.toggle_special("name")
+@@ -329,7 +329,7 @@ std::string IPC::buildLuaDispatch(const std::string& dispatcher, const std::stri
+     return "/dispatch hl.dsp.focus({ workspace = \"" + arg + "\" })";
+   }
+   if (dispatcher == "focusworkspaceoncurrentmonitor") {
+-    return "/dispatch hl.dsp.focus({ workspace = \"" + arg + "\", monitor = \"current\" })";
++    return "/dispatch hl.dsp.focus({ workspace = \"" + arg + "\", on_current_monitor = true })";
+   }
+   if (dispatcher == "togglespecialworkspace") {
+     if (arg.empty()) {
+
+From 40c9d92e3de1ee287da1ac4901264d1571fe803d Mon Sep 17 00:00:00 2001
+From: Tom Benham <tom.benham13@gmail.com>
+Date: Sat, 16 May 2026 21:29:23 +0200
+Subject: [PATCH 2/2] test(hyprland): fix dispatch test
+
+---
+ test/hyprland/backend.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/test/hyprland/backend.cpp b/test/hyprland/backend.cpp
+index 62d23ae4d6..f2e10daeac 100644
+--- a/test/hyprland/backend.cpp
++++ b/test/hyprland/backend.cpp
+@@ -160,7 +160,7 @@ TEST_CASE("buildLuaDispatch focusworkspaceoncurrentmonitor", "[buildLuaDispatch]
+       IPCTestHelper::buildLuaDispatch("focusworkspaceoncurrentmonitor", "3");
+   REQUIRE(
+       result ==
+-      "/dispatch hl.dsp.focus({ workspace = \"3\", monitor = \"current\" })");
++      "/dispatch hl.dsp.focus({ workspace = \"3\", on_current_monitor = true })");
+ }
+ 
+ TEST_CASE("buildLuaDispatch togglespecialworkspace", "[buildLuaDispatch]") {

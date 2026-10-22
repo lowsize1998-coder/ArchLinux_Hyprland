@@ -1,0 +1,23 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify Qt
+GenericName=Music Player
+Comment=Lightweight Spotify player with the current rice theme
+Icon=spotify-qt
+Exec=/home/rozetta/.local/bin/spotify-qt
+Terminal=false
+Categories=Audio;Music;Player;AudioVideo;
+StartupWMClass=spotify-qt
+Actions=PlayPause;Next;Previous;
+
+[Desktop Action PlayPause]
+Name=Play / Pause
+Exec=/home/rozetta/.local/bin/spotify-qt --play-pause
+
+[Desktop Action Next]
+Name=Next track
+Exec=/home/rozetta/.local/bin/spotify-qt --next
+
+[Desktop Action Previous]
+Name=Previous track
+Exec=/home/rozetta/.local/bin/spotify-qt --previous

@@ -1,0 +1,31 @@
+
+* { font-family: "JetBrainsMono Nerd Font"; font-size: 16px; border: none; border-radius: 0; }
+window#waybar { background: #194B66; color: #FAEEBA; border-bottom: 1px solid alpha(#FDE1BA, 0.35); }
+tooltip, menu { background: #86AD31; color: #1B272C; border: 1px solid #FDE1BA; border-radius: 10px; padding: 8px; }
+tooltip label, menuitem { color: #1B272C; }
+menuitem:hover { background: #DFEDC9; }
+#workspaces button { background: transparent; color: #C7D5EF; padding: 0 8px; margin: 1px 2px; border-radius: 7px; }
+#workspaces button.active, #workspaces button.visible.hosting-monitor { background: #DFEDC9; color: #1B272C; font-weight: bold; }
+#workspaces button:hover { background: #FFE2E6; color: #1B272C; box-shadow: none; }
+#workspaces button.empty { color: #ADB5B8; }
+#clock, #mpris, #tray, #pulseaudio, #bluetooth, #backlight, #memory,
+#custom-logo, #custom-expand, #custom-idle-indicator, #custom-screenrecording-indicator,
+#custom-keyboard-layout, #custom-uair { padding: 0 8px; color: #FAEEBA; background: transparent; }
+#custom-uair { margin: 1px 4px; background: #FFE2E6; color: #1B272C; border-radius: 7px; padding: 0 10px; }
+#custom-uair.paused { background: #DFEDC9; }
+#custom-screenrecording-indicator.active { color: #D4ABB0; }
+#clock { font-weight: bold; }
+
+/* Three islands, using the existing Dreamcore palette. */
+* { min-height: 0; }
+window#waybar { background: transparent; border: none; }
+.modules-left, .modules-center, .modules-right {
+    background: #194B66;
+    border: 1px solid alpha(#FDE1BA, 0.35);
+    border-radius: 10px;
+    padding: 0 8px;
+    min-height: 32px;
+}
+#custom-music-icon { color: #FAEEBA; padding: 0 4px 0 2px; }
+#custom-expand { border-radius: 7px; }
+#custom-expand:hover { background: #FFE2E6; color: #1B272C; }

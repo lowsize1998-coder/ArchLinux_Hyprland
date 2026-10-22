@@ -1,0 +1,21 @@
+@-moz-document url("chrome://browser/content/browser.xhtml") {
+  #nav-bar, #PersonalToolbar, #toolbar-menubar {
+    background: var(--symphony-panel) !important;
+    color: var(--symphony-fg) !important;
+  }
+  #nav-bar {
+    border-radius: var(--symphony-radius) !important;
+    padding-block: 3px !important;
+  }
+  toolbarbutton .toolbarbutton-icon, toolbarbutton .toolbarbutton-badge-stack {
+    border-radius: var(--symphony-control-radius) !important;
+  }
+  #PersonalToolbar .toolbarbutton-text {
+    font-family: var(--symphony-ui-font) !important;
+    font-size: 13px !important;
+  }
+  #PersonalToolbar {
+    padding-inline: 8px !important;
+    min-height: 28px !important;
+  }
+}

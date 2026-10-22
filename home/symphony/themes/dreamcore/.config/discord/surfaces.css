@@ -1,0 +1,30 @@
+/* Structural surfaces only; keep Discord's layout and content intact. */
+html, body, #app-mount {
+  background-color: var(--dc-background) !important;
+  color: var(--dc-text) !important;
+}
+
+[class*="sidebar_"]:not([class*="sidebarList_"]),
+[class*="sidebarList_"], [class*="guilds_"],
+[class*="chat_"]:not([class*="chatContent_"]),
+[class*="chatContent_"], [class*="membersWrap_"], [class*="members_"],
+[class*="privateChannels_"], [class*="panels_"],
+[class*="standardSidebarView_"], [class*="sidebarRegionScroller_"],
+[class*="contentRegion_"], [class*="contentRegionScroller_"],
+[class*="peopleColumn_"], [class*="nowPlayingColumn_"] {
+  background-color: var(--dc-background) !important;
+}
+
+[class*="menu_"][role="menu"], [class*="tooltip_"] {
+  border: 1px solid var(--dc-border);
+  border-radius: 10px;
+}
+
+[class*="channelTextArea_"] {
+  background-color: var(--dc-hover) !important;
+  border: 1px solid var(--dc-border);
+}
+
+[class*="markup_"] pre, [class*="markup_"] code {
+  background-color: var(--dc-hover) !important;
+}

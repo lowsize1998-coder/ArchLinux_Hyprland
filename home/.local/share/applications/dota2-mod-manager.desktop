@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Dota 2 Mod Manager
+Comment=Mods for Dota 2, without the file juggling
+Exec="/home/rozetta/.local/opt/dota2-mod-manager/Dota-2-Mod-Manager.AppImage" %u
+Icon=dota2-mod-manager
+Categories=Game;
+Terminal=false
+MimeType=x-scheme-handler/d2mm;application/x-d2mm;

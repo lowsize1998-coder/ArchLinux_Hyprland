@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+config="$HOME/.config/koodo-rice"
+installation="$HOME/.local/share/koodo-rice/current"
+if [[ ! -f "$installation/rice-executable.txt" ]]; then
+  printf '%s\n' 'Koodo пока не установлен. Выполните: koodo-rice-install' >&2
+  exit 1
+fi
+python3 "$config/theme.py"
+export KOODO_RICE_DIR="$config"
+IFS= read -r executable < "$installation/rice-executable.txt" || [[ -n "$executable" ]]
+exec "$installation/$executable" --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3 "$@"

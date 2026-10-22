@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if command -v swww >/dev/null 2>&1; then
+    wallbin=swww
+elif command -v awww >/dev/null 2>&1; then
+    wallbin=awww
+else
+    notify-send "No wallpaper daemon found" "Please install awww or swww and try again"
+    exit 1 
+fi
+
+# Sync hyprlock wallpaper from wallpaper cache (fast inline version)
+CACHE="$HOME/.cache/awww"
+MON=$(ls "$CACHE" 2>/dev/null | grep -v '_' | head -1)
+[[ -f "$CACHE/$MON" ]] && ln -sf "$(tr '\0' '\n' < "$CACHE/$MON" | sed -n '3p')" "$HOME/.cache/hyprlock-wallpaper"
+
+# Kill screensaver, launch hyprlock
+pkill -f "alacritty --class Screensaver"
+pidof hyprlock || exec hyprlock

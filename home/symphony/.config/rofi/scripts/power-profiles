@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get list of available power profiles
+profile=$(powerprofilesctl list |
+  awk '/^\s*[* ]\s*[a-zA-Z0-9\-]+:$/ { gsub(/^[*[:space:]]+|:$/,""); print }' |
+  tac |
+  rofi -dmenu -p "" -config "$HOME/.config/rofi/custom-rofi/config-power-profiles.rasi")
+
+# If user selected something, apply it and notify
+if [[ -n "$profile" ]]; then
+  powerprofilesctl set "$profile"
+  notify-send -i "power-profile-${profile}-symbolic" -a "Power" "Power Profile" "Switched to ${profile}"
+fi

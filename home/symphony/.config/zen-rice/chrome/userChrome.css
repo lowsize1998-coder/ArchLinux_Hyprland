@@ -1,0 +1,9 @@
+/* Symphony Zen: small modules, native controls, no animation/blur theme packs. */
+@import url("colors.css");
+@import url("variables.css");
+@import url("sidebar.css");
+@import url("tabs.css");
+@import url("toolbar.css");
+@import url("urlbar.css");
+@import url("menus.css");
+@import url("panels.css");

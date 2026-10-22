@@ -1,0 +1,36 @@
+# Pomodoro: 60 minutes of focus, then 10 minutes of rest.
+# Start/pause: uairctl toggle. Reload settings: uairctl reload.
+loop_on_end = true
+pause_at_start = false
+
+[defaults]
+format = "\r{name}: {time} {state}            "
+time_format = "%H:%M:%S"
+autostart = false
+paused_state_text = "[пауза]"
+resumed_state_text = "[идёт]"
+
+[defaults.overrides.waybar]
+format = '''
+{"text":" {time}","tooltip":"{name}\nЛКМ — запуск / пауза\nПКМ — следующий этап\nСКМ — сброс рабочего этапа","class":["work","{state}"]}
+'''
+paused_state_text = "paused"
+resumed_state_text = "running"
+
+[[sessions]]
+id = "work"
+name = "Работа"
+duration = "1h"
+command = "notify-send --app-name=uair --hint=boolean:suppress-sound:true 'Время отдохнуть' 'Рабочий этап завершён. Перерыв — 10 минут.'"
+
+[[sessions]]
+id = "rest"
+name = "Отдых"
+duration = "10m"
+autostart = true
+command = "notify-send --app-name=uair --hint=boolean:suppress-sound:true 'Перерыв завершён' 'Когда будете готовы, запустите следующий цикл работы.'"
+
+[sessions.overrides.waybar]
+format = '''
+{"text":" {time}","tooltip":"{name}\nЛКМ — запуск / пауза\nПКМ — следующий этап\nСКМ — сброс рабочего этапа","class":["rest","{state}"]}
+'''

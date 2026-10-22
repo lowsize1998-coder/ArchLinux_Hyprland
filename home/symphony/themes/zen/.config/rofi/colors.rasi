@@ -1,0 +1,46 @@
+/**
+ * ════════════════════════════════════════════════════════
+ *   Symphony by https://github.com/vyrx-dev
+ *   Theme: Zen
+ * ════════════════════════════════════════════════════════
+ */
+
+* {
+    /* Primary accent color (using cyan/green as primary) */
+    primary: #a8a8ac;
+    primary-container: #6c6c6e;
+    on-primary: #1c1c1e;
+    on-primary-container: #e8e8ed;
+    
+    /* Secondary accent */
+    secondary: #86868a;
+    secondary-container: #48484a;
+    on-secondary: #1c1c1e;
+    on-secondary-container: #e8e8ed;
+    
+    /* Surface backgrounds (progressively lighter) */
+    surface: #0f0f0f;
+    surface-dim: #0f0f0f;
+    surface-bright: #48484a;
+    surface-container-lowest: #0f0f0f;
+    surface-container-low: #0f0f0f;
+    surface-container: #48484a;
+    surface-container-high: #48484a;
+    surface-container-highest: #48484a;
+    
+    /* Text colors */
+    on-surface: #0f0f0f;
+    on-surface-variant: #d1d1d6;
+    
+    /* Outline/border colors */
+    outline: #48484a;
+    outline-variant: #48484a;
+    
+    /* Error colors */
+    error: #5c5c5e;
+    on-error: #1c1c1e;
+    
+    /* Inverse colors */
+    inverse-surface: #0f0f0f;
+    inverse-on-surface: #0f0f0f;
+}

@@ -1,0 +1,2 @@
+#!/bin/bash
+exec "$HOME/dotfiles/install/themes/symphony-tui" "$@"

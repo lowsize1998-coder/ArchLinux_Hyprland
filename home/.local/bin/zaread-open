@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+if [[ $# -eq 0 ]]; then
+    document=$(zenity --file-selection --title="Открыть документ в Zaread" \
+        --file-filter="Документы | *.docx *.doc *.odt *.rtf" \
+        --file-filter="Все файлы | *") || exit 0
+    set -- "$document"
+fi
+
+exec /home/rozetta/.local/bin/zaread "$@"

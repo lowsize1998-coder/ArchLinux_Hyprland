@@ -1,0 +1,5 @@
+set recolor-darkcolor "#292724"
+set recolor-lightcolor "#eee8dc"
+set recolor-keephue true
+set recolor-reverse-video true
+set recolor true

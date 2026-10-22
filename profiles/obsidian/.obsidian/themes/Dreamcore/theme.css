@@ -1,0 +1,286 @@
+/* Generated from Dreamcore palette.json by .config/obsidian/build.py. */
+body {
+  --dream-bg: #194B66;
+  --dream-text: #FAEEBA;
+  --dream-secondary: #C7D5EF;
+  --dream-pink: #FFE2E6;
+  --dream-selection: #DFEDC9;
+  --dream-teal: #81B8B5;
+  --dream-info: #A4C9E5;
+  --dream-success: #C7D6B3;
+  --dream-warning: #CBB36B;
+  --dream-ink: #1B272C;
+  --dream-muted: #ADB5B8;
+  --dream-accent: #BAAEDA;
+  --dream-error: #D4ABB0;
+  --dream-surface: #13394E;
+  --dream-hover: #2D5A6E;
+  --dream-border: #38647F;
+}
+
+/* Native Obsidian controls, with one quiet surface across the workspace. */
+body.theme-dark,
+body.theme-light {
+  color-scheme: dark;
+  --color-base-00: var(--dream-bg);
+  --color-base-05: var(--dream-bg);
+  --color-base-10: var(--dream-surface);
+  --color-base-20: var(--dream-surface);
+  --color-base-25: var(--dream-hover);
+  --color-base-30: var(--dream-border);
+  --color-base-35: var(--dream-border);
+  --color-base-40: var(--dream-muted);
+  --color-base-50: var(--dream-muted);
+  --color-base-60: var(--dream-secondary);
+  --color-base-70: var(--dream-secondary);
+  --color-base-100: var(--dream-text);
+  --background-primary: var(--dream-bg);
+  --background-primary-alt: var(--dream-bg);
+  --background-secondary: var(--dream-bg);
+  --background-secondary-alt: var(--dream-bg);
+  --background-modifier-hover: var(--dream-hover);
+  --background-modifier-active-hover: var(--dream-hover);
+  --background-modifier-border: var(--dream-border);
+  --background-modifier-border-hover: var(--dream-muted);
+  --background-modifier-border-focus: var(--dream-accent);
+  --background-modifier-form-field: var(--dream-surface);
+  --background-modifier-box-shadow: #00000024;
+  --background-modifier-cover: #07172299;
+  --background-modifier-error: color-mix(in srgb, var(--dream-error) 15%, var(--dream-bg));
+  --background-modifier-error-hover: color-mix(in srgb, var(--dream-error) 25%, var(--dream-bg));
+  --background-modifier-success: color-mix(in srgb, var(--dream-success) 15%, var(--dream-bg));
+  --text-normal: var(--dream-text);
+  --text-muted: var(--dream-secondary);
+  --text-faint: var(--dream-muted);
+  --text-on-accent: var(--dream-ink);
+  --text-on-accent-inverted: var(--dream-ink);
+  --text-accent: var(--dream-accent);
+  --text-accent-hover: var(--dream-pink);
+  --text-error: var(--dream-error);
+  --text-success: var(--dream-success);
+  --text-warning: var(--dream-warning);
+  --text-selection: color-mix(in srgb, var(--dream-selection) 24%, transparent);
+  --text-highlight-bg: var(--dream-selection);
+  --text-highlight-bg-active: var(--dream-warning);
+  --interactive-normal: var(--dream-surface);
+  --interactive-hover: var(--dream-hover);
+  --interactive-accent: var(--dream-accent);
+  --interactive-accent-hover: var(--dream-pink);
+  --interactive-success: var(--dream-success);
+  --color-accent: var(--dream-accent);
+  --color-accent-1: var(--dream-accent);
+  --color-accent-2: var(--dream-pink);
+  --color-red: var(--dream-error);
+  --color-orange: #F59127;
+  --color-yellow: var(--dream-warning);
+  --color-green: var(--dream-success);
+  --color-cyan: var(--dream-teal);
+  --color-blue: var(--dream-info);
+  --color-purple: var(--dream-accent);
+  --color-pink: var(--dream-pink);
+  --icon-color: var(--dream-secondary);
+  --icon-color-hover: var(--dream-text);
+  --icon-color-active: var(--dream-text);
+  --icon-color-focused: var(--dream-accent);
+  --nav-item-color: var(--dream-secondary);
+  --nav-item-color-hover: var(--dream-text);
+  --nav-item-color-active: var(--dream-text);
+  --nav-item-background-hover: var(--dream-hover);
+  --nav-item-background-active: var(--dream-hover);
+  --nav-item-padding: 5px 9px;
+  --nav-indentation-guide-color: var(--dream-border);
+  --tab-container-background: var(--dream-bg);
+  --tab-background-active: var(--dream-hover);
+  --tab-outline-width: 0px;
+  --tab-divider-color: transparent;
+  --tab-text-color: var(--dream-muted);
+  --tab-text-color-active: var(--dream-secondary);
+  --tab-text-color-focused: var(--dream-secondary);
+  --tab-text-color-focused-active: var(--dream-text);
+  --tab-text-color-focused-active-current: var(--dream-text);
+  --titlebar-background: var(--dream-bg);
+  --titlebar-background-focused: var(--dream-bg);
+  --titlebar-text-color: var(--dream-secondary);
+  --titlebar-text-color-focused: var(--dream-text);
+  --titlebar-border-width: 0px;
+  --header-height: 38px;
+  --status-bar-background: var(--dream-bg);
+  --status-bar-text-color: var(--dream-muted);
+  --status-bar-border-width: 0px;
+  --status-bar-font-size: 11px;
+  --divider-color: var(--dream-border);
+  --divider-width: 1px;
+  --divider-color-hover: var(--dream-accent);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: color-mix(in srgb, var(--dream-teal) 32%, transparent);
+  --scrollbar-active-thumb-bg: var(--dream-teal);
+  --modal-background: var(--dream-surface);
+  --menu-background: var(--dream-surface);
+  --prompt-background: var(--dream-surface);
+  --search-result-background: var(--dream-bg);
+  --search-result-background-hover: var(--dream-hover);
+  --checkbox-color: var(--dream-teal);
+  --checkbox-color-hover: var(--dream-selection);
+  --checkbox-marker-color: var(--dream-ink);
+  --slider-thumb-color: var(--dream-selection);
+  --slider-track-background: var(--dream-hover);
+  --input-shadow: none;
+  --input-shadow-hover: none;
+  --radius-s: 5px;
+  --radius-m: 8px;
+  --radius-l: 10px;
+}
+
+.workspace-tab-header-inner {
+  box-shadow: none;
+}
+
+.workspace-leaf-content[data-type="markdown"] .view-header {
+  background: var(--dream-bg);
+  border-bottom: 0;
+}
+
+.status-bar {
+  opacity: 0.8;
+}
+
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  color: var(--dream-ink);
+  background-color: var(--dream-selection);
+  box-shadow: none;
+  border-radius: 3px;
+  padding-inline: 0.12em;
+}
+
+/* Comfortable study text; ordinary prose uses Noto Sans, code uses JetBrains Mono. */
+body {
+  --font-interface-theme: "Noto Sans", sans-serif;
+  --font-text-theme: "Noto Sans", sans-serif;
+  --font-monospace-theme: "JetBrainsMono Nerd Font", monospace;
+  --font-ui-small: 13px;
+  --font-ui-medium: 14px;
+  --file-line-width: 780px;
+  --file-margins: 32px;
+  --line-height-normal: 1.7;
+  --line-height-tight: 1.35;
+  --h1-size: 1.75em;
+  --h2-size: 1.4em;
+  --h3-size: 1.18em;
+  --h4-size: 1.08em;
+  --h1-color: var(--dream-text);
+  --h2-color: var(--dream-text);
+  --h3-color: var(--dream-text);
+  --h4-color: var(--dream-text);
+  --h5-color: var(--dream-text);
+  --h6-color: var(--dream-secondary);
+  --h1-weight: 600;
+  --h2-weight: 600;
+  --inline-title-color: var(--dream-text);
+  --inline-title-size: 1.85em;
+  --inline-title-weight: 600;
+  --bold-color: var(--dream-text);
+  --italic-color: var(--dream-secondary);
+  --link-color: var(--dream-info);
+  --link-color-hover: var(--dream-pink);
+  --link-external-color: var(--dream-info);
+  --link-external-color-hover: var(--dream-pink);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  --link-external-decoration: none;
+  --link-external-decoration-hover: underline;
+  --list-marker-color: var(--dream-teal);
+  --list-marker-color-hover: var(--dream-selection);
+  --blockquote-border-color: var(--dream-teal);
+  --blockquote-border-thickness: 2px;
+  --blockquote-color: var(--dream-secondary);
+  --code-background: var(--dream-surface);
+  --code-normal: var(--dream-text);
+  --code-comment: var(--dream-muted);
+  --code-function: #F59127;
+  --code-keyword: #F59127;
+  --code-important: #F59127;
+  --code-property: var(--dream-info);
+  --code-operator: var(--dream-secondary);
+  --code-punctuation: var(--dream-secondary);
+  --code-string: var(--dream-selection);
+  --code-tag: #F59127;
+  --code-value: #F59127;
+  --tag-color: var(--dream-accent);
+  --tag-color-hover: var(--dream-pink);
+  --tag-background: color-mix(in srgb, var(--dream-accent) 12%, transparent);
+  --tag-background-hover: var(--dream-hover);
+  --tag-radius: 5px;
+  --table-border-color: var(--dream-border);
+  --table-header-background: var(--dream-surface);
+  --table-header-color: var(--dream-text);
+  --table-row-alt-background: color-mix(in srgb, var(--dream-text) 3%, transparent);
+  --metadata-label-text-color: var(--dream-muted);
+  --metadata-input-text-color: var(--dream-secondary);
+  --metadata-border-color: var(--dream-border);
+}
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-content {
+  caret-color: var(--dream-text);
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--dream-border);
+  border-radius: var(--radius-m);
+}
+
+.markdown-rendered img {
+  border-radius: var(--radius-s);
+}
+
+/* @settings
+name: Dreamcore
+id: dreamcore
+settings:
+  - id: dreamcore-focus
+    title: Dreamcore Focus
+    description: "Только активная заметка. Ctrl+Alt+F возвращает панели и вкладки."
+    type: class-toggle
+    default: false
+    addCommand: true
+*/
+
+/* Scope focus to a Markdown pane. Switching to a graph or canvas restores chrome. */
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  :is(.mod-sidedock, .workspace-ribbon, .titlebar, .status-bar,
+      .mod-root .workspace-tab-header-container, .mod-root .view-header,
+      .mod-root .sidebar-toggle-button) {
+  display: none !important;
+}
+
+/* Do not close other notes: hide only groups and leaves outside the active path. */
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root :is(.workspace-split, .workspace-tabs):not(:has(.workspace-leaf.mod-active)),
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root .workspace-leaf:not(.mod-active),
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .workspace-split.mod-root .workspace-leaf-resize-handle {
+  display: none !important;
+}
+
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root :is(.workspace-split, .workspace-tabs):has(.workspace-leaf.mod-active),
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .mod-root .workspace-leaf.mod-active {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform: none !important;
+}
+
+body.dreamcore-focus:has(.mod-root .workspace-leaf.mod-active [data-type="markdown"])
+  .workspace-leaf.mod-active :is(.metadata-container, .embedded-backlinks) {
+  display: none !important;
+}
+
+body.dreamcore-focus {
+  --file-margins: 48px;
+}
+

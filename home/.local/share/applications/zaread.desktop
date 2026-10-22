@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Zaread · Dreamcore
+Comment=Read Word documents in the configured Zathura
+Comment[ru]=Чтение документов Word в настроенной Zathura
+Exec=/home/rozetta/.local/bin/zaread-open %f
+TryExec=/home/rozetta/.local/bin/zaread-open
+Icon=org.pwmt.zathura
+Terminal=false
+Categories=Office;Viewer;
+MimeType=application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/msword;application/vnd.oasis.opendocument.text;text/rtf;

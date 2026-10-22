@@ -1,0 +1,63 @@
+#!/bin/bash
+set -euo pipefail
+
+if (( EUID == 0 )); then
+    printf 'Запустите этот скрипт обычным пользователем, без sudo.\n' >&2
+    exit 1
+fi
+
+state_dir="$HOME/.local/state/symphony-setup"
+mkdir -p "$state_dir"
+log="$state_dir/finish-setup-$(date +%Y%m%d-%H%M%S).log"
+exec > >(tee -a "$log") 2>&1
+trap 'rc=$?; printf "Ошибка на строке %s (код %s). Журнал: %s\n" "$LINENO" "$rc" "$log"; exit "$rc"' ERR
+
+# Check session access before asking sudo to remove the package.
+if ! hyprctl version; then
+    printf 'Нет доступа к текущему Hyprland. Запустите скрипт из нового окна Ghostty в текущем сеансе.\n' >&2
+    exit 1
+fi
+systemctl --user show-environment > /dev/null
+Hyprland --verify-config -c "$HOME/.config/hypr/hyprland.lua"
+ghostty +validate-config
+
+packages_to_remove=()
+for package in localsend-bin zed; do
+    if pacman -Q "$package"; then
+        packages_to_remove+=("$package")
+    else
+        printf 'Пакет %s уже отсутствует.\n' "$package"
+    fi
+done
+if (( ${#packages_to_remove[@]} > 0 )); then
+    sudo pacman -R "${packages_to_remove[@]}"
+fi
+for package in localsend-bin zed; do
+    if pacman -Q "$package" > /dev/null 2>&1; then
+        printf 'Пакет %s всё ещё установлен; настройки не применены.\n' "$package" >&2
+        exit 1
+    fi
+    printf 'Проверено: пакет %s отсутствует.\n' "$package"
+done
+
+hyprctl reload
+config_errors=$(hyprctl configerrors)
+if [[ -n "$config_errors" ]]; then
+    printf 'Hyprland сообщил ошибки после reload:\n%s\n' "$config_errors" >&2
+    exit 1
+fi
+
+export TERMINAL=ghostty
+systemctl --user import-environment TERMINAL
+dbus-update-activation-environment --systemd TERMINAL
+systemctl --user restart symphony-waybar.service
+systemctl --user is-active --quiet symphony-waybar.service
+systemctl --user show-environment | rg '^TERMINAL=ghostty$'
+
+printf '\nПроверено: reload без ошибок; TERMINAL=ghostty в окружении служб; Waybar активен.\n'
+printf '\nТекущие параметры монитора и клавиатуры:\n'
+hyprctl monitors
+hyprctl getoption input:kb_layout
+hyprctl getoption input:kb_options
+printf '\nЖурнал: %s\n' "$log"
+printf 'Уже запущенные приложения получат новое окружение после перезапуска или повторного входа в сеанс.\n'

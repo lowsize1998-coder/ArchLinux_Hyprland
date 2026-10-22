@@ -1,0 +1,1 @@
+<RCC><qresource prefix="/imports/Theme"><file alias="DarkTheme.qml">DarkTheme.qml</file><file alias="LightTheme.qml">LightTheme.qml</file></qresource></RCC>

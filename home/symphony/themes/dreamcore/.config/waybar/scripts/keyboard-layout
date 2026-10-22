@@ -1,0 +1,2 @@
+#!/bin/bash
+hyprctl devices -j | jq -c '.keyboards[] | select(.main) | {text: (.layout | split(","))[.active_layout_index] | ascii_upcase | if . == "US" then "EN" else . end, tooltip: .active_keymap}'

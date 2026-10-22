@@ -1,0 +1,15 @@
+{
+  "git_add_includes_all_export_files": true,
+  "source_gitignore_updated_only_in_export": true,
+  "files_over_100_mib": [],
+  "script_syntax": "passed",
+  "codex_toml": "passed",
+  "restore_test": "inventory/restore-test.json",
+  "waybar_patch_test": "inventory/waybar-patch-check.json",
+  "secret_scan": "inventory/secret-scan.json",
+  "export_crlf_normalized_for_git": [
+    "profiles/obsidian/.obsidian/themes/Minimal/manifest.json",
+    "profiles/obsidian/.obsidian/themes/Minimal/theme.css",
+    "profiles/obsidian/.obsidian/plugins/obsidian-excalidraw-plugin/manifest.json"
+  ]
+}

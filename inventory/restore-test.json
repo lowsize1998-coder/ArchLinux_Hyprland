@@ -1,0 +1,26 @@
+{
+  "result": "passed",
+  "checks": [
+    "dry run writes nothing",
+    "outside symlink target unchanged",
+    "personal vault note unchanged",
+    "Hyprland config present",
+    "dotfiles alias resolves",
+    "current Dreamcore theme resolves",
+    "dynamic theme links preserved",
+    "old user paths rewritten",
+    "Zen CSS paths rewritten",
+    "Zen profile CSS links resolve",
+    "unrelated Zen preferences preserved",
+    "exported Zen preferences applied",
+    "Obsidian theme restored",
+    "replacement backup map created",
+    "old launcher backed up",
+    "old config symlink backed up",
+    "Spicetify executable available"
+  ],
+  "isolated_destination": "temporary directory under /tmp, removed after verification",
+  "packages_installed": false,
+  "current_desktop_modified": false,
+  "full_clean_arch_install_tested": false
+}

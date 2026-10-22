@@ -1,0 +1,94 @@
+00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Root Complex
+00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:01.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Device 1453
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:01.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Device 1453
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:03.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse GPP Bridge
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Device 1453
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:04.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:05.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:07.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Host Bridge
+00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Internal PCIe GPP Bridge 0 to bus[E:B]
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 61)
+	Subsystem: Gigabyte Technology Co., Ltd Device 5001
+	Kernel modules: i2c_piix4, sp5100_tco
+00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)
+	Subsystem: Gigabyte Technology Co., Ltd Device 5001
+00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 0
+00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 1
+00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 2
+00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 3
+	Kernel driver in use: k10temp
+	Kernel modules: k10temp
+00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 4
+00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 5
+00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 6
+00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Matisse/Vermeer Data Fabric: Device 18h; Function 7
+01:00.0 Non-Volatile memory controller: Sandisk Corp WD Green SN350 240GB (DRAM-less) / SN560E NVMe SSD (rev 01)
+	Subsystem: Sandisk Corp WD Green SN350 240GB (DRAM-less) / SN560E NVMe SSD
+	Kernel driver in use: nvme
+	Kernel modules: nvme
+02:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset USB 3.1 XHCI Controller
+	Subsystem: ASMedia Technology Inc. ASM1042A USB 3.0 Host Controller
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+02:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset SATA Controller
+	Subsystem: ASMedia Technology Inc. ASM1062 Serial ATA Controller
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+02:00.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset Switch Upstream Port
+	Subsystem: ASMedia Technology Inc. Device 0201
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+03:08.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] 500 Series Chipset Switch Downstream Port
+	Subsystem: ASMedia Technology Inc. Device 3308
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+04:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller (rev 05)
+	DeviceName: RTL8111E Giga LAN
+	Subsystem: Gigabyte Technology Co., Ltd Device e000
+	Kernel driver in use: r8169
+	Kernel modules: r8169
+05:00.0 VGA compatible controller: NVIDIA Corporation GA102 [GeForce RTX 3080] (rev a1)
+	Subsystem: ASUSTeK Computer Inc. Device 87ce
+	Kernel driver in use: nvidia
+	Kernel modules: nouveau, nvidia_drm, nvidia
+05:00.1 Audio device: NVIDIA Corporation GA102 High Definition Audio Controller (rev a1)
+	Subsystem: ASUSTeK Computer Inc. Device 87ce
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
+06:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function
+07:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP
+07:00.1 Encryption controller: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP
+	Subsystem: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP
+	Kernel driver in use: ccp
+	Kernel modules: ccp
+07:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller
+	Subsystem: Gigabyte Technology Co., Ltd Device 5007
+	Kernel driver in use: xhci_hcd
+	Kernel modules: xhci_pci
+07:00.4 Audio device: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller
+	DeviceName: Realtek ALC1220
+	Subsystem: Gigabyte Technology Co., Ltd Device a194
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
