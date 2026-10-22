@@ -46,7 +46,7 @@ docs/                  → порядок установки, ограничен
 
 ```sh
 # 1. Установить git и python средствами Arch, затем клонировать свой репозиторий.
-git clone https://github.com/YOUR-USER/YOUR-REPOSITORY.git ~/arch-restore
+git clone https://github.com/lowsize1998-coder/ArchLinux_Hyprland.git ~/arch-restore
 cd ~/arch-restore
 
 # 2. Проверить содержимое и посмотреть план.
@@ -84,13 +84,13 @@ bash scripts/activate-desktop.sh --apply
 git init -b main
 git add .
 git commit -m "Save Arch Hyprland configuration 2026-10-22"
-git remote add origin https://github.com/YOUR-USER/YOUR-REPOSITORY.git
+git remote add origin https://github.com/lowsize1998-coder/ArchLinux_Hyprland.git
 git push -u origin main
 ```
 
-Выполнить эти команды предстоит владельцу репозитория: текущая задача не
-создаёт удалённый репозиторий и не выполняет push. Для сохранения ссылок
-и Unix-режимов файлов удобнее сделать первый commit из Linux.
+Эти команды нужны для первой публикации нового комплекта. В уже клонированном
+репозитории достаточно `git add .`, `git commit` и `git push`. Для сохранения
+ссылок и Unix-режимов файлов удобнее работать с репозиторием из Linux.
 
 Среди файлов есть ресурсы больше 25 MiB, поэтому предпочтительна загрузка
 через Git. Все файлы проверяются на лимит обычного GitHub-файла 100 MiB.

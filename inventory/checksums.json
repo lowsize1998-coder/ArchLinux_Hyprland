@@ -9,7 +9,7 @@
   },
   "README.md": {
     "type": "file",
-    "sha256": "2906caab043ab7eb9ce7fde964ac12f2dd19c3ad440769504ff9688fe582d69f"
+    "sha256": "ea9ac9a45c13d71a66e8c2aa944e2c8b359086024e8152ca2faf77350cd017c9"
   },
   "build/waybar/5013-native.patch": {
     "type": "file",
